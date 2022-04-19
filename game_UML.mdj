@@ -996,7 +996,7 @@
 											"top": 567,
 											"width": 495.294921875,
 											"height": 13,
-											"text": "major"
+											"text": "major  fake change"
 										},
 										{
 											"_type": "LabelView",
@@ -3693,7 +3693,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "major",
+					"name": "major  fake change",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
