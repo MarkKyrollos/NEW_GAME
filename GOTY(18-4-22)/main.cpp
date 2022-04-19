@@ -77,6 +77,9 @@ int main(int argc, char *argv[])
                 scene.addItem(&boardItems[row][col]);
             }
         }
+        scene.addItem(&P1);
+        P1.setFlag(QGraphicsPixmapItem::ItemIsFocusable);
+        P1.setFocus();
         view.setScene(&scene);
         view.show();
     return a.exec();

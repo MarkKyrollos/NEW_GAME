@@ -12,7 +12,7 @@
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
 
-class player: public character, QGraphicsPixmapItem {
+class player: public character, public QGraphicsPixmapItem {
 public: 
     bool Invincible;
     QString Name;
