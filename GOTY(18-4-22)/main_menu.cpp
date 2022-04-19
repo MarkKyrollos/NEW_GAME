@@ -36,6 +36,9 @@ void main_menu::on_music_switch_clicked()//this flips the switch on music
 
 
 
-    };
+    }
+    else {
+        music_check=false;
+    }
 }
 
