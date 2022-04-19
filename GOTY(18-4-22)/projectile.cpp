@@ -51,7 +51,7 @@ void projectile:: Pain(character* target)
 
 void projectile::movement() //make this a function that moves periodically and is called in the character class
 {
-    QVector<QVector<QVector<character*>>>* charLocPoint=&charLoc;
+    QVector<QVector<QVector<character*>>>* charLocPoint=charLoc;
     switch (direction)
     {
     case up:
@@ -86,5 +86,5 @@ projectile::projectile(int dmg, int range, float cool_down, float proj_speed, in
     this->Shooter = Shooter;
     this->direction = direction;
     this->map=&map;
-    this->charLoc=charLoc;
+    this->charLoc=&charLoc;
 }

@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
                 map[i][j]=temp.toInt();
             }
         }
-        player P1(100,5,true,up,1,1,"Placeholder",false,map,true);
+        player P1(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true);
         charLoc[1][1][0]=&P1;
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");

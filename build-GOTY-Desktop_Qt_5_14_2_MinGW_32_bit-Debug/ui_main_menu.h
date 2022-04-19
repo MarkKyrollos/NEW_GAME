@@ -41,7 +41,7 @@ public:
         main_menu->resize(400, 300);
         verticalLayoutWidget = new QWidget(main_menu);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(220, 200, 171, 86));
+        verticalLayoutWidget->setGeometry(QRect(230, 200, 171, 86));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -63,7 +63,7 @@ public:
         name->setGeometry(QRect(20, 210, 161, 21));
         verticalLayoutWidget_2 = new QWidget(main_menu);
         verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(190, 40, 160, 80));
+        verticalLayoutWidget_2->setGeometry(QRect(240, 50, 160, 80));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);

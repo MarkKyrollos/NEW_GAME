@@ -1,0 +1,10 @@
+debug/character.o
+debug/main.o
+debug/main_menu.o
+debug/mainwindow.o
+debug/player.o
+debug/projectile.o
+debug/qrc_res.o
+debug/moc_character.o
+debug/moc_main_menu.o
+debug/moc_mainwindow.o

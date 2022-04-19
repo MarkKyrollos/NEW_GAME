@@ -17,7 +17,7 @@ public:
     int row;
     direct direction; //this is a variable of type enum I'm thinking of making, hmu if you want an explanation
     QVector<QVector<int>>* map;
-    QVector<QVector<QVector<character*>>> &charLoc;
+    QVector<QVector<QVector<character*>>> *charLoc;
     
 bool Location_Check(QVector<QVector<QVector<character*>>> &charLoc);
     
