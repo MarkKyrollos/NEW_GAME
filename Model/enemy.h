@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _ENEMY_H
 #define _ENEMY_H
@@ -16,20 +12,13 @@ public:
 	
     bool Line_of_sight;
     bool Found_player;
-    
+    int player_location;
+	
 bool is_Spotted();
 	
 int Find_Player();
     
-/**
- * @param helth
- * @param mvmt_spd
- * @param Playa
- * @param Loc
- * @param Facer
- * @param Rowd
- * @param Cold
- */
+
 enemy(int helth, float mvmt_spd, bool Playa, int Loc, int Facer, int Rowd, int Cold);
 };
 
