@@ -1,0 +1,10 @@
+release/character.o
+release/main.o
+release/main_menu.o
+release/mainwindow.o
+release/player.o
+release/projectile.o
+release/qrc_res.o
+release/moc_character.o
+release/moc_main_menu.o
+release/moc_mainwindow.o

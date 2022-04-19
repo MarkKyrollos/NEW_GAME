@@ -20,6 +20,8 @@ void main_menu::on_start_clicked()
     //main.setname(ui->name->text());
     main.show();
     this->close();
+    main.play_sound(music_check);
+
 }
 
 
@@ -41,4 +43,3 @@ void main_menu::on_music_switch_clicked()//this flips the switch on music
         music_check=false;
     }
 }
-

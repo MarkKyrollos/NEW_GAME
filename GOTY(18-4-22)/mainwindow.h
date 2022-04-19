@@ -16,8 +16,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-public slots:
+    void play_sound(bool music);
     void timefunction(QMediaPlayer* music);
+public slots:
+
 
 private:
     Ui::MainWindow *ui;
