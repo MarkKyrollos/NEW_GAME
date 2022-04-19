@@ -20,10 +20,11 @@ void character::shoot() // automatic shooting
 
 }
 
-void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc)
+void character::moveUp(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row-1).at(col)>=0)
+
+    if (map->at(row-1).at(col)>=0 &&  event->key()==Qt::Key_Up)
     {
         if (Player)
         {
@@ -41,10 +42,12 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc)
     face=up;
 }
 
-void character::moveDown(QVector<QVector<QVector<character *>>> &charLoc)
+
+
+void character::moveDown(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row+1).at(col)>=0)
+    if (map->at(row+1).at(col)>=0 && event->key()==Qt::Key_Down)
     {
         if (Player)
         {
@@ -62,10 +65,10 @@ void character::moveDown(QVector<QVector<QVector<character *>>> &charLoc)
     face=down;
 }
 
-void character::moveRight(QVector<QVector<QVector<character *>>> &charLoc)
+void character::moveRight(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col+1)>=0)
+    if (map->at(row).at(col+1)>=0 && event->key()==Qt::Key_Right)
     {
         if (Player)
         {
@@ -83,10 +86,10 @@ void character::moveRight(QVector<QVector<QVector<character *>>> &charLoc)
     face=right;
 }
 
-void character::moveLeft(QVector<QVector<QVector<character *>>> &charLoc)
+void character::moveLeft(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col-1)>=0)
+    if (map->at(row).at(col-1)>=0 && event->key()==Qt::Key_Left)
     {
         if (Player)
         {
@@ -103,6 +106,9 @@ void character::moveLeft(QVector<QVector<QVector<character *>>> &charLoc)
     }
     face=left;
 }
+
+
+
 //*** I will do another public slots in derived classes for up down left right buttons, which will relocate the player using its array and pixmap
 void character::keyPressEvent(QKeyEvent* event)  // if character manually shoots
 {

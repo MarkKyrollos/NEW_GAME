@@ -8,6 +8,7 @@
 /*#include "projectile.h"*/
 
 enum direct {up=1, right, left, down};
+
 class character : public QObject //, public QGraphicsPixmapItem (include this class in inherited classes like player and enemy since each one would have its own jpeg)
 {
     Q_OBJECT
@@ -32,15 +33,15 @@ public:
 
     void shoot(); // i set this shooting function to be a pure virtual one since player shots are manually done using spacebar while enemy shots are random
 
-    void moveUp(QVector<QVector<QVector<character*>>> &charLoc);
-    void moveDown(QVector<QVector<QVector<character*>>> &charLoc);
-    void moveRight(QVector<QVector<QVector<character*>>> &charLoc);
-    void moveLeft(QVector<QVector<QVector<character*>>> &charLoc);
+
 
 public slots:   // added this, i can push everything onto github once im done instead of modifying each step i make
-    virtual void keyPressEvent(QKeyEvent* event);
+    void keyPressEvent(QKeyEvent* event);
 
-    // add another function for keyboard movement
+    void moveUp(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
+    void moveDown(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
+    void moveRight(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
+    void moveLeft(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
 
 };
 
