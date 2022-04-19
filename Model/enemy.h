@@ -12,10 +12,13 @@
 
 
 class enemy: public character {
-public: 
+public:
+	
     bool Line_of_sight;
     bool Found_player;
     
+bool is_Spotted();
+	
 int Find_Player();
     
 /**
@@ -27,7 +30,7 @@ int Find_Player();
  * @param Rowd
  * @param Cold
  */
-void enemy(int helth, float mvmt_spd, bool Playa, int Loc, int Facer, int Rowd, int Cold);
+enemy(int helth, float mvmt_spd, bool Playa, int Loc, int Facer, int Rowd, int Cold);
 };
 
 #endif //_ENEMY_H
