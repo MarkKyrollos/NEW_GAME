@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     //to play music on a loop
-if(background_music==true){
+if(background_music==false){
     music_loop =new QTimer(this);
 
     QMediaPlayer * music = new QMediaPlayer();
