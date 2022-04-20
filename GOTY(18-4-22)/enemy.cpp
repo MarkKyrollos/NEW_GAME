@@ -4,6 +4,7 @@
 
 
 #include "enemy.h"
+#include "player.h"
 
 /**
  * enemy implementation
@@ -13,7 +14,10 @@
 /**
  * @return int
  */
-int enemy::Find_Player() {
+int enemy::Find_Player(player p1) {
+    //if messed up contact programmer to fix it
+    player_location[0]=p1.row;
+    player_location[1]=p1.col;
     return 0;
 }
 
@@ -30,4 +34,7 @@ enemy::enemy(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int 
 
     Line_of_sight=los;
     Found_player=playerFound;
+    player_location[0]=Rowd;
+    player_location[1]=Cold;
+
 }
