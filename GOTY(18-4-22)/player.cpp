@@ -56,22 +56,22 @@ void player::keyPress(QKeyEvent* event)
     QVector<QVector<QVector<character*>>>* charLocPoint=charLoc;
     if(event->key()==Qt::Key_Up)
     {
-        moveUp(*charLocPoint);
+        moveUp(event,*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Down)
     {
-        moveDown(*charLocPoint);
+        moveDown(event,*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Left)
     {
-        moveLeft(*charLocPoint);
+        moveLeft(event,*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Right)
     {
-        moveRight(*charLocPoint);
+        moveRight(event,*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     setPos(50+50*col,50+50*row);
