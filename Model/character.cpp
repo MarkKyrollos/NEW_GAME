@@ -1,20 +1,110 @@
 #include "character.h"
 
-character::character(int helth, QString NAME,float mvmt_spd, bool alive, int Facer, int Rowd, int Cold)
+character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa)
 {
     health=helth;
-    name=NAME;
+    /*name=NAME;*/
     movement_speed=mvmt_spd;
     is_alive=alive;
     face=Facer;
     row=Rowd;
     col=Cold;
+    this->map =&map;
+    this->charLoc= &charLoc;
+    Player=Playa;
 }
 
 
 void character::shoot() // automatic shooting
 {
 
+}
+
+void character::moveUp(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc)
+{
+    character* nullifier=NULL;
+
+    if (map->at(row-1).at(col)>=0 &&  event->key()==Qt::Key_Up)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            row--;
+            charLoc[row][col][0]=this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            row--;
+            charLoc[row][col][1]=this;
+        }
+    }
+    face=up;
+}
+
+
+
+void character::moveDown(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
+{
+    character* nullifier=NULL;
+    if (map->at(row+1).at(col)>=0 && event->key()==Qt::Key_Down)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            row++;
+            charLoc[row][col][0]=this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            row++;
+            charLoc[row][col][1]=this;
+        }
+    }
+    face=down;
+}
+
+void character::moveRight(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
+{
+    character* nullifier=NULL;
+    if (map->at(row).at(col+1)>=0 && event->key()==Qt::Key_Right)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            col++;
+            charLoc[row][col][0]=this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            col++;
+            charLoc[row][col][1]=this;
+        }
+    }
+    face=right;
+}
+
+void character::moveLeft(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
+{
+    character* nullifier=NULL;
+    if (map->at(row).at(col-1)>=0 && event->key()==Qt::Key_Left)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            col--;
+            charLoc[row][col][0]=this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            col--;
+            charLoc[row][col][1]=this;
+        }
+    }
+    face=left;
 }
 
 
@@ -24,10 +114,11 @@ void character::keyPressEvent(QKeyEvent* event)  // if character manually shoots
 {
     if(event->key()==Qt::Key_Space)
     {
-        projectile proj;
-        while(!proj.Location_Check()) // projectile keeps moving until it reaches the location of a character/wall
+        /*projectile proj(25, 50, 0.1, 0.5, 1, face);
+        while(!proj.Location_Check(map, charLoc)) // projectile keeps moving until it reaches the location of a character/wall
         {
-            proj.movement();
+            proj.movement(); //needs to be done with QTimer
         }
+        */
     }
 }
