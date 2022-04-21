@@ -2,9 +2,13 @@
  * Project Untitled
  */
 
-
 #include "player.h"
-
+#include<QObject>
+#include <QMainWindow>
+#include <QGraphicsPixmapItem>
+#include <QApplication>
+#include <QEvent>
+#include <QKeyEvent>
 /**
  * player implementation
  */
@@ -51,27 +55,27 @@ player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, in
 
 }
 
-void player::keyPress(QKeyEvent* event)
+void player::keyPressEvent(QKeyEvent* event)
 {
     QVector<QVector<QVector<character*>>>* charLocPoint=charLoc;
     if(event->key()==Qt::Key_Up)
     {
-        moveUp(event,*charLocPoint);
+        moveUp(*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Down)
     {
-        moveDown(event,*charLocPoint);
+        moveDown(*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Left)
     {
-        moveLeft(event,*charLocPoint);
+        moveLeft(*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Right)
     {
-        moveRight(event,*charLocPoint);
+        moveRight(*charLocPoint);
         In_Enemy(*charLocPoint);
     }
     setPos(50+50*col,50+50*row);

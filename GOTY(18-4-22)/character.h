@@ -4,6 +4,8 @@
 #include<QObject>
 #include <QMainWindow>
 #include <QGraphicsPixmapItem>
+#include <QApplication>
+#include <QEvent>
 #include <QKeyEvent>
 /*#include "projectile.h"*/
 
@@ -32,16 +34,16 @@ public:
     character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa);
 
     void shoot(); // i set this shooting function to be a pure virtual one since player shots are manually done using spacebar while enemy shots are random
+    void moveUp(QVector<QVector<QVector<character*>>> &charLoc);
+    void moveDown(QVector<QVector<QVector<character*>>> &charLoc);
+    void moveRight(QVector<QVector<QVector<character*>>> &charLoc);
+    void moveLeft(QVector<QVector<QVector<character*>>> &charLoc);
 
 
+//public slots:   // added this, i can push everything onto github once im done instead of modifying each step i make
+    //void keyPressEvent(QKeyEvent* event);
 
-public slots:   // added this, i can push everything onto github once im done instead of modifying each step i make
-    void keyPressEvent(QKeyEvent* event);
 
-    void moveUp(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
-    void moveDown(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
-    void moveRight(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
-    void moveLeft(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc);
 
 };
 

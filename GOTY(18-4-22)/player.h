@@ -10,6 +10,8 @@
 #include<QObject>
 #include <QMainWindow>
 #include <QGraphicsPixmapItem>
+#include <QApplication>
+#include <QEvent>
 #include <QKeyEvent>
 
 class player: public character, public QGraphicsPixmapItem {
@@ -20,10 +22,11 @@ player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, 
     
 void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);
 
-void keyPress(QKeyEvent* event);
+
     
 bool Trigger_Invincibility();
-    
+public slots:
+    void keyPressEvent(QKeyEvent* event);
 /**
  * @param helth
  * @param mvmt_spd
@@ -33,6 +36,7 @@ bool Trigger_Invincibility();
  * @param Rowd
  * @param Cold
  */
+
 
 };
 #endif //_PLAYER_H

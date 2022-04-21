@@ -4,7 +4,8 @@
 #include <QTimer>
 
 #include <QMainWindow>
-
+#include <QEvent>
+#include <QKeyEvent>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -19,7 +20,7 @@ public:
     void play_sound(bool music);
     void timefunction(QMediaPlayer* music);
 public slots:
-
+    void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::MainWindow *ui;

@@ -1,5 +1,4 @@
 #include "character.h"
-
 character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa)
 {
     health=helth;
@@ -20,11 +19,11 @@ void character::shoot() // automatic shooting
 
 }
 
-void character::moveUp(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc)
+void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc)
 {
     character* nullifier=NULL;
 
-    if (map->at(row-1).at(col)>=0 &&  event->key()==Qt::Key_Up)
+    if (map->at(row-1).at(col)>=0)
     {
         if (Player)
         {
@@ -44,10 +43,10 @@ void character::moveUp(QKeyEvent* event, QVector<QVector<QVector<character*>>> &
 
 
 
-void character::moveDown(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
+void character::moveDown(QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row+1).at(col)>=0 && event->key()==Qt::Key_Down)
+    if (map->at(row+1).at(col)>=0)
     {
         if (Player)
         {
@@ -65,10 +64,10 @@ void character::moveDown(QKeyEvent* event, QVector<QVector<QVector<character *>>
     face=down;
 }
 
-void character::moveRight(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
+void character::moveRight(QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col+1)>=0 && event->key()==Qt::Key_Right)
+    if (map->at(row).at(col+1)>=0)
     {
         if (Player)
         {
@@ -86,10 +85,10 @@ void character::moveRight(QKeyEvent* event, QVector<QVector<QVector<character *>
     face=right;
 }
 
-void character::moveLeft(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
+void character::moveLeft(QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col-1)>=0 && event->key()==Qt::Key_Left)
+    if (map->at(row).at(col-1)>=0)
     {
         if (Player)
         {
@@ -110,15 +109,15 @@ void character::moveLeft(QKeyEvent* event, QVector<QVector<QVector<character *>>
 
 
 //*** I will do another public slots in derived classes for up down left right buttons, which will relocate the player using its array and pixmap
-void character::keyPressEvent(QKeyEvent* event)  // if character manually shoots
-{
-    if(event->key()==Qt::Key_Space)
-    {
+//void character::keyPressEvent(QKeyEvent* event)  // if character manually shoots
+//{
+    //if(event->key()==Qt::Key_Space)
+    //{
         /*projectile proj(25, 50, 0.1, 0.5, 1, face);
         while(!proj.Location_Check(map, charLoc)) // projectile keeps moving until it reaches the location of a character/wall
         {
             proj.movement(); //needs to be done with QTimer
         }
         */
-    }
-}
+    //}
+//}

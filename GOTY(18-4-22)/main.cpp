@@ -7,6 +7,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QGraphicsPixmapItem>
+#include <QKeyEvent>
 #include "player.h"
 #include "character.h"
 #include "projectile.h"
@@ -82,7 +83,6 @@ int main(int argc, char *argv[])
         P1.setFocus();
         view.setScene(&scene);
         view.show();
-
     return a.exec();
 }
 

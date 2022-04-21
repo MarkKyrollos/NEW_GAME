@@ -36,6 +36,13 @@ void MainWindow::timefunction(QMediaPlayer * music)
     music->play();
 
 }
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key()==Qt::Key_Down)
+    {
+        ui->label->setText("down");
+    }
+}
 void MainWindow::play_sound(bool music){
     if(music==true){
         music_loop =new QTimer(this);
@@ -47,4 +54,6 @@ void MainWindow::play_sound(bool music){
           music_loop->start(50000);
 
 }
+
+
 }
