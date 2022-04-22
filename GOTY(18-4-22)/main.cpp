@@ -81,6 +81,7 @@ int main(int argc, char *argv[])
         scene.addItem(&P1);
         P1.setFlag(QGraphicsPixmapItem::ItemIsFocusable);
         P1.setFocus();
+        P1.grabKeyboard();
         view.setScene(&scene);
         view.show();
     return a.exec();

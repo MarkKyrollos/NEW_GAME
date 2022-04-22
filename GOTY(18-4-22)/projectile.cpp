@@ -1,5 +1,6 @@
 #include "projectile.h"
-
+#include<QObject>
+#include <QGraphicsPixmapItem>
 
 bool projectile::Location_Check(QVector<QVector<QVector<character*>>> &charLoc) // got it, this func is used to check if projectile reached the exact location for player/enemy to reduce health
 {
@@ -87,4 +88,9 @@ projectile::projectile(int dmg, int range, float cool_down, float proj_speed, in
     this->direction = direction;
     this->map=&map;
     this->charLoc=&charLoc;
+    QPixmap p("Tweety.png");
+       p=p.scaledToWidth(50);
+       p=p.scaledToHeight(50);
+       setPixmap(p);
+       setPos(50+50*col,50+50*row);
 }

@@ -6,7 +6,9 @@
 #ifndef _PROJECTILE_H
 #define _PROJECTILE_H
 #include "character.h"
-class projectile {
+#include<QObject>
+#include <QGraphicsPixmapItem>
+class projectile: public QObject {
 public: 
     int damage;
     int range;

@@ -60,6 +60,7 @@ void character::moveDown(QVector<QVector<QVector<character *>>> &charLoc)
             row++;
             charLoc[row][col][1]=this;
         }
+
     }
     face=down;
 }
