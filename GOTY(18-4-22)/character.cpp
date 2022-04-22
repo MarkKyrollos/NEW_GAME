@@ -1,8 +1,8 @@
 #include "character.h"
+
 character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa)
 {
     health=helth;
-    /*name=NAME;*/
     movement_speed=mvmt_spd;
     is_alive=alive;
     face=Facer;
@@ -16,18 +16,118 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
 
 void character::shoot() // automatic shooting
 {
-    if (Player)
-    {
-        projectile* proj;
-        proj=new projectile()
-    }
+// call the same projectile functions as called in the keyPressEvent function
 }
 
-void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc)
+
+void character::keyPressEvent(QKeyEvent* event , QVector<QVector<QVector<character*>>> &charLoc)  // if character manually shoots
+{
+
+    // manual shooting
+    if(event->key()==Qt::Key_Space)
+    {
+        projectile proj(25, 50, 0.1, 0.5, 1, face); // I hid the projectile.h as a comment since Qt doesnt recognize it and throws over 130 errors casually
+        QTimer T;
+while(!proj.Location_Check(charLoc[row][col][0]))
+{
+    T.singleShot(500, this , SLOT(proj.movement())); // i set the projectile to move at a speed each .5 seconds, void singleShot(int msec, const projectile *receiver, const char *member)
+}
+
+    }
+
+
+    character* nullifier=NULL;
+
+    // moving UP
+    if (map->at(row-1).at(col)>=0 &&  event->key()==Qt::Key_Up)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            row--;
+            charLoc[row][col][0] = this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            row--;
+            charLoc[row][col][1]=this;
+        }
+
+    face=up;
+    setPos(50+50*col,50+50*row);
+    }
+
+    // moving DOWN
+    if (map->at(row+1).at(col)>=0 && event->key()==Qt::Key_Down)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            row++;
+            charLoc[row][col][0]=this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            row++;
+            charLoc[row][col][1]=this;
+        }
+    face=down;
+    setPos(50+50*col,50+50*row);
+    }
+
+
+    // moving RIGHT
+    if (map->at(row).at(col+1)>=0 && event->key()==Qt::Key_Right)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            col++;
+            charLoc[row][col][0]=this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            col++;
+            charLoc[row][col][1]=this;
+        }
+
+        face =right;
+        setPos(50+50*col,50+50*row);
+    }
+
+
+    //moving LEFT
+    if (map->at(row).at(col-1)>=0 && event->key()==Qt::Key_Left)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0] = nullifier;
+            col--;
+            charLoc[row][col][0]=this;
+        }
+        else
+        {
+            charLoc[row][col][1] = nullifier;
+            col--;
+            charLoc[row][col][1]=this;
+        }
+        face=left;
+    setPos(50+50*col,50+50*row);
+    }
+
+}
+
+
+
+/*
+void character::moveUp(QKeyEvent* event, QVector<QVector<QVector<character*>>> &charLoc)
 {
     character* nullifier=NULL;
 
-    if (map->at(row-1).at(col)>=0)
+    if (map->at(row-1).at(col)>=0 &&  event->key()==Qt::Key_Up)
     {
         if (Player)
         {
@@ -42,15 +142,16 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc)
             charLoc[row][col][1]=this;
         }
     }
+    setPos(50+50*col,50+50*row);
     face=up;
 }
 
 
 
-void character::moveDown(QVector<QVector<QVector<character *>>> &charLoc)
+void character::moveDown(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row+1).at(col)>=0)
+    if (map->at(row+1).at(col)>=0 && event->key()==Qt::Key_Down)
     {
         if (Player)
         {
@@ -64,15 +165,16 @@ void character::moveDown(QVector<QVector<QVector<character *>>> &charLoc)
             row++;
             charLoc[row][col][1]=this;
         }
-
     }
+   setPos(50+50*col,50+50*row);
     face=down;
 }
 
-void character::moveRight(QVector<QVector<QVector<character *>>> &charLoc)
+
+void character::moveRight(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col+1)>=0)
+    if (map->at(row).at(col+1)>=0 && event->key()==Qt::Key_Right)
     {
         if (Player)
         {
@@ -87,13 +189,14 @@ void character::moveRight(QVector<QVector<QVector<character *>>> &charLoc)
             charLoc[row][col][1]=this;
         }
     }
+    setPos(50+50*col,50+50*row);
     face=right;
 }
 
-void character::moveLeft(QVector<QVector<QVector<character *>>> &charLoc)
+void character::moveLeft(QKeyEvent* event, QVector<QVector<QVector<character *>>> &charLoc)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col-1)>=0)
+    if (map->at(row).at(col-1)>=0 && event->key()==Qt::Key_Left)
     {
         if (Player)
         {
@@ -108,21 +211,8 @@ void character::moveLeft(QVector<QVector<QVector<character *>>> &charLoc)
             charLoc[row][col][1]=this;
         }
     }
+    setPos(50+50*col,50+50*row);
     face=left;
 }
 
-
-
-//*** I will do another public slots in derived classes for up down left right buttons, which will relocate the player using its array and pixmap
-//void character::keyPressEvent(QKeyEvent* event)  // if character manually shoots
-//{
-    //if(event->key()==Qt::Key_Space)
-    //{
-        /*projectile proj(25, 50, 0.1, 0.5, 1, face);
-        while(!proj.Location_Check(map, charLoc)) // projectile keeps moving until it reaches the location of a character/wall
-        {
-            proj.movement(); //needs to be done with QTimer
-        }
-        */
-    //}
-//}
+*/
