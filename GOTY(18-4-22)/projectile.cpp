@@ -1,32 +1,11 @@
 #include "projectile.h"
-#include<QObject>
-#include <QMainWindow>
-#include <QGraphicsPixmapItem>
-#include <QApplication>
 
-projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, int col, int row, QVector<QVector<QVector<int>>> &chrloc) {
-    damage = dmg;
-    this->cool_down = cool_down;
-    this->proj_speed = proj_speed;
-    this->Shooter = Shooter;
-    this->direction = direction;
-    this->map=&map;
-    this->charLoc=&charLoc;
-    this->col=col;
-    this->row=row;
-    QPixmap g("projectile.png");
-       g=g.scaledToWidth(50);
-       g=g.scaledToHeight(50);
-       setPixmap(g);
-       setPos(50+50*col,50+50*row);
-}
 
 bool projectile::Location_Check(QVector<QVector<QVector<character*>>> &charLoc) // got it, this func is used to check if projectile reached the exact location for player/enemy to reduce health
 {
-    character* nullifier = NULL;
-    if (Shooter == 1)
+        if (Shooter == 1)
         {
-            if (charLoc[row][col][1] != nullifier)
+            if (charLoc[row][col][1] != NULL)
             {
                 character* target;
                 target = charLoc[row][col][1];
@@ -38,7 +17,7 @@ bool projectile::Location_Check(QVector<QVector<QVector<character*>>> &charLoc) 
 
         if (Shooter == 2)
         {
-            if (charLoc[row][col][0] != nullifier)
+            if (charLoc[row][col][0] != NULL)
             {
                 character* target;
                 target = charLoc[row][col][0];
@@ -69,12 +48,6 @@ void projectile:: Pain(character* target)
     return;
 }
 
-void projectile::timedMovement()
-{
-    QTimer timer(this);
-    connect(&timer,SIGNAL(timeout()),this,SLOT(movement()));
-    timer.start(proj_speed*1000);
-}
 
 void projectile::movement() //make this a function that moves periodically and is called in the character class
 {
@@ -101,8 +74,24 @@ void projectile::movement() //make this a function that moves periodically and i
         Location_Check(*charLocPoint);
         break;
     }
+
+    setPos(charLocPoint->col, charLocPoint->row);
 }
 
 
 
+projectile::projectile(int dmg, int range, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc) {
+    damage = dmg;
+    this->range = range;
+    this->cool_down = cool_down;
+    this->proj_speed = proj_speed;
+    this->Shooter = Shooter;
+    this->direction = direction;
+    this->map=&map;
+    this->charLoc=&charLoc;
 
+    QPixmap missile("missile.jpg");
+    missile=missile.scaledToWidth(50);
+    missile=missile.scaledToHeight(50);
+    setPixmap(missile);
+}

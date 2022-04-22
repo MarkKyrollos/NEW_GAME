@@ -1,19 +1,16 @@
-/**
- * Project Untitled
- */
-
-
 #ifndef _PROJECTILE_H
 #define _PROJECTILE_H
-#include "character.h"
-#include<QObject>
-#include <QGraphicsPixmapItem>
-#include <QPixmap>
-#include <QApplication>
 
-class projectile: public QObject {
+#include "character.h"
+#include <QGraphicsPixmapItem>
+
+
+class projectile :public QObject, public QGraphicsPixmapItem
+{
+    Q_OBJECT
 public:
     int damage;
+    int range;
     float cool_down;
     float proj_speed;
     int Shooter;
@@ -23,30 +20,14 @@ public:
     QVector<QVector<int>>* map;
     QVector<QVector<QVector<character*>>> *charLoc;
 
-projectile(int dmg, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, int col, int row, QVector<QVector<QVector<character*>>> &chrloc);
-
 bool Location_Check(QVector<QVector<QVector<character*>>> &charLoc);
-
-/**
- * @param &character target
- */
 
 void Pain (character* target);
 
-void timedMovement();
-
 void movement();
 
-/**
- * @param dmg
- * @param range
- * @param cool_down
- * @param proj_speed
- * @param Shooter
- */
-
+projectile(int dmg, int range, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc);
 
 };
 
 #endif //_PROJECTILE_H
-
