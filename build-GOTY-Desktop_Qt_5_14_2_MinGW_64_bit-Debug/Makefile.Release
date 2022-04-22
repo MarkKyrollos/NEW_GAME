@@ -251,6 +251,14 @@ release/moc_character.cpp: ../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_64/bin/moc.exe
@@ -389,6 +397,8 @@ release/moc_main_menu.cpp: ../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/cs2/game project/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -I"D:/cs2/game project/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_64/include -IC:/Qt/5.14.2/mingw73_64/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/5.14.2/mingw73_64/include/QtGui -IC:/Qt/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/5.14.2/mingw73_64/include/QtNetwork -IC:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\GOTY(18-4-22)\main_menu.h -o release\moc_main_menu.cpp
@@ -523,6 +533,8 @@ release/moc_mainwindow.cpp: ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/cs2/game project/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -I"D:/cs2/game project/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_64/include -IC:/Qt/5.14.2/mingw73_64/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/5.14.2/mingw73_64/include/QtGui -IC:/Qt/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/5.14.2/mingw73_64/include/QtNetwork -IC:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\GOTY(18-4-22)\mainwindow.h -o release\moc_mainwindow.cpp
@@ -665,6 +677,14 @@ release/character.o: ../GOTY(18-4-22)/character.cpp ../GOTY(18-4-22)/character.h
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\character.o ..\GOTY(18-4-22)\character.cpp
 
@@ -780,6 +800,14 @@ release/enemy.o: ../GOTY(18-4-22)/enemy.cpp ../GOTY(18-4-22)/enemy.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		../GOTY(18-4-22)/player.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\enemy.o ..\GOTY(18-4-22)\enemy.cpp
@@ -914,6 +942,8 @@ release/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdialog.h \
@@ -942,7 +972,6 @@ release/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		../GOTY(18-4-22)/player.h \
 		../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QObject \
-		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtCore/QVector
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\GOTY(18-4-22)\main.cpp
@@ -1080,6 +1109,8 @@ release/main_menu.o: ../GOTY(18-4-22)/main_menu.cpp ../GOTY(18-4-22)/main_menu.h
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		ui_main_menu.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
@@ -1238,6 +1269,8 @@ release/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindo
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent \
 		ui_mainwindow.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
@@ -1246,6 +1279,9 @@ release/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindo
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QLabel \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlabel.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QMenuBar \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qmenubar.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qmenu.h \
@@ -1261,9 +1297,6 @@ release/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindo
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdialog.h \
 		ui_main_menu.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QLineEdit \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlineedit.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qtextcursor.h \
@@ -1392,6 +1425,14 @@ release/player.o: ../GOTY(18-4-22)/player.cpp ../GOTY(18-4-22)/player.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\player.o ..\GOTY(18-4-22)\player.cpp
 
@@ -1507,6 +1548,14 @@ release/projectile.o: ../GOTY(18-4-22)/projectile.cpp ../GOTY(18-4-22)/projectil
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_64/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\projectile.o ..\GOTY(18-4-22)\projectile.cpp
 

@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     //MainWindow w;
     //w.show();
-    main_menu w;
-    w.show();
+   // main_menu w;
+    //w.show();
     //creating the view obj
     QVector<QVector<QVector<character*>>> charLoc(10, QVector<QVector<character*>>(10,QVector<character*>(2,NULL)));
     QVector<QVector<int>> map(10);
@@ -84,6 +84,7 @@ int main(int argc, char *argv[])
         P1.grabKeyboard();
         view.setScene(&scene);
         view.show();
+
     return a.exec();
 }
 
