@@ -47,8 +47,9 @@ int main(int argc, char *argv[])
                 map[i][j]=temp.toInt();
             }
         }
-        player P1(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true);
-        charLoc[1][1][0]=&P1;
+        player* P1;
+        P1=new player(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true);
+        charLoc[1][1][0]=P1;
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");
         grassImage=grassImage.scaledToHeight(55);
@@ -78,10 +79,10 @@ int main(int argc, char *argv[])
                 scene.addItem(&boardItems[row][col]);
             }
         }
-        scene.addItem(&P1);
-        P1.setFlag(QGraphicsPixmapItem::ItemIsFocusable);
-        P1.setFocus();
-        P1.grabKeyboard();
+        scene.addItem(P1);
+        P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable);
+        P1->setFocus();
+        P1->grabKeyboard();
         view.setScene(&scene);
         view.show();
 

@@ -9,6 +9,8 @@
 #include<QObject>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
+#include <QApplication>
+
 class projectile: public QObject {
 public:
     int damage;
@@ -21,7 +23,7 @@ public:
     QVector<QVector<int>>* map;
     QVector<QVector<QVector<character*>>> *charLoc;
 
-projectile(int dmg, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc);
+projectile(int dmg, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, int col, int row, QVector<QVector<QVector<character*>>> &chrloc);
 
 bool Location_Check(QVector<QVector<QVector<character*>>> &charLoc);
 
@@ -30,6 +32,8 @@ bool Location_Check(QVector<QVector<QVector<character*>>> &charLoc);
  */
 
 void Pain (character* target);
+
+void timedMovement();
 
 void movement();
 

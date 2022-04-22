@@ -1,5 +1,6 @@
 release/character.o
 release/enemy.o
+release/game.o
 release/main.o
 release/main_menu.o
 release/mainwindow.o

@@ -4,6 +4,23 @@
 #include <QGraphicsPixmapItem>
 #include <QApplication>
 
+projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, int col, int row, QVector<QVector<QVector<int>>> &chrloc) {
+    damage = dmg;
+    this->cool_down = cool_down;
+    this->proj_speed = proj_speed;
+    this->Shooter = Shooter;
+    this->direction = direction;
+    this->map=&map;
+    this->charLoc=&charLoc;
+    this->col=col;
+    this->row=row;
+    QPixmap g("projectile.png");
+       g=g.scaledToWidth(50);
+       g=g.scaledToHeight(50);
+       setPixmap(g);
+       setPos(50+50*col,50+50*row);
+}
+
 bool projectile::Location_Check(QVector<QVector<QVector<character*>>> &charLoc) // got it, this func is used to check if projectile reached the exact location for player/enemy to reduce health
 {
     character* nullifier = NULL;
@@ -52,6 +69,12 @@ void projectile:: Pain(character* target)
     return;
 }
 
+void projectile::timedMovement()
+{
+    QTimer timer(this);
+    connect(&timer,SIGNAL(timeout()),this,SLOT(movement()));
+    timer.start(proj_speed*1000);
+}
 
 void projectile::movement() //make this a function that moves periodically and is called in the character class
 {
@@ -82,17 +105,4 @@ void projectile::movement() //make this a function that moves periodically and i
 
 
 
-projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc) {
-    damage = dmg;
-    this->cool_down = cool_down;
-    this->proj_speed = proj_speed;
-    this->Shooter = Shooter;
-    this->direction = direction;
-    this->map=&map;
-    this->charLoc=&charLoc;
-    QPixmap g("projectile.png");
-       g=g.scaledToWidth(50);
-       g=g.scaledToHeight(50);
-       setPixmap(g);
-       setPos(50+50*col,50+50*row);
-}
+

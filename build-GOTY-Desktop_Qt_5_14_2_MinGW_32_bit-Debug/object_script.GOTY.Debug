@@ -1,5 +1,6 @@
 debug/character.o
 debug/enemy.o
+debug/game.o
 debug/main.o
 debug/main_menu.o
 debug/mainwindow.o
