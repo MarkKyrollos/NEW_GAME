@@ -10,7 +10,7 @@
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 class projectile: public QObject {
-public:
+public: 
     int damage;
     float cool_down;
     float proj_speed;
@@ -20,11 +20,11 @@ public:
     direct direction; //this is a variable of type enum I'm thinking of making, hmu if you want an explanation
     QVector<QVector<int>>* map;
     QVector<QVector<QVector<character*>>> *charLoc;
-
+    
 projectile(int dmg, float cool_down, float proj_speed, int Shooter, direct direction, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc);
 
 bool Location_Check(QVector<QVector<QVector<character*>>> &charLoc);
-
+    
 /**
  * @param &character target
  */
@@ -32,7 +32,7 @@ bool Location_Check(QVector<QVector<QVector<character*>>> &charLoc);
 void Pain (character* target);
 
 void movement();
-
+    
 /**
  * @param dmg
  * @param range

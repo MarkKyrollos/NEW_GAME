@@ -78,5 +78,16 @@ void player::keyPressEvent(QKeyEvent* event)
         moveRight(*charLocPoint);
         In_Enemy(*charLocPoint);
     }
+    if(event->key()==Qt::Key_Space)
+    {
+            projectile* proj;
+            proj=new projectile();
+            while(!proj->Location_Check(map, charLoc)) // projectile keeps moving until it reaches the location of a character/wall
+            {
+                proj->movement(); //needs to be done with QTimer
+                proj->setPos(50+50*proj->col,50+50*proj->row);
+            }
+            delete proj;
+    }
     setPos(50+50*col,50+50*row);
 }

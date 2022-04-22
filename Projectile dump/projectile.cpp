@@ -6,10 +6,9 @@
 
 bool projectile::Location_Check(QVector<QVector<QVector<character*>>> &charLoc) // got it, this func is used to check if projectile reached the exact location for player/enemy to reduce health
 {
-    character* nullifier = NULL;
-    if (Shooter == 1)
+        if (Shooter == 1)
         {
-            if (charLoc[row][col][1] != nullifier)
+            if (charLoc[row][col][1] != NULL)
             {
                 character* target;
                 target = charLoc[row][col][1];
@@ -21,7 +20,7 @@ bool projectile::Location_Check(QVector<QVector<QVector<character*>>> &charLoc) 
 
         if (Shooter == 2)
         {
-            if (charLoc[row][col][0] != nullifier)
+            if (charLoc[row][col][0] != NULL)
             {
                 character* target;
                 target = charLoc[row][col][0];
@@ -90,9 +89,10 @@ projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, 
     this->direction = direction;
     this->map=&map;
     this->charLoc=&charLoc;
-    QPixmap g("projectile.png");
+    /*QPixmap g("Tweety.png");
        g=g.scaledToWidth(50);
        g=g.scaledToHeight(50);
        setPixmap(g);
        setPos(50+50*col,50+50*row);
+       */
 }

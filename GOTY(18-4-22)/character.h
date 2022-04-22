@@ -7,7 +7,7 @@
 #include <QApplication>
 #include <QEvent>
 #include <QKeyEvent>
-/*#include "projectile.h"*/
+#include "projectile.h"
 
 enum direct {up=1, right, left, down};
 

@@ -16,7 +16,11 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
 
 void character::shoot() // automatic shooting
 {
-
+    if (Player)
+    {
+        projectile* proj;
+        proj=new projectile()
+    }
 }
 
 void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc)
