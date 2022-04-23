@@ -1,0 +1,13 @@
+black outer wall
+grey player
+paige room 1
+orange room 2
+brown room 3
+blue minor
+red major
+pink hazard/deathzone(etc lava 1 hit kill)
+-1 hazard
+-2 door
+-3 passable wall for major
+-4 static wall
+00 or above normal
