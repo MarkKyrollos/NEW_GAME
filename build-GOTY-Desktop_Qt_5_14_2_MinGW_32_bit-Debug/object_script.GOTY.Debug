@@ -10,3 +10,4 @@ debug/qrc_res.o
 debug/moc_character.o
 debug/moc_main_menu.o
 debug/moc_mainwindow.o
+debug/moc_projectile.o

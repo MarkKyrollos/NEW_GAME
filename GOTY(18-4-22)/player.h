@@ -14,11 +14,11 @@
 #include <QEvent>
 #include <QKeyEvent>
 
-class player: public character, public QGraphicsPixmapItem {
+class player: public character{
 public: 
     bool Invincible;
     QString Name;
-player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence);
+player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence, QGraphicsScene &scene);
     
 void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);
 

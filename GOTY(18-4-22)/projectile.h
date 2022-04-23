@@ -12,6 +12,7 @@
 #include <QApplication>
 
 class projectile: public QObject, public QGraphicsPixmapItem {
+    Q_OBJECT
 public:
     int damage;
     float cool_down;
@@ -22,6 +23,7 @@ public:
     int direction; //this is a variable of type enum I'm thinking of making, hmu if you want an explanation
     QVector<QVector<int>>* map;
     QVector<QVector<bool>>* presence;
+    QTimer T;
 
 projectile(int dmg, float cool_down, float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int col, int row, QVector<QVector<bool>> &presence);
 
@@ -35,7 +37,9 @@ bool Location_Check(QVector<QVector<bool>> &presence);
 
 void timedMovement();
 
-void movement();
+public slots:
+
+    void movement();
 
 /**
  * @param dmg

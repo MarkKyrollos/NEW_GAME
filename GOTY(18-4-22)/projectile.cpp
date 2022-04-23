@@ -14,6 +14,10 @@ projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, 
     this->presence=&presence;
     this->col=col;
     this->row=row;
+    QTimer* T=new QTimer(this);
+    connect(T,SIGNAL(timeout()),this,SLOT(movement()));
+    T->start(250);
+    //T->singleShot(1000, this , SLOT(movement()));
     QPixmap g("projectile.png");
        g=g.scaledToWidth(50);
        g=g.scaledToHeight(50);
@@ -64,35 +68,39 @@ bool projectile::Location_Check(QVector<QVector<bool>> &presence) // got it, thi
 */
 void projectile::timedMovement()
 {
-    QTimer timer(this);
-    connect(&timer,SIGNAL(timeout()),this,SLOT(movement()));
-    timer.start(proj_speed*1000);
+      T.start(1000); // i set the projectile to move at a speed each .5 seconds, void singleShot(int msec, const projectile *receiver, const char *member)
 }
 
 void projectile::movement() //make this a function that moves periodically and is called in the character class
 {
     QVector<QVector<bool>>* presencePoint=presence;
-    switch (direction)
+    if (direction==1)
     {
-    case 1:
         row--;
         Location_Check(*presencePoint);
-        break;
-
-    case 4:
-        row++;
-        Location_Check(*presencePoint);
-        break;
-
-    case 2:
+        setPos(50+50*col,50+50*row);
+    }
+    else if (direction==2)
+    {
         col++;
         Location_Check(*presencePoint);
-        break;
-
-    case 3:
+        setPos(50+50*col,50+50*row);
+    }
+    else if (direction==3)
+    {
         col--;
         Location_Check(*presencePoint);
-        break;
+        setPos(50+50*col,50+50*row);
+    }
+    else if (direction==4)
+    {
+        row++;
+        Location_Check(*presencePoint);
+        setPos(50+50*col,50+50*row);
+    }
+    if (Location_Check(*presence))
+    {
+        delete this;
     }
 }
 

@@ -44,7 +44,7 @@ bool player::Trigger_Invincibility() {
  * @param Rowd
  * @param Cold
  */
-player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence): character(helth, mvmt_spd,live, Facer, Rowd, Cold, map, charLoc, Playa, presence) {
+player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence, QGraphicsScene &scene): character(helth, mvmt_spd,live, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene) {
 
     Name=NAME;
     this->Invincible=Invincible;

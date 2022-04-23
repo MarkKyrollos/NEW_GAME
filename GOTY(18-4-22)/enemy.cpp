@@ -30,7 +30,7 @@ int enemy::Find_Player(player p1) {
  * @param Rowd
  * @param Cold
  */
-enemy::enemy(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, bool los, bool playerFound, QVector<QVector<bool>> &presence): character(helth, mvmt_spd,live, Facer, Rowd, Cold, map, charLoc, Playa, presence) {
+enemy::enemy(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, bool los, bool playerFound, QVector<QVector<bool>> &presence, QGraphicsScene &scene): character(helth, mvmt_spd,live, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene) {
 
     Line_of_sight=los;
     Found_player=playerFound;

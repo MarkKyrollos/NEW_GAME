@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
             }
         }
         player* P1;
-        P1=new player(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true, presence);
+        P1=new player(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true, presence, scene);
         charLoc[1][1][0]=P1;
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");

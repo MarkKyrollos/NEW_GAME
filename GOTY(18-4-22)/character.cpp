@@ -1,5 +1,5 @@
 #include "character.h"
-character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence)
+character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene)
 {
     health=helth;
     /*name=NAME;*/
@@ -11,6 +11,7 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     this->map =&map;
     this->charLoc= &charLoc;
     this->presence=&presence;
+    this->scene=&scene;
     Player=Playa;
 }
 
@@ -26,13 +27,22 @@ void character::shoot() // automatic shooting
         int shooter=1;
         int direct=4;
         proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col,row+1,*presence);
+        scene->addItem(proj);
+        /*
         QTimer T;
+
         while(!proj->Location_Check(*presence))
         {
             T.singleShot(500, this , SLOT(proj.movement())); // i set the projectile to move at a speed each .5 seconds, void singleShot(int msec, const projectile *receiver, const char *member)
         }
+        */
+        /*
+        if (proj->Location_Check(*presence))
+        {
+            delete proj;
+        }
+        */
 
-        delete proj;
     }
     else
     {
