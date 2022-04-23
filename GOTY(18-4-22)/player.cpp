@@ -44,7 +44,7 @@ bool player::Trigger_Invincibility() {
  * @param Rowd
  * @param Cold
  */
-player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live): character(helth, mvmt_spd,live, Facer, Rowd, Cold, map, charLoc, Playa) {
+player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence): character(helth, mvmt_spd,live, Facer, Rowd, Cold, map, charLoc, Playa, presence) {
 
     Name=NAME;
     this->Invincible=Invincible;
@@ -59,37 +59,30 @@ player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, in
 void player::keyPressEvent(QKeyEvent* event)
 {
     QVector<QVector<QVector<character*>>>* charLocPoint=charLoc;
+    QVector<QVector<bool>>* presencePoint=presence;
     if(event->key()==Qt::Key_Up)
     {
-        moveUp(*charLocPoint);
+        moveUp(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Down)
     {
-        moveDown(*charLocPoint);
+        moveDown(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Left)
     {
-        moveLeft(*charLocPoint);
+        moveLeft(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
     }
     else if(event->key()==Qt::Key_Right)
     {
-        moveRight(*charLocPoint);
+        moveRight(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
     }
     if(event->key()==Qt::Key_Space)
     {
-            projectile* proj;
-            proj=new projectile;
-            while(!proj->Location_Check(map, charLoc)) // projectile keeps moving until it reaches the location of a character/wall
-            {
-
-                proj->timedMovement(); //needs to be done with QTimer
-                proj->setPos(50+50*proj->col,50+50*proj->row);
-            }
-            delete proj;
+            shoot();
     }
     setPos(50+50*col,50+50*row);
 }

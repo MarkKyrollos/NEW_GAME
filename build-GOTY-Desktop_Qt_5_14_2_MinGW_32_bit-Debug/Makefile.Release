@@ -264,6 +264,9 @@ release/moc_character.cpp: ../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../GOTY(18-4-22)/projectile.h \
 		../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
@@ -693,6 +696,9 @@ release/character.o: ../GOTY(18-4-22)/character.cpp ../GOTY(18-4-22)/character.h
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\character.o ..\GOTY(18-4-22)\character.cpp
@@ -818,6 +824,9 @@ release/enemy.o: ../GOTY(18-4-22)/enemy.cpp ../GOTY(18-4-22)/enemy.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		../GOTY(18-4-22)/player.h
@@ -1449,6 +1458,9 @@ release/player.o: ../GOTY(18-4-22)/player.cpp ../GOTY(18-4-22)/player.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\player.o ..\GOTY(18-4-22)\player.cpp
@@ -1574,6 +1586,9 @@ release/projectile.o: ../GOTY(18-4-22)/projectile.cpp ../GOTY(18-4-22)/projectil
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\projectile.o ..\GOTY(18-4-22)\projectile.cpp
 

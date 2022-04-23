@@ -15,7 +15,7 @@ public:
     bool Found_player;
     int player_location[2];//location of player so enemy can track player_location[0]=row player_location[1]=col
 
-enemy(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, bool los, bool playerFound);
+enemy(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, bool los, bool playerFound, QVector<QVector<bool>> &presence);
 int Find_Player(player p1);
     
 /**

@@ -18,7 +18,7 @@ class player: public character, public QGraphicsPixmapItem {
 public: 
     bool Invincible;
     QString Name;
-player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live);
+player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence);
     
 void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);
 

@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
     //w.show();
     //creating the view obj
     QVector<QVector<QVector<character*>>> charLoc(10, QVector<QVector<character*>>(10,QVector<character*>(2,NULL)));
+    QVector<QVector<bool>> presence(10,QVector<bool>(10,false));
     QVector<QVector<int>> map(10);
         QGraphicsView view;
         QBrush Brush(Qt::black);
@@ -48,7 +49,7 @@ int main(int argc, char *argv[])
             }
         }
         player* P1;
-        P1=new player(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true);
+        P1=new player(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true, presence);
         charLoc[1][1][0]=P1;
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");
