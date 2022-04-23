@@ -10,6 +10,7 @@
 #include <QEvent>
 #include <QKeyEvent>
 
+
 /**
  * player implementation
  */
@@ -48,10 +49,10 @@ player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, in
 
     Name=NAME;
     this->Invincible=Invincible;
-    QPixmap p("pacman.png");
-       p=p.scaledToWidth(50);
-       p=p.scaledToHeight(50);
-       setPixmap(p);
+    QPixmap pac("pacman.png");
+       pac=pac.scaledToWidth(50);
+       pac=pac.scaledToHeight(50);
+       setPixmap(pac);
        setPos(50+50*col,50+50*row);
 
 }
@@ -62,27 +63,55 @@ void player::keyPressEvent(QKeyEvent* event)
     QVector<QVector<bool>>* presencePoint=presence;
     if(event->key()==Qt::Key_Up)
     {
+        /*
+        setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(50+col,50+row);
+        setRotation(270);
+        */
         moveUp(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+
     }
     else if(event->key()==Qt::Key_Down)
     {
+        /*
+        setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(50+col,50+row);
+        setRotation(90);
+        */
         moveDown(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+
     }
     else if(event->key()==Qt::Key_Left)
     {
+        /*
+        setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(50+col,50+row);
+
+        setRotation(180);
+        */
         moveLeft(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+
     }
     else if(event->key()==Qt::Key_Right)
     {
+        /*
+        setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(50+col,50+row);
+        setRotation(0);
+        */
         moveRight(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+
     }
     if(event->key()==Qt::Key_Space)
     {
             shoot();
     }
+
     setPos(50+50*col,50+50*row);
+
+    //FIXME: this entire rotation system
 }

@@ -25,7 +25,7 @@ public:
     QVector<QVector<bool>>* presence;
     QTimer T;
 
-projectile(int dmg, float cool_down, float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int col, int row, QVector<QVector<bool>> &presence);
+projectile(int dmg, float cool_down, float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence);
 
 bool Location_Check(QVector<QVector<bool>> &presence);
 
@@ -35,7 +35,6 @@ bool Location_Check(QVector<QVector<bool>> &presence);
 
 //void Pain (character* target);
 
-void timedMovement();
 
 public slots:
 

@@ -20,18 +20,21 @@ void character::shoot() // automatic shooting
 {
     if (Player)
     {
+        character* nullifier = NULL;
         projectile* proj;
         int dmg=25;
         float cool_down=0.5;
         float proj_speed=0.5;
         int shooter=1;
         int direct=4;
+        int coltar=col;
+        int rowtar=row;
         if (face==up)
         {
             direct=1;
             if (map->at(row-1)[col]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col,row-1,*presence);
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,--rowtar,*presence);
                 scene->addItem(proj);
             }
 
@@ -41,7 +44,7 @@ void character::shoot() // automatic shooting
             direct=2;
             if (map->at(row)[col+1]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col+1,row,*presence);
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
                 scene->addItem(proj);
             }
 
@@ -51,7 +54,7 @@ void character::shoot() // automatic shooting
             direct=3;
             if (map->at(row)[col-1]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col-1,row,*presence);
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
                 scene->addItem(proj);
             }
 
@@ -61,12 +64,19 @@ void character::shoot() // automatic shooting
             direct=4;
             if (map->at(row+1)[col]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col,row+1,*presence);
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
                 scene->addItem(proj);
             }
 
         }
-
+        if (charLoc->at(rowtar)[coltar][1]!= nullifier)
+        {
+            charLoc->at(rowtar)[coltar][1]->health-=dmg;
+            if(charLoc->at(rowtar)[coltar][1]->health<=0)
+            {
+                delete charLoc->at(rowtar)[coltar][1];
+            }
+        }
 
 
         /*
@@ -87,20 +97,63 @@ void character::shoot() // automatic shooting
     }
     else
     {
+        character* nullifier = NULL;
         projectile* proj;
         int dmg=10;
         float cool_down=0.5;
         float proj_speed=0.5;
         int shooter=2;
-        int direct=face;
-        proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col,row,*presence);
-        QTimer T;
-        while(!proj->Location_Check(*presence))
+        int direct=4;
+        int coltar=col;
+        int rowtar=row;
+        if (face==up)
         {
-            T.singleShot(500, this , SLOT(proj.movement())); // i set the projectile to move at a speed each .5 seconds, void singleShot(int msec, const projectile *receiver, const char *member)
-        }
+            direct=1;
+            if (map->at(row-1)[col]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,--rowtar,*presence);
+                scene->addItem(proj);
+            }
 
-        delete proj;
+        }
+        else if (face==right)
+        {
+            direct=2;
+            if (map->at(row)[col+1]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
+                scene->addItem(proj);
+            }
+
+        }
+        else if (face==left)
+        {
+            direct=3;
+            if (map->at(row)[col-1]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
+                scene->addItem(proj);
+            }
+
+        }
+        else if(face==down)
+        {
+            direct=4;
+            if (map->at(row+1)[col]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
+                scene->addItem(proj);
+            }
+
+        }
+        if (charLoc->at(rowtar)[coltar][0]!= nullifier)
+        {
+            charLoc->at(rowtar)[coltar][0]->health-=dmg;
+            if(charLoc->at(rowtar)[coltar][0]->health<=0)
+            {
+                delete charLoc->at(rowtar)[coltar][0];
+            }
+        }
     }
 }
 
@@ -132,6 +185,7 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
         }
         presence[row][col]=true;
     }
+
     face=up;
 }
 

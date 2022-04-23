@@ -4,7 +4,7 @@
 #include <QGraphicsPixmapItem>
 #include <QApplication>
 
-projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int col, int row, QVector<QVector<bool>> &presence) {
+projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence) {
     damage = dmg;
     this->cool_down = cool_down;
     this->proj_speed = proj_speed;
@@ -66,10 +66,6 @@ bool projectile::Location_Check(QVector<QVector<bool>> &presence) // got it, thi
     return;
 }
 */
-void projectile::timedMovement()
-{
-      T.start(1000); // i set the projectile to move at a speed each .5 seconds, void singleShot(int msec, const projectile *receiver, const char *member)
-}
 
 void projectile::movement() //make this a function that moves periodically and is called in the character class
 {

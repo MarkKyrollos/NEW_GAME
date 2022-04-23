@@ -973,7 +973,10 @@ release/enemy.o: ../GOTY(18-4-22)/enemy.cpp ../GOTY(18-4-22)/enemy.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
-		../GOTY(18-4-22)/player.h
+		../GOTY(18-4-22)/player.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPainter \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainter.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\enemy.o ..\GOTY(18-4-22)\enemy.cpp
 
 release/game.o: ../GOTY(18-4-22)/game.cpp ../GOTY(18-4-22)/game.h
@@ -1141,6 +1144,7 @@ release/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QObject \
 		../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPainter \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QVector
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\GOTY(18-4-22)\main.cpp
 
@@ -1609,7 +1613,10 @@ release/player.o: ../GOTY(18-4-22)/player.cpp ../GOTY(18-4-22)/player.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../GOTY(18-4-22)/projectile.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPainter \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainter.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\player.o ..\GOTY(18-4-22)\player.cpp
 
 release/projectile.o: ../GOTY(18-4-22)/projectile.cpp ../GOTY(18-4-22)/projectile.h \

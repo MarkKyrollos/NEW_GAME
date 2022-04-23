@@ -13,11 +13,13 @@
 #include <QApplication>
 #include <QEvent>
 #include <QKeyEvent>
+#include <QPainter>
 
 class player: public character{
 public: 
     bool Invincible;
     QString Name;
+    QPixmap pac;
 player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence, QGraphicsScene &scene);
     
 void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);
