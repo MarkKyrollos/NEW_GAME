@@ -63,13 +63,14 @@ void player::keyPressEvent(QKeyEvent* event)
     QVector<QVector<bool>>* presencePoint=presence;
     if(event->key()==Qt::Key_Up)
     {
-        /*
-        setPos(50+50*col,50+50*row);
-        setTransformOriginPoint(50+col,50+row);
-        setRotation(270);
-        */
+
+        QPointF point(50+50*col,50+50*row);
         moveUp(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+        setTransformOriginPoint(row+24, col+24);
+        setPos(50+50*col,50+50*row);
+        QLineF ln(point,pos());
+        setRotation(-1*ln.angle());
 
     }
     else if(event->key()==Qt::Key_Down)
@@ -79,8 +80,15 @@ void player::keyPressEvent(QKeyEvent* event)
         setTransformOriginPoint(50+col,50+row);
         setRotation(90);
         */
+        QPointF point(50+50*col,50+50*row);
         moveDown(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+        setTransformOriginPoint(row+24, col+24);
+        setPos(50+50*col,50+50*row);
+
+        QLineF ln(point,pos());
+        setRotation(-1*ln.angle());
+
 
     }
     else if(event->key()==Qt::Key_Left)
@@ -91,8 +99,13 @@ void player::keyPressEvent(QKeyEvent* event)
 
         setRotation(180);
         */
+        QPointF point(50+50*col,50+50*row);
         moveLeft(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+        setTransformOriginPoint(row+24, col+24);
+        setPos(50+50*col,50+50*row);
+        QLineF ln(point,pos());
+        setRotation(-1*ln.angle());
 
     }
     else if(event->key()==Qt::Key_Right)
@@ -102,8 +115,13 @@ void player::keyPressEvent(QKeyEvent* event)
         setTransformOriginPoint(50+col,50+row);
         setRotation(0);
         */
+        QPointF point(50+50*col,50+50*row);
         moveRight(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
+        setTransformOriginPoint(row+24, col+24);
+        setPos(50+50*col,50+50*row);
+        QLineF ln(point,pos());
+        setRotation(-1*ln.angle());
 
     }
     if(event->key()==Qt::Key_Space)

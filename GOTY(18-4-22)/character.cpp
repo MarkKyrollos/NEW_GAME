@@ -13,6 +13,7 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     this->presence=&presence;
     this->scene=&scene;
     Player=Playa;
+
 }
 
 
