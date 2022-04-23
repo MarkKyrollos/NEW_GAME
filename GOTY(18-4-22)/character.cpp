@@ -162,7 +162,7 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
 {
     character* nullifier=NULL;
 
-    if (map->at(row-1).at(col)>=0)
+    if (map->at(row-1).at(col)>=0||map->at(row-1).at(col)==-1)
     {
         if (Player)
         {
@@ -195,7 +195,7 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
 void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
 {
     character* nullifier=NULL;
-    if (map->at(row+1).at(col)>=0)
+    if (map->at(row+1).at(col)>=0||map->at(row+1).at(col)==-1)
     {
         if (Player)
         {
@@ -226,7 +226,7 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
 void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col+1)>=0)
+    if (map->at(row).at(col+1)>=0||map->at(row).at(col+1)==-1)
     {
         if (Player)
         {
@@ -256,7 +256,7 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
 void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
 {
     character* nullifier=NULL;
-    if (map->at(row).at(col-1)>=0)
+    if (map->at(row).at(col-1)>=0||map->at(row).at(col-1)==-1)
     {
         if (Player)
         {
