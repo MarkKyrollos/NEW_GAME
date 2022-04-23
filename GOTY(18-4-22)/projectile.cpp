@@ -78,30 +78,28 @@ void projectile::movement() //make this a function that moves periodically and i
     {
         row--;
         Location_Check(*presencePoint);
-        setPos(50+50*col,50+50*row);
     }
     else if (direction==2)
     {
         col++;
         Location_Check(*presencePoint);
-        setPos(50+50*col,50+50*row);
     }
     else if (direction==3)
     {
         col--;
         Location_Check(*presencePoint);
-        setPos(50+50*col,50+50*row);
     }
     else if (direction==4)
     {
         row++;
         Location_Check(*presencePoint);
-        setPos(50+50*col,50+50*row);
+
     }
     if (Location_Check(*presence))
     {
         delete this;
     }
+    setPos(50+50*col,50+50*row);
 }
 
 

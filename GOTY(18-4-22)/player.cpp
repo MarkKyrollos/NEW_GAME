@@ -48,7 +48,7 @@ player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, in
 
     Name=NAME;
     this->Invincible=Invincible;
-    QPixmap p("Tweety.png");
+    QPixmap p("pacman.png");
        p=p.scaledToWidth(50);
        p=p.scaledToHeight(50);
        setPixmap(p);

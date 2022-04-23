@@ -26,8 +26,49 @@ void character::shoot() // automatic shooting
         float proj_speed=0.5;
         int shooter=1;
         int direct=4;
-        proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col,row+1,*presence);
-        scene->addItem(proj);
+        if (face==up)
+        {
+            direct=1;
+            if (map->at(row-1)[col]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col,row-1,*presence);
+                scene->addItem(proj);
+            }
+
+        }
+        else if (face==right)
+        {
+            direct=2;
+            if (map->at(row)[col+1]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col+1,row,*presence);
+                scene->addItem(proj);
+            }
+
+        }
+        else if (face==left)
+        {
+            direct=3;
+            if (map->at(row)[col-1]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col-1,row,*presence);
+                scene->addItem(proj);
+            }
+
+        }
+        else if(face==down)
+        {
+            direct=4;
+            if (map->at(row+1)[col]>=0)
+            {
+                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,col,row+1,*presence);
+                scene->addItem(proj);
+            }
+
+        }
+
+
+
         /*
         QTimer T;
 
