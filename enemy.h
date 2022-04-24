@@ -1,0 +1,21 @@
+#ifndef _ENEMY_H
+#define _ENEMY_H
+
+#include "character.h"
+#include "player.h"
+#include<QTimer>
+
+class enemy: public character
+{
+Q_OBJECT
+public:
+
+static int killCount;
+static void incrementKillCount();
+enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene):character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene) {}
+~enemy();
+void Detection_Shooting(player p);
+
+};
+
+#endif //_ENEMY_H
