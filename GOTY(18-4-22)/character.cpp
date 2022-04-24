@@ -8,11 +8,21 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     face=Facer;
     row=Rowd;
     col=Cold;
+    Player=Playa;
     this->map =&map;
     this->charLoc= &charLoc;
+    if (Player)
+    {
+        charLoc[row][col][0]=this;
+
+    }
+    else
+    {
+        charLoc[row][col][1]=this;
+    }
     this->presence=&presence;
     this->scene=&scene;
-    Player=Playa;
+    presence[row][col]=true;
 
 }
 

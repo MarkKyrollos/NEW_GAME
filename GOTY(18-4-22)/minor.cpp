@@ -9,5 +9,5 @@ minor::minor(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int 
        setPos(50+50*col,50+50*row); // modify the 2 minor's position according to Mahmoud's map
        QTimer* T=new QTimer(this);
        connect(T,SIGNAL(timeout()),this,SLOT(shoot()));
-       T->start(mvmt_spd*1000);
+       T->start(1000);
 }

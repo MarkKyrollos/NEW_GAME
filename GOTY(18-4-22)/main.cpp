@@ -53,10 +53,9 @@ int main(int argc, char *argv[])
         }
         player* P1;
         P1=new player(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true, presence, scene);
-        minor* E1;
-        E1=new minor(100,0,true,up,5,6,map,charLoc,false,presence,scene);
-        minor* E2;
-        E2=new minor(100,0,true,up,5,9,map,charLoc,false,presence,scene);
+        minor* E1=new minor(100,0,true,down,5,5,map,charLoc,false,presence,scene);
+        minor* E2=new minor(100,0,true,down,5,8,map,charLoc,false,presence,scene);
+        minor* E3=new minor(100,0,true,down,1,9,map,charLoc,false,presence,scene);
         charLoc[1][1][0]=P1;
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");
@@ -111,6 +110,9 @@ int main(int argc, char *argv[])
             }
         }
         scene.addItem(P1);
+        scene.addItem(E1);
+        scene.addItem(E2);
+        scene.addItem(E3);
         P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable);
         P1->setFocus();
         P1->grabKeyboard();

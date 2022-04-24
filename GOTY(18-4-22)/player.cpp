@@ -69,13 +69,13 @@ void player::keyPressEvent(QKeyEvent* event)
     if(event->key()==Qt::Key_Up)
     {
 
-        QPointF point(50+50*col,50+50*row);
+        //QPointF point(50+50*col,50+50*row);
         moveUp(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
 
         setPos(50+50*col,50+50*row);
         setTransformOriginPoint(row+25, col+25);
-        QLineF ln(point,pos());
+        //QLineF ln(point,pos());
         //setRotation(-1*ln.angle());
 
     }
@@ -86,13 +86,13 @@ void player::keyPressEvent(QKeyEvent* event)
         setTransformOriginPoint(50+col,50+row);
         setRotation(90);
         */
-        QPointF point(50+50*col,50+50*row);
+        //QPointF point(50+50*col,50+50*row);
         moveDown(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
 
         setPos(50+50*col,50+50*row);
         setTransformOriginPoint(row+25, col+25);
-        QLineF ln(point,pos());
+        //QLineF ln(point,pos());
         //setRotation(-1*ln.angle());
 
 
@@ -105,13 +105,13 @@ void player::keyPressEvent(QKeyEvent* event)
 
         setRotation(180);
         */
-        QPointF point(50+50*col,50+50*row);
+        //QPointF point(50+50*col,50+50*row);
         moveLeft(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
 
         setPos(50+50*col,50+50*row);
         setTransformOriginPoint(row+25, col+25);
-        QLineF ln(point,pos());
+        //QLineF ln(point,pos());
         //setRotation(-1*ln.angle());
 
     }
@@ -122,13 +122,13 @@ void player::keyPressEvent(QKeyEvent* event)
         setTransformOriginPoint(50+col,50+row);
         setRotation(0);
         */
-        QPointF point(50+50*col,50+50*row);
+        //QPointF point(50+50*col,50+50*row);
         moveRight(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
 
         setPos(50+50*col,50+50*row);
         setTransformOriginPoint(row+25, col+25);
-        QLineF ln(point,pos());
+        //QLineF ln(point,pos());
         //setRotation(-1*ln.angle());
 
     }

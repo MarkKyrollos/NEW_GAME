@@ -45,7 +45,7 @@ bool projectile::Location_Check(QVector<QVector<bool>> &presence) // got it, thi
         }
 
 
-        if (map->at(row).at(col) < 0) // if projectile hits a wall
+        if (map->at(row).at(col) < 0 && map->at(row).at(col) != -1) // if projectile hits a wall
         {
             return true;
         }
