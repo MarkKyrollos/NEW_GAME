@@ -173,8 +173,12 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
             }
             row--;
             charLoc[row][col][0]=this;
+            if (map->at(row).at(col)==-1)
+            {
+                health=0;
+            }
         }
-        else
+        else if (charLoc[row-1][col][1] == nullifier)
         {
             charLoc[row][col][1] = nullifier;
             if (charLoc[row][col][0]==nullifier)
@@ -188,6 +192,10 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
     }
 
     face=up;
+    if (health==0)
+    {
+        delete this;
+    }
 }
 
 
@@ -206,8 +214,12 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
             }
             row++;
             charLoc[row][col][0]=this;
+            if (map->at(row).at(col)==-1)
+            {
+                health=0;
+            }
         }
-        else
+        else if (charLoc[row+1][col][1] == nullifier)
         {
             charLoc[row][col][1] = nullifier;
             if (charLoc[row][col][0]==nullifier)
@@ -221,6 +233,10 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
 
     }
     face=down;
+    if (health==0)
+    {
+        delete this;
+    }
 }
 
 void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
@@ -237,8 +253,12 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
             }
             col++;
             charLoc[row][col][0]=this;
+            if (map->at(row).at(col)==-1)
+            {
+                health=0;
+            }
         }
-        else
+        else if (charLoc[row][col+1][1] == nullifier)
         {
             charLoc[row][col][1] = nullifier;
             if (charLoc[row][col][0]==nullifier)
@@ -251,6 +271,10 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
         presence[row][col]=true;
     }
     face=right;
+    if (health==0)
+    {
+        delete this;
+    }
 }
 
 void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
@@ -267,8 +291,12 @@ void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector
             }
             col--;
             charLoc[row][col][0]=this;
+            if (map->at(row).at(col)==-1)
+            {
+                health=0;
+            }
         }
-        else
+        else if (charLoc[row][col-1][1] == nullifier)
         {
             charLoc[row][col][1] = nullifier;
             if (charLoc[row][col][0]==nullifier)
@@ -281,6 +309,10 @@ void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector
         presence[row][col]=true;
     }
     face=left;
+    if (health==0)
+    {
+        delete this;
+    }
 }
 
 

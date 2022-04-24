@@ -36,7 +36,7 @@ public:
 
 
     character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene);
-
+public slots:
     void shoot(); // i set this shooting function to be a pure virtual one since player shots are manually done using spacebar while enemy shots are random
     void moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence);
     void moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence);

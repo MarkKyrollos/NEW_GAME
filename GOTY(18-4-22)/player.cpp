@@ -49,12 +49,17 @@ player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, in
 
     Name=NAME;
     this->Invincible=Invincible;
-    QPixmap pac("pacman.png");
+    QPixmap pac("player.png");
        pac=pac.scaledToWidth(50);
        pac=pac.scaledToHeight(50);
        setPixmap(pac);
        setPos(50+50*col,50+50*row);
 
+}
+
+player::~player()
+{
+    //TODO: Make something happen when the player dies
 }
 
 void player::keyPressEvent(QKeyEvent* event)
@@ -67,10 +72,11 @@ void player::keyPressEvent(QKeyEvent* event)
         QPointF point(50+50*col,50+50*row);
         moveUp(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
-        setTransformOriginPoint(row+24, col+24);
+
         setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(row+25, col+25);
         QLineF ln(point,pos());
-        setRotation(-1*ln.angle());
+        //setRotation(-1*ln.angle());
 
     }
     else if(event->key()==Qt::Key_Down)
@@ -83,11 +89,11 @@ void player::keyPressEvent(QKeyEvent* event)
         QPointF point(50+50*col,50+50*row);
         moveDown(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
-        setTransformOriginPoint(row+24, col+24);
-        setPos(50+50*col,50+50*row);
 
+        setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(row+25, col+25);
         QLineF ln(point,pos());
-        setRotation(-1*ln.angle());
+        //setRotation(-1*ln.angle());
 
 
     }
@@ -102,10 +108,11 @@ void player::keyPressEvent(QKeyEvent* event)
         QPointF point(50+50*col,50+50*row);
         moveLeft(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
-        setTransformOriginPoint(row+24, col+24);
+
         setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(row+25, col+25);
         QLineF ln(point,pos());
-        setRotation(-1*ln.angle());
+        //setRotation(-1*ln.angle());
 
     }
     else if(event->key()==Qt::Key_Right)
@@ -118,10 +125,11 @@ void player::keyPressEvent(QKeyEvent* event)
         QPointF point(50+50*col,50+50*row);
         moveRight(*charLocPoint, *presencePoint);
         In_Enemy(*charLocPoint);
-        setTransformOriginPoint(row+24, col+24);
+
         setPos(50+50*col,50+50*row);
+        setTransformOriginPoint(row+25, col+25);
         QLineF ln(point,pos());
-        setRotation(-1*ln.angle());
+        //setRotation(-1*ln.angle());
 
     }
     if(event->key()==Qt::Key_Space)

@@ -16,6 +16,8 @@ SOURCES += \
     main.cpp \
     main_menu.cpp \
     mainwindow.cpp \
+    major.cpp \
+    minor.cpp \
     player.cpp \
     projectile.cpp
 
@@ -25,6 +27,8 @@ HEADERS += \
     game.h \
     main_menu.h \
     mainwindow.h \
+    major.h \
+    minor.h \
     player.h \
     projectile.h
 

@@ -24,6 +24,7 @@ player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, 
     
 void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);
 
+~player();
 
     
 bool Trigger_Invincibility();
