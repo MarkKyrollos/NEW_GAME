@@ -25,7 +25,7 @@ private slots:
 
 private:
     Ui::main_menu *ui;
-    MainWindow main;
+    //MainWindow main;
     bool music_check=false;
 };
 

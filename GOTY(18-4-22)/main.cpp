@@ -29,12 +29,12 @@ int main(int argc, char *argv[])
     //The vector is in charge of collision detection
     QVector<QVector<bool>> presence(30,QVector<bool>(30,false)); //this one was entirely created because projectiles couldn't read charLoc, so we needed another way of determining if the projectile collided with something
     QVector<QVector<int>> map(30); //map vector
-        QGraphicsView view; //trying to port this from the lab led to the main menu breaking beyond repair, we were unaware this was a widget
+        //QGraphicsView view; //trying to port this from the lab led to the main menu breaking beyond repair, we were unaware this was a widget
         QBrush Brush(Qt::black); //brush for background (if you see the background for whatever reason)
         QGraphicsScene scene; //the scene where everything is displayed
-        view.setFixedSize(1500,1000); //changes size of window
-        view.setWindowTitle("Maze Game"); //renames the window
-        view.setBackgroundBrush(Brush); //sets the background color
+        //view.setFixedSize(1500,1000); //changes size of window
+        //view.setWindowTitle("Maze Game"); //renames the window
+        //view.setBackgroundBrush(Brush); //sets the background color
         QFile file("Board.txt"); //opens the board file to read from it
         file.open(QIODevice::ReadOnly);
         //connects file to stream
@@ -116,9 +116,10 @@ int main(int argc, char *argv[])
         P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable); //makes the focus on the character
         P1->setFocus();
         P1->grabKeyboard(); //brute forces the character into accepting keyboard input
-        view.setScene(&scene); //sets the scene in the Graphics View
-        view.show(); //displays the GraphicsView
-
+        //view.setScene(&scene); //sets the scene in the Graphics View
+        //view.show(); //displays the GraphicsView
+        MainWindow w(nullptr,&scene);
+        w.show();
     return a.exec();
 }
 

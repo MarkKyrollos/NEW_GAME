@@ -18,9 +18,9 @@ main_menu::~main_menu()
 void main_menu::on_start_clicked()
 {
     //main.setname(ui->name->text());
-    main.show();
+    //main.show();
     this->close();
-    main.play_sound(music_check);
+    //main.play_sound(music_check);
 
 }
 

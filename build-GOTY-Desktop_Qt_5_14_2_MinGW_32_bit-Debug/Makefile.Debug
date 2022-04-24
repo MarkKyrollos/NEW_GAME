@@ -555,12 +555,39 @@ debug/moc_main_menu.cpp: ../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
+		../GOTY(18-4-22)/main_menu.h \
+		ui_main_menu.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextcursor.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextformat.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		debug/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
 	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\main_menu.h -o debug\moc_main_menu.cpp
@@ -656,33 +683,36 @@ debug/moc_mainwindow.cpp: ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsize.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcolor.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgb.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qline.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtransform.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qimage.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfont.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
@@ -695,8 +725,35 @@ debug/moc_mainwindow.cpp: ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
+		../GOTY(18-4-22)/main_menu.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QDialog \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		../GOTY(18-4-22)/mainwindow.h \
+		ui_main_menu.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextcursor.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextformat.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		debug/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
 	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -1220,33 +1277,36 @@ debug/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsize.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcolor.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgb.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qline.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtransform.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qimage.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfont.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
@@ -1259,11 +1319,10 @@ debug/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
 		../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QDialog \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		ui_main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
@@ -1271,24 +1330,38 @@ debug/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextcursor.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextformat.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsView \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsview.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainter.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qscrollarea.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QBrush \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QFile \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTextStream \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
 		../GOTY(18-4-22)/player.h \
 		../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QObject \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
 		../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPainter \
@@ -1427,12 +1500,13 @@ debug/main_menu.o: ../GOTY(18-4-22)/main_menu.cpp ../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
 		ui_main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
@@ -1448,7 +1522,6 @@ debug/main_menu.o: ../GOTY(18-4-22)/main_menu.cpp ../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlineedit.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextcursor.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextformat.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
@@ -1552,33 +1625,36 @@ debug/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindow.
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsize.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcolor.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgb.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qline.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtransform.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qimage.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfont.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
@@ -1591,9 +1667,10 @@ debug/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindow.
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
-		ui_mainwindow.h \
+		../GOTY(18-4-22)/main_menu.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QDialog \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		ui_main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
@@ -1604,26 +1681,10 @@ debug/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindow.
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMenuBar \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmenu.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QStatusBar \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
-		C:/Qt/5.14.2/mingw73_32/include/QtMultimedia/QMediaPlaylist \
-		C:/Qt/5.14.2/mingw73_32/include/QtMultimedia/qmediaplaylist.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtMultimedia/qmediabindableinterface.h \
-		../GOTY(18-4-22)/main_menu.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QDialog \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
-		ui_main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLineEdit \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlineedit.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextcursor.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextformat.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
@@ -1632,7 +1693,24 @@ debug/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindow.
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
+		ui_mainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainter.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMenuBar \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmenubar.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmenu.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qaction.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QStatusBar \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qstatusbar.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtMultimedia/QMediaPlaylist \
+		C:/Qt/5.14.2/mingw73_32/include/QtMultimedia/qmediaplaylist.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtMultimedia/qmediabindableinterface.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\GOTY(18-4-22)\mainwindow.cpp
 
 debug/major.o: ../GOTY(18-4-22)/major.cpp ../GOTY(18-4-22)/major.h \

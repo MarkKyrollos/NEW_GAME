@@ -6,10 +6,11 @@
 #include "ui_main_menu.h"
 
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QWidget *parent, QGraphicsScene* scene)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    this->scene=scene;
     ui->setupUi(this);
     //to play music on a loop
 if(background_music==false){
@@ -21,8 +22,8 @@ if(background_music==false){
     connect(music_loop,SIGNAL(timeout()),this,SLOT(timefunction(music)));
       music_loop->start(50000);
 }
-
-
+ui->graphicsView->setScene(this->scene);
+ui->graphicsView->show();
 }
 //play music
 MainWindow::~MainWindow()
@@ -36,13 +37,7 @@ void MainWindow::timefunction(QMediaPlayer * music)
     music->play();
 
 }
-void MainWindow::keyPressEvent(QKeyEvent *event)
-{
-    if (event->key()==Qt::Key_Down)
-    {
-        ui->label->setText("down");
-    }
-}
+
 void MainWindow::play_sound(bool music){
     if(music==true){
         music_loop =new QTimer(this);
