@@ -254,7 +254,8 @@ Makefile: ../GOTY(18-4-22)/GOTY.pro C:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++/qm
 		C:/Qt/5.14.2/mingw73_32/lib/Qt5Core.prl \
 		C:/Qt/5.14.2/mingw73_32/lib/qtmain.prl \
 		C:/Qt/5.14.2/mingw73_32/mkspecs/features/build_pass.prf \
-		../GOTY(18-4-22)/res.qrc
+		../GOTY(18-4-22)/res.qrc \
+		../GOTY(18-4-22)/sound.qrc
 	$(QMAKE) -o Makefile ..\GOTY(18-4-22)\GOTY.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/5.14.2/mingw73_32/mkspecs/features/spec_pre.prf:
 C:/Qt/5.14.2/mingw73_32/mkspecs/qdevice.pri:
@@ -441,6 +442,7 @@ C:/Qt/5.14.2/mingw73_32/lib/Qt5Core.prl:
 C:/Qt/5.14.2/mingw73_32/lib/qtmain.prl:
 C:/Qt/5.14.2/mingw73_32/mkspecs/features/build_pass.prf:
 ../GOTY(18-4-22)/res.qrc:
+../GOTY(18-4-22)/sound.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\GOTY(18-4-22)\GOTY.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 
