@@ -1,19 +1,27 @@
 #include "enemy.h"
+#include "character.h"
+#include "player.h"
 
 
-bool enemy::is_Spotted()
+/* place this function in a do-while loop inside the main,
+ *IMPORTANT: and actually we need to place each of the three rooms in separate do-while in order to proceed sequentially in the program, and to call certain functions repetitively like this one below*/
+void enemy::Detection_Shooting(player p, enemy e)
 {
-
+    while(abs(e.row-p.row)<=2)
+    {
+        e.shoot();
+    }
 }
 
 
-int enemy::Find_Player()
+int enemy::killCount=0;
+
+enemy::~enemy()
 {
-    return 0;
+    incrementKillCount();
 }
 
-
-void enemy::enemy(int helth, float mvmt_spd, bool Playa, int Loc, int Facer, int Rowd, int Cold)
+void enemy::incrementKillCount()
 {
-
+    killCount++;
 }

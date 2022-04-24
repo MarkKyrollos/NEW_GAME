@@ -1,25 +1,21 @@
-
 #ifndef _ENEMY_H
 #define _ENEMY_H
 
 #include "character.h"
-#include "major.h"
-#include "character.h"
+#include "player.h"
+#include<QTimer>
 
-
-class enemy: public character {
+class enemy: public character
+{
+Q_OBJECT
 public:
-	
-    bool Line_of_sight;
-    bool Found_player;
-    int player_location;
-	
-bool is_Spotted();
-	
-int Find_Player();
-    
 
-enemy(int helth, float mvmt_spd, bool Playa, int Loc, int Facer, int Rowd, int Cold);
+static int killCount;
+static void incrementKillCount();
+enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene):character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene) {}
+~enemy();
+void Detection_Shooting(player p, enemy e);
+
 };
 
 #endif //_ENEMY_H
