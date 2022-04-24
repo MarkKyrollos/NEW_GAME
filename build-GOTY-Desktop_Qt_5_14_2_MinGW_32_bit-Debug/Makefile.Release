@@ -287,7 +287,7 @@ release/moc_character.cpp: ../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
-	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "D:/cs2/game project/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"D:/cs2/game project/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\character.h -o release\moc_character.cpp
+	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\character.h -o release\moc_character.cpp
 
 release/moc_enemy.cpp: ../GOTY(18-4-22)/enemy.h \
 		../GOTY(18-4-22)/character.h \
@@ -424,7 +424,7 @@ release/moc_enemy.cpp: ../GOTY(18-4-22)/enemy.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtextoption.h \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
-	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "D:/cs2/game project/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"D:/cs2/game project/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\enemy.h -o release\moc_enemy.cpp
+	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\enemy.h -o release\moc_enemy.cpp
 
 release/moc_main_menu.cpp: ../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QDialog \
@@ -571,6 +571,11 @@ release/moc_main_menu.cpp: ../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGridLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -582,15 +587,13 @@ release/moc_main_menu.cpp: ../GOTY(18-4-22)/main_menu.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QRadioButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qradiobutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
-	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "D:/cs2/game project/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"D:/cs2/game project/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\main_menu.h -o release\moc_main_menu.cpp
+	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\main_menu.h -o release\moc_main_menu.cpp
 
 release/moc_mainwindow.cpp: ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtMultimedia/QMediaPlayer \
@@ -737,6 +740,11 @@ release/moc_mainwindow.cpp: ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGridLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -748,15 +756,13 @@ release/moc_mainwindow.cpp: ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QRadioButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qradiobutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
-	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "D:/cs2/game project/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"D:/cs2/game project/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_projectile.cpp: ../GOTY(18-4-22)/projectile.h \
 		../GOTY(18-4-22)/character.h \
@@ -889,7 +895,7 @@ release/moc_projectile.cpp: ../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		release/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
-	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "D:/cs2/game project/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"D:/cs2/game project/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\projectile.h -o release\moc_projectile.cpp
+	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\projectile.h -o release\moc_projectile.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1330,6 +1336,11 @@ release/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGridLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -1341,11 +1352,9 @@ release/main.o: ../GOTY(18-4-22)/main.cpp ../GOTY(18-4-22)/mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QRadioButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qradiobutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsView \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsview.h \
@@ -1515,6 +1524,11 @@ release/main_menu.o: ../GOTY(18-4-22)/main_menu.cpp ../GOTY(18-4-22)/main_menu.h
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGridLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -1526,11 +1540,9 @@ release/main_menu.o: ../GOTY(18-4-22)/main_menu.cpp ../GOTY(18-4-22)/main_menu.h
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QRadioButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qradiobutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main_menu.o ..\GOTY(18-4-22)\main_menu.cpp
 
@@ -1678,6 +1690,11 @@ release/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindo
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGridLayout \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -1689,11 +1706,9 @@ release/mainwindow.o: ../GOTY(18-4-22)/mainwindow.cpp ../GOTY(18-4-22)/mainwindo
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QPushButton \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QRadioButton \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qradiobutton.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QVBoxLayout \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayout.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgridlayout.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QWidget \
 		ui_mainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsView \

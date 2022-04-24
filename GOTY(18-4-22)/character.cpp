@@ -1,5 +1,5 @@
 #include "character.h"
-character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene)
+character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major)
 {
     //assigning data to attributes
     health=helth;
@@ -25,6 +25,7 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     this->presence=&presence;
     this->scene=&scene;
     presence[row][col]=true;
+    this->major=major;
 
 }
 
@@ -158,7 +159,23 @@ void character::shoot() // automatic shooting
 void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) //move up
 {
     character* nullifier=NULL;
-
+    if (major)
+    {
+        if (map->at(row-1).at(col)==-3)
+        {
+            if (charLoc[row-1][col][1] == nullifier) //enemy movement
+            {
+                charLoc[row][col][1] = nullifier;
+                if (charLoc[row][col][0]==nullifier)
+                {
+                    presence[row][col]=false;
+                }
+                row--;
+                charLoc[row][col][1]=this;
+            }
+            presence[row][col]=true;
+        }
+    }
     if (map->at(row-1).at(col)>=0||map->at(row-1).at(col)==-1) //checks if player is moving in lava or regular walkways
     {
         if (Player)
@@ -200,6 +217,23 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
 void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) //move down
 {
     character* nullifier=NULL;
+    if (major)
+    {
+        if (map->at(row+1).at(col)==-3)
+        {
+            if (charLoc[row+1][col][1] == nullifier) //enemy movement
+            {
+                charLoc[row][col][1] = nullifier;
+                if (charLoc[row][col][0]==nullifier)
+                {
+                    presence[row][col]=false;
+                }
+                row++;
+                charLoc[row][col][1]=this;
+            }
+            presence[row][col]=true;
+        }
+    }
     if (map->at(row+1).at(col)>=0||map->at(row+1).at(col)==-1)
     {
         if (Player)
@@ -239,6 +273,23 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
 void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) //move right
 {
     character* nullifier=NULL;
+    if (major)
+    {
+        if (map->at(row+1).at(col)==-3)
+        {
+            if (charLoc[row][col+1][1] == nullifier) //enemy movement
+            {
+                charLoc[row][col][1] = nullifier;
+                if (charLoc[row][col][0]==nullifier)
+                {
+                    presence[row][col]=false;
+                }
+                col++;
+                charLoc[row][col][1]=this;
+            }
+            presence[row][col]=true;
+        }
+    }
     if (map->at(row).at(col+1)>=0||map->at(row).at(col+1)==-1)
     {
         if (Player)
@@ -277,6 +328,23 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
 void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) // move left
 {
     character* nullifier=NULL;
+    if (major)
+    {
+        if (map->at(row+1).at(col)==-3)
+        {
+            if (charLoc[row][col-1][1] == nullifier) //enemy movement
+            {
+                charLoc[row][col][1] = nullifier;
+                if (charLoc[row][col][0]==nullifier)
+                {
+                    presence[row][col]=false;
+                }
+                col--;
+                charLoc[row][col][1]=this;
+            }
+            presence[row][col]=true;
+        }
+    }
     if (map->at(row).at(col-1)>=0||map->at(row).at(col-1)==-1)
     {
         if (Player)

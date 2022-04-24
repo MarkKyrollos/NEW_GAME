@@ -2,41 +2,75 @@
 #include "character.h"
 #include "player.h"
 
-int enemy::killCount=0;
 /* place this function in a do-while loop inside the main,
  *IMPORTANT: and actually we need to place each of the three rooms in separate do-while in order to proceed sequentially in the program, and to call certain functions repetitively like this one below*/
-void enemy::Detection_Shooting(player p, enemy e) //(Magd Comment: We can have the enemy objects call these functions in main themselves so we can just pass the player to it without the enemy)
+void enemy::Detection_Shooting(player p)
 {
-    while(abs(e.row-p.row)<=2)
+    while(abs(row-p.row)<=2)
     {
-        e.shoot();
+        shoot();
     }
 }
 
 
-//
+int enemy::killCount=0;
 
-enemy::enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene):character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene)
-{
-    /* Base constructor already does all of this
-    health=helth;
-    movement_speed=mvmt_spd;
-    is_alive=alive;
-    face=Facer;
-    row=Rowd;
-    col=Cold;
-    this->map =&map;
-    this->charLoc= &charLoc;
-    this->presence=&presence;
-    this->scene=&scene;
-    Player=Playa;
-    */
-}
 enemy::~enemy()
 {
     incrementKillCount();
 }
+
 void enemy::incrementKillCount()
 {
     killCount++;
+}
+void enemy::random_movement()
+{
+    QVector<QVector<QVector<character*>>>* charLocPoint=charLoc;
+    QVector<QVector<bool>>* presencePoint=presence;
+
+
+
+
+    // generating random numbers from 0-3, 0 1 2 3 correspond to up down left right respectively
+    if(rand()%4==0) // moving UPWARDS
+    { // not gonna use the our defined moveUp etc since major enemies CAN go through walls, redefined new movements
+        moveUp(*charLocPoint,*presencePoint);
+        setPos(50+50*col,50+50*row);
+        shoot();
+    }
+
+
+     else if(rand()%4==1) //moving downwards
+     {
+
+        moveDown(*charLocPoint,*presencePoint);
+        setPos(50+50*col,50+50*row);
+        shoot();
+     }
+
+
+     else if(rand()%4==2) // moving left
+     {
+        moveLeft(*charLocPoint,*presencePoint);
+        setPos(50+50*col,50+50*row);
+        shoot();
+     }
+
+     else if(rand()%4==3) // moving right
+     {
+        moveRight(*charLocPoint,*presencePoint);
+        setPos(50+50*col,50+50*row);
+        shoot();
+     }
+
+
+
+}
+
+enemy::enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major):character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene, major)
+{
+    QTimer* T=new QTimer(this);
+    connect(T,SIGNAL(timeout()),this,SLOT(random_movement()));
+    T->start(mvmt_spd*1000);
 }
