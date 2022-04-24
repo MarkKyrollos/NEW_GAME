@@ -4,7 +4,7 @@
 #include "character.h"
 #include "player.h"
 #include<QTimer>
-
+//
 class enemy: public character
 {
 Q_OBJECT

@@ -60,7 +60,7 @@ void character::shoot() // automatic shooting
                 scene->addItem(proj);
             }
 
-        }
+        }//
         else if (face==left) //shoot left
         {
             direct=3;

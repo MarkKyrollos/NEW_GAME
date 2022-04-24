@@ -23,7 +23,7 @@ void main_menu::on_start_clicked()
     //main.play_sound(music_check);
 
 }
-
+//
 
 void main_menu::on_exit_clicked()//exit
 {

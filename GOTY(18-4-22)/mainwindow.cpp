@@ -29,7 +29,7 @@ ui->graphicsView->show();
 MainWindow::~MainWindow()
 {
     delete ui;
-}
+}//
 
 void MainWindow::timefunction(QMediaPlayer * music)
 {

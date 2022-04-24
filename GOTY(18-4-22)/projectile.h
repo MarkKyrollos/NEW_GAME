@@ -10,7 +10,7 @@
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <QApplication>
-
+//
 class projectile: public QObject, public QGraphicsPixmapItem {
     Q_OBJECT
 public:

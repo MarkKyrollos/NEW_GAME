@@ -24,7 +24,7 @@ void player::In_Enemy(QVector<QVector<QVector<character*>>> &charLoc) {
     if (charLoc[row][col][1] != nullifier)
     {
         health-=10;
-    }
+    }//
 }
 
 

@@ -8,7 +8,7 @@
 #include <QApplication>
 #include <QEvent>
 #include <QKeyEvent>
-
+//
 class minor: public enemy
 {
 

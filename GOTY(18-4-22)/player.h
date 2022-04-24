@@ -14,7 +14,7 @@
 #include <QEvent>
 #include <QKeyEvent>
 #include <QPainter>
-
+//
 class player: public character{
 public: 
     QString Name;

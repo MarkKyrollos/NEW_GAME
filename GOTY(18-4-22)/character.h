@@ -12,7 +12,7 @@
 #include "projectile.h"
 
 enum direct {up=1, right, left, down};
-
+//
 class character : public QObject, public QGraphicsPixmapItem //, public QGraphicsPixmapItem (include this class in inherited classes like player and enemy since each one would have its own jpeg)
 {
     Q_OBJECT

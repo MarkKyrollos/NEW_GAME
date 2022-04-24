@@ -23,7 +23,7 @@ major::major(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int 
        this->presence=&presence;
        this->scene()=&scene;
        Player=Playa;
-       */
+       *///
 }
 
 

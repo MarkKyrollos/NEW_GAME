@@ -18,7 +18,7 @@ void minor::random_movement()
 
     while(health>=0)
     {
-
+//
     srand(time(NULL));
 
 

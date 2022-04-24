@@ -14,7 +14,7 @@ void enemy::Detection_Shooting(player p, enemy e) //(Magd Comment: We can have t
 }
 
 
-
+//
 
 enemy::enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene):character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene)
 {

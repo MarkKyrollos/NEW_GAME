@@ -11,7 +11,7 @@
 #include <time.h>
 #include<cstdlib>
 
-
+//
 
 class major: public enemy
 {

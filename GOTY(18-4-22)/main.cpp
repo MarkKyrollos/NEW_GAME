@@ -56,7 +56,12 @@ int main(int argc, char *argv[])
         P1=new player(100,5,true,up,1,1,"Placeholder",map, charLoc,true, presence, scene);
         minor* E1=new minor(100,0,true,down,5,5,map,charLoc,false,presence,scene); //creates an enemy
         minor* E2=new minor(100,0,true,down,5,8,map,charLoc,false,presence,scene);
-        minor* E3=new minor(100,0,true,down,1,9,map,charLoc,false,presence,scene);
+        minor* E3=new minor(100,0,true,down,17,3,map,charLoc,false,presence,scene);
+        minor* E4=new minor(100,0,true,down,1,26,map,charLoc,false,presence,scene);
+        major* E5=new major(100,0,true,down,24,3,map,charLoc,false,presence,scene);
+        major* E6=new major(100,0,true,down,6,17,map,charLoc,false,presence,scene);
+        major* E7=new major(100,0,true,down,13,20,map,charLoc,false,presence,scene);
+        major* E8=new major(100,0,true,down,20,8,map,charLoc,false,presence,scene);
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");
 
@@ -91,7 +96,7 @@ int main(int argc, char *argv[])
                 else if(map[row][col]==-1)
                 {
                     boardItems[row][col].setPixmap(hole_image);
-                }
+                }//
                 else if(map[row][col]==-3){
 
                     boardItems[row][col].setPixmap(  enemy_wall);}
@@ -113,6 +118,11 @@ int main(int argc, char *argv[])
         scene.addItem(E1);
         scene.addItem(E2);
         scene.addItem(E3);
+        scene.addItem(E4);
+        scene.addItem(E5);
+        scene.addItem(E6);
+        scene.addItem(E7);
+        scene.addItem(E8);
         P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable); //makes the focus on the character
         P1->setFocus();
         P1->grabKeyboard(); //brute forces the character into accepting keyboard input
