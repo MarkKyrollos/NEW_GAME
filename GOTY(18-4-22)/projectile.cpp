@@ -4,9 +4,8 @@
 #include <QGraphicsPixmapItem>
 #include <QApplication>
 
-projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence) {
-    damage = dmg;
-    this->cool_down = cool_down;
+projectile::projectile(float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence) {
+    //assigns the data
     this->proj_speed = proj_speed;
     this->Shooter = Shooter;
     this->direction = direction;
@@ -15,9 +14,9 @@ projectile::projectile(int dmg, float cool_down, float proj_speed, int Shooter, 
     this->col=col;
     this->row=row;
     QTimer* T=new QTimer(this);
-    connect(T,SIGNAL(timeout()),this,SLOT(movement()));
-    T->start(250);
-    //T->singleShot(1000, this , SLOT(movement()));
+    connect(T,SIGNAL(timeout()),this,SLOT(movement()));//timer makes projectile move
+    T->start(proj_speed*1000);
+    //sets projectile image
     QPixmap g("projectile.png");
        g=g.scaledToWidth(50);
        g=g.scaledToHeight(50);
@@ -94,7 +93,7 @@ void projectile::movement() //make this a function that moves periodically and i
     {
         delete this;
     }
-    setPos(50+50*col,50+50*row);
+    setPos(50+50*col,50+50*row); //places projectile image in its new location
 }
 
 

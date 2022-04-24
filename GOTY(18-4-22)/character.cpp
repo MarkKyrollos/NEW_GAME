@@ -1,6 +1,7 @@
 #include "character.h"
 character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene)
 {
+    //assigning data to attributes
     health=helth;
     /*name=NAME;*/
     movement_speed=mvmt_spd;
@@ -11,6 +12,7 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     Player=Playa;
     this->map =&map;
     this->charLoc= &charLoc;
+    //places location in charLoc depending on whether or not its a player
     if (Player)
     {
         charLoc[row][col][0]=this;
@@ -29,90 +31,74 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
 
 void character::shoot() // automatic shooting
 {
-    if (Player)
+    if (Player) //checks who is shooting
     {
-        character* nullifier = NULL;
-        projectile* proj;
-        int dmg=25;
-        float cool_down=0.5;
-        float proj_speed=0.5;
-        int shooter=1;
-        int direct=4;
-        int coltar=col;
-        int rowtar=row;
-        if (face==up)
+        character* nullifier = NULL; //You'll see this a lot because NULL on its own is read as type int
+        projectile* proj; //projectile pointer
+        int dmg=25; //damage
+        float proj_speed=0.25; //projectile speed
+        int shooter=1; //determines if shooter is player or enemy, 1 is player, 2 is enemy
+        int direct=4; //determines direction, 1 is up, 2 is right, 3 is left, 4 is down
+        int coltar=col; //column of projectile
+        int rowtar=row; //row of projectile
+        if (face==up) //shoot up
         {
             direct=1;
             if (map->at(row-1)[col]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,--rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,*presence); //it wouldn't construct unless we did the terribleness above
                 scene->addItem(proj);
             }
 
         }
-        else if (face==right)
+        else if (face==right) //shoot right
         {
             direct=2;
             if (map->at(row)[col+1]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
                 scene->addItem(proj);
             }
 
         }
-        else if (face==left)
+        else if (face==left) //shoot left
         {
             direct=3;
             if (map->at(row)[col-1]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
                 scene->addItem(proj);
             }
 
         }
-        else if(face==down)
+        else if(face==down) //shoot down
         {
             direct=4;
             if (map->at(row+1)[col]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
                 scene->addItem(proj);
             }
 
         }
-        if (charLoc->at(rowtar)[coltar][1]!= nullifier)
+        if (charLoc->at(rowtar)[coltar][1]!= nullifier) //checks if enemy is hit and deals damage
         {
-            charLoc->at(rowtar)[coltar][1]->health-=dmg;
-            if(charLoc->at(rowtar)[coltar][1]->health<=0)
+            charLoc->at(rowtar)[coltar][1]->health-=dmg; //deducts health
+            if(charLoc->at(rowtar)[coltar][1]->health<=0) //kills enemy;
             {
                 delete charLoc->at(rowtar)[coltar][1];
             }
-            delete proj;
+            delete proj; //deletes projectile on enemy contact
         }
 
 
-        /*
-        QTimer T;
-
-        while(!proj->Location_Check(*presence))
-        {
-            T.singleShot(500, this , SLOT(proj.movement())); // i set the projectile to move at a speed each .5 seconds, void singleShot(int msec, const projectile *receiver, const char *member)
-        }
-        */
-        /*
-        if (proj->Location_Check(*presence))
-        {
-            delete proj;
-        }
-        */
 
     }
     else
     {
         character* nullifier = NULL;
         projectile* proj;
-        int dmg=10;
-        float cool_down=0.5;
+        int dmg=10; //less damage than player
         float proj_speed=0.5;
         int shooter=2;
         int direct=4;
@@ -123,7 +109,7 @@ void character::shoot() // automatic shooting
             direct=1;
             if (map->at(row-1)[col]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,--rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,*presence);
                 scene->addItem(proj);
             }
 
@@ -133,7 +119,7 @@ void character::shoot() // automatic shooting
             direct=2;
             if (map->at(row)[col+1]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
                 scene->addItem(proj);
             }
 
@@ -143,7 +129,7 @@ void character::shoot() // automatic shooting
             direct=3;
             if (map->at(row)[col-1]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
                 scene->addItem(proj);
             }
 
@@ -153,7 +139,7 @@ void character::shoot() // automatic shooting
             direct=4;
             if (map->at(row+1)[col]>=0)
             {
-                proj=new projectile(dmg,cool_down,proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
                 scene->addItem(proj);
             }
 
@@ -161,7 +147,7 @@ void character::shoot() // automatic shooting
         if (charLoc->at(rowtar)[coltar][0]!= nullifier)
         {
             charLoc->at(rowtar)[coltar][0]->health-=dmg;
-            if(charLoc->at(rowtar)[coltar][0]->health<=0)
+            if(charLoc->at(rowtar)[coltar][0]->health<=0) //kills player if health reaches 0
             {
                 delete charLoc->at(rowtar)[coltar][0];
             }
@@ -169,27 +155,27 @@ void character::shoot() // automatic shooting
     }
 }
 
-void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
+void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) //move up
 {
     character* nullifier=NULL;
 
-    if (map->at(row-1).at(col)>=0||map->at(row-1).at(col)==-1)
+    if (map->at(row-1).at(col)>=0||map->at(row-1).at(col)==-1) //checks if player is moving in lava or regular walkways
     {
         if (Player)
         {
-            charLoc[row][col][0] = nullifier;
-            if (charLoc[row][col][1]==nullifier)
+            charLoc[row][col][0] = nullifier; //makes previous location null
+            if (charLoc[row][col][1]==nullifier) //checks if enemy is in that location
             {
-                presence[row][col]=false;
+                presence[row][col]=false; //removes presence if no enemy is present
             }
-            row--;
-            charLoc[row][col][0]=this;
-            if (map->at(row).at(col)==-1)
+            row--; //changes row/column
+            charLoc[row][col][0]=this; //moves player to new location
+            if (map->at(row).at(col)==-1) //kills player if they step in lava
             {
                 health=0;
             }
         }
-        else if (charLoc[row-1][col][1] == nullifier)
+        else if (charLoc[row-1][col][1] == nullifier) //enemy movement
         {
             charLoc[row][col][1] = nullifier;
             if (charLoc[row][col][0]==nullifier)
@@ -202,8 +188,8 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
         presence[row][col]=true;
     }
 
-    face=up;
-    if (health==0)
+    face=up; //changes direction character is facing
+    if (health==0) //just a secondary check to kill off a character in case they survive a lethal attack
     {
         delete this;
     }
@@ -211,7 +197,7 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
 
 
 
-void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
+void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) //move down
 {
     character* nullifier=NULL;
     if (map->at(row+1).at(col)>=0||map->at(row+1).at(col)==-1)
@@ -250,7 +236,7 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
     }
 }
 
-void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
+void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) //move right
 {
     character* nullifier=NULL;
     if (map->at(row).at(col+1)>=0||map->at(row).at(col+1)==-1)
@@ -288,7 +274,7 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
     }
 }
 
-void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence)
+void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) // move left
 {
     character* nullifier=NULL;
     if (map->at(row).at(col-1)>=0||map->at(row).at(col-1)==-1)

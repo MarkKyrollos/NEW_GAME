@@ -25,20 +25,21 @@ int main(int argc, char *argv[])
    // main_menu w;
     //w.show();
     //creating the view obj
-    QVector<QVector<QVector<character*>>> charLoc(30, QVector<QVector<character*>>(30,QVector<character*>(2,NULL)));
-    QVector<QVector<bool>> presence(30,QVector<bool>(30,false));
-    QVector<QVector<int>> map(30);
-        QGraphicsView view;
-        QBrush Brush(Qt::black);
-        QGraphicsScene scene;
-        view.setFixedSize(1500,1000);
-        view.setWindowTitle("Maze Game");
-        view.setBackgroundBrush(Brush);
-        QFile file("Board.txt");
+    QVector<QVector<QVector<character*>>> charLoc(30, QVector<QVector<character*>>(30,QVector<character*>(2,NULL))); //A 3D vector that stores character addresses, the third dimension is to allow both player and enemy to be in the same space
+    //The vector is in charge of collision detection
+    QVector<QVector<bool>> presence(30,QVector<bool>(30,false)); //this one was entirely created because projectiles couldn't read charLoc, so we needed another way of determining if the projectile collided with something
+    QVector<QVector<int>> map(30); //map vector
+        QGraphicsView view; //trying to port this from the lab led to the main menu breaking beyond repair, we were unaware this was a widget
+        QBrush Brush(Qt::black); //brush for background (if you see the background for whatever reason)
+        QGraphicsScene scene; //the scene where everything is displayed
+        view.setFixedSize(1500,1000); //changes size of window
+        view.setWindowTitle("Maze Game"); //renames the window
+        view.setBackgroundBrush(Brush); //sets the background color
+        QFile file("Board.txt"); //opens the board file to read from it
         file.open(QIODevice::ReadOnly);
         //connects file to stream
         QTextStream stream(&file);
-        //create a 10x10 map
+        //create a 30x30 map
         QString temp;
         for (int i=0; i<30; i++)
         {
@@ -51,12 +52,11 @@ int main(int argc, char *argv[])
                 map[i][j]=temp.toInt();
             }
         }
-        player* P1;
-        P1=new player(100,5,true,up,1,1,"Placeholder",false,map, charLoc,true, presence, scene);
-        minor* E1=new minor(100,0,true,down,5,5,map,charLoc,false,presence,scene);
+        player* P1; //creates a player
+        P1=new player(100,5,true,up,1,1,"Placeholder",map, charLoc,true, presence, scene);
+        minor* E1=new minor(100,0,true,down,5,5,map,charLoc,false,presence,scene); //creates an enemy
         minor* E2=new minor(100,0,true,down,5,8,map,charLoc,false,presence,scene);
         minor* E3=new minor(100,0,true,down,1,9,map,charLoc,false,presence,scene);
-        charLoc[1][1][0]=P1;
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");
 
@@ -109,15 +109,15 @@ int main(int argc, char *argv[])
                 scene.addItem(&boardItems[row][col]);
             }
         }
-        scene.addItem(P1);
+        scene.addItem(P1);//adds elements to the scene
         scene.addItem(E1);
         scene.addItem(E2);
         scene.addItem(E3);
-        P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable);
+        P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable); //makes the focus on the character
         P1->setFocus();
-        P1->grabKeyboard();
-        view.setScene(&scene);
-        view.show();
+        P1->grabKeyboard(); //brute forces the character into accepting keyboard input
+        view.setScene(&scene); //sets the scene in the Graphics View
+        view.show(); //displays the GraphicsView
 
     return a.exec();
 }

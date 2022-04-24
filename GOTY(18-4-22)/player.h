@@ -17,19 +17,17 @@
 
 class player: public character{
 public: 
-    bool Invincible;
     QString Name;
     QPixmap pac;
-player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, bool Invincible, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence, QGraphicsScene &scene);
+player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence, QGraphicsScene &scene); //constructor
     
-void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);
+void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);//checks if player is in an enemy to deal damage
 
 ~player();
 
     
-bool Trigger_Invincibility();
 public slots:
-    void keyPressEvent(QKeyEvent* event);
+    void keyPressEvent(QKeyEvent* event); //handles key presses
 /**
  * @param helth
  * @param mvmt_spd
