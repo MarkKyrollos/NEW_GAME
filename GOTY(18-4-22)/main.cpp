@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
             }
         }
         player* P1; //creates a player
+<<<<<<< Updated upstream
         P1=new player(100,5,true,up,1,1,"Placeholder",map, charLoc,true, presence, scene, false);
         minor* E1=new minor(100,3,true,down,5,5,map,charLoc,false,presence,scene, false); //creates an enemy
         minor* E2=new minor(100,3,true,down,5,8,map,charLoc,false,presence,scene, false);
@@ -63,6 +64,17 @@ int main(int argc, char *argv[])
         major* E6=new major(100,2,true,down,6,17,map,charLoc,false,presence,scene, true);
         major* E7=new major(100,2,true,down,13,20,map,charLoc,false,presence,scene, true);
         major* E8=new major(100,2,true,down,20,8,map,charLoc,false,presence,scene, true);
+=======
+        P1=new player(100,5,true,up,1,1,"Placeholder",map, charLoc,true, presence, scene);
+        minor* E1=new minor(100,0,true,down,5,5,map,charLoc,false,presence,scene); //creates an enemy
+        minor* E2=new minor(100,0,true,down,5,8,map,charLoc,false,presence,scene);
+        minor* E3=new minor(100,0,true,down,17,3,map,charLoc,false,presence,scene);
+        minor* E4=new minor(100,0,true,down,1,26,map,charLoc,false,presence,scene);
+        major* E5=new major(100,0,true,down,24,3,map,charLoc,false,presence,scene);
+        major* E6=new major(100,0,true,down,6,17,map,charLoc,false,presence,scene);
+        major* E7=new major(100,0,true,down,13,20,map,charLoc,false,presence,scene);
+        major* E8=new major(100,0,true,down,20,8,map,charLoc,false,presence,scene);
+>>>>>>> Stashed changes
         //start drawing on the map
         QPixmap grassImage("Grass(1).png");
 
