@@ -18,7 +18,8 @@ class major: public enemy
 public: 
 
 major(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major);
-
+public slots:
+void ran_movement();
 // major enemies also use Detection_Shooting function
 
 };

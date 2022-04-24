@@ -4,6 +4,7 @@
 //
 #include <QDialog>
 #include "mainwindow.h"
+#include <QtMultimedia>
 namespace Ui {
 class main_menu;
 }

@@ -15,7 +15,7 @@
 #include "major.h"
 #include "minor.h"
 #include <QVector>
-
+#include "doortimer.h"
 
 int main(int argc, char *argv[])
 {
@@ -53,6 +53,7 @@ int main(int argc, char *argv[])
                 map[i][j]=temp.toInt();
             }
         }
+
         player* P1; //creates a player
 
         P1=new player(100,5,true,up,1,1,"Placeholder",map, charLoc,true, presence, scene, false);
@@ -64,13 +65,13 @@ int main(int argc, char *argv[])
         major* E6=new major(100,2,true,down,6,17,map,charLoc,false,presence,scene, true);
         major* E7=new major(100,2,true,down,13,20,map,charLoc,false,presence,scene, true);
         major* E8=new major(100,2,true,down,20,8,map,charLoc,false,presence,scene, true);
-
+        //program will crash whe an enemy dies
         //start drawing on the map
-        QPixmap grassImage("Grass(1).png");
+        QPixmap grassImage("Netherrack.png");
 
         grassImage=grassImage.scaledToHeight(55);
         grassImage=grassImage.scaledToWidth(55);
-        QPixmap bricksImage("Bricks(1).png");
+        QPixmap bricksImage("soul_sand.png");
         bricksImage=bricksImage.scaledToHeight(50);
         bricksImage=bricksImage.scaledToWidth(50);
         QPixmap enemy_wall("enemy_wall.png");
@@ -131,8 +132,12 @@ int main(int argc, char *argv[])
         P1->grabKeyboard(); //brute forces the character into accepting keyboard input
         //view.setScene(&scene); //sets the scene in the Graphics View
         //view.show(); //displays the GraphicsView
+
+
         MainWindow w(nullptr,&scene);
         w.show();
+
+
     return a.exec();
 }
 

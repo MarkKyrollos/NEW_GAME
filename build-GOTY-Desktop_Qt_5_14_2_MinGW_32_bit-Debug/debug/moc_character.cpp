@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../GOTY(18-4-22)/character.h"
+#include "../../../halp/NEW_GAME-591728520f35a9cdcfc944a26dcbe03924378d8b/GOTY(18-4-22)/character.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QVector>

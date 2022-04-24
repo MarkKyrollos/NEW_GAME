@@ -33,14 +33,14 @@ public:
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
-    QRadioButton *radioButton;
-    QRadioButton *radioButton_2;
+    QRadioButton *on;
+    QRadioButton *off;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
     QLineEdit *name;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton;
-    QLineEdit *lineEdit;
+    QPushButton *registor;
+    QPushButton *login;
+    QLineEdit *pass;
     QLabel *label_2;
     QLabel *label_3;
 
@@ -48,7 +48,7 @@ public:
     {
         if (main_menu->objectName().isEmpty())
             main_menu->setObjectName(QString::fromUtf8("main_menu"));
-        main_menu->resize(1014, 448);
+        main_menu->resize(611, 448);
         verticalLayoutWidget = new QWidget(main_menu);
         verticalLayoutWidget->setObjectName(QString::fromUtf8("verticalLayoutWidget"));
         verticalLayoutWidget->setGeometry(QRect(430, 360, 171, 86));
@@ -67,10 +67,10 @@ public:
 
         god = new QLabel(main_menu);
         god->setObjectName(QString::fromUtf8("god"));
-        god->setGeometry(QRect(30, 10, 201, 131));
+        god->setGeometry(QRect(10, 180, 201, 131));
         verticalLayoutWidget_2 = new QWidget(main_menu);
         verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
-        verticalLayoutWidget_2->setGeometry(QRect(430, 290, 171, 71));
+        verticalLayoutWidget_2->setGeometry(QRect(430, 290, 171, 74));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -79,15 +79,15 @@ public:
 
         verticalLayout_2->addWidget(label);
 
-        radioButton = new QRadioButton(verticalLayoutWidget_2);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        on = new QRadioButton(verticalLayoutWidget_2);
+        on->setObjectName(QString::fromUtf8("on"));
 
-        verticalLayout_2->addWidget(radioButton);
+        verticalLayout_2->addWidget(on);
 
-        radioButton_2 = new QRadioButton(verticalLayoutWidget_2);
-        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+        off = new QRadioButton(verticalLayoutWidget_2);
+        off->setObjectName(QString::fromUtf8("off"));
 
-        verticalLayout_2->addWidget(radioButton_2);
+        verticalLayout_2->addWidget(off);
 
         gridLayoutWidget = new QWidget(main_menu);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
@@ -100,20 +100,20 @@ public:
 
         gridLayout->addWidget(name, 1, 0, 1, 1);
 
-        pushButton_2 = new QPushButton(gridLayoutWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        registor = new QPushButton(gridLayoutWidget);
+        registor->setObjectName(QString::fromUtf8("registor"));
 
-        gridLayout->addWidget(pushButton_2, 2, 1, 1, 1);
+        gridLayout->addWidget(registor, 2, 1, 1, 1);
 
-        pushButton = new QPushButton(gridLayoutWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        login = new QPushButton(gridLayoutWidget);
+        login->setObjectName(QString::fromUtf8("login"));
 
-        gridLayout->addWidget(pushButton, 2, 0, 1, 1);
+        gridLayout->addWidget(login, 2, 0, 1, 1);
 
-        lineEdit = new QLineEdit(gridLayoutWidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        pass = new QLineEdit(gridLayoutWidget);
+        pass->setObjectName(QString::fromUtf8("pass"));
 
-        gridLayout->addWidget(lineEdit, 1, 1, 1, 1);
+        gridLayout->addWidget(pass, 1, 1, 1, 1);
 
         label_2 = new QLabel(gridLayoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
@@ -136,12 +136,12 @@ public:
         main_menu->setWindowTitle(QCoreApplication::translate("main_menu", "Dialog", nullptr));
         start->setText(QCoreApplication::translate("main_menu", "start", nullptr));
         exit->setText(QCoreApplication::translate("main_menu", "exit", nullptr));
-        god->setText(QCoreApplication::translate("main_menu", "//", nullptr));
+        god->setText(QCoreApplication::translate("main_menu", "// escape from hell", nullptr));
         label->setText(QCoreApplication::translate("main_menu", "music", nullptr));
-        radioButton->setText(QCoreApplication::translate("main_menu", "on", nullptr));
-        radioButton_2->setText(QCoreApplication::translate("main_menu", "off", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("main_menu", "registor", nullptr));
-        pushButton->setText(QCoreApplication::translate("main_menu", "login", nullptr));
+        on->setText(QCoreApplication::translate("main_menu", "on", nullptr));
+        off->setText(QCoreApplication::translate("main_menu", "off", nullptr));
+        registor->setText(QCoreApplication::translate("main_menu", "registor", nullptr));
+        login->setText(QCoreApplication::translate("main_menu", "login", nullptr));
         label_2->setText(QCoreApplication::translate("main_menu", "username", nullptr));
         label_3->setText(QCoreApplication::translate("main_menu", "password", nullptr));
     } // retranslateUi

@@ -13,15 +13,8 @@ MainWindow::MainWindow(QWidget *parent, QGraphicsScene* scene)
     this->scene=scene;
     ui->setupUi(this);
     //to play music on a loop
-if(background_music==false){
-    music_loop =new QTimer(this);
+    openmenu();
 
-    QMediaPlayer * music = new QMediaPlayer();
-    music->setMedia(QUrl("qrc:/sounds/JOJO.mp3"));
-    music->play();
-    connect(music_loop,SIGNAL(timeout()),this,SLOT(timefunction(music)));
-      music_loop->start(50000);
-}
 ui->graphicsView->setScene(this->scene);
 ui->graphicsView->show();
 }
@@ -31,24 +24,11 @@ MainWindow::~MainWindow()
     delete ui;
 }//
 
-void MainWindow::timefunction(QMediaPlayer * music)
+void MainWindow::openmenu()
 {
-    music->setPosition(0);
-    music->play();
+    main_menu main_menu;
+    main_menu.setModal(true);
+    main_menu.exec();
 
 }
 
-void MainWindow::play_sound(bool music){
-    if(music==true){
-        music_loop =new QTimer(this);
-
-        QMediaPlayer * music = new QMediaPlayer();
-        music->setMedia(QUrl("qrc:/sounds/JOJO.mp3"));
-        music->play();
-        connect(music_loop,SIGNAL(timeout()),this,SLOT(timefunction(music)));
-          music_loop->start(50000);
-
-}
-
-
-}

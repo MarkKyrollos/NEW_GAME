@@ -18,6 +18,7 @@ int enemy::killCount=0;
 enemy::~enemy()
 {
     incrementKillCount();
+
 }
 
 void enemy::incrementKillCount()
@@ -36,8 +37,12 @@ void enemy::random_movement()
     if(rand()%4==0) // moving UPWARDS
     { // not gonna use the our defined moveUp etc since major enemies CAN go through walls, redefined new movements
         moveUp(*charLocPoint,*presencePoint);
-        setPos(50+50*col,50+50*row);
-        shoot();
+        if (health>0)
+        {
+            setPos(50+50*col,50+50*row);
+            shoot();
+        }
+
     }
 
 
@@ -45,23 +50,32 @@ void enemy::random_movement()
      {
 
         moveDown(*charLocPoint,*presencePoint);
-        setPos(50+50*col,50+50*row);
-        shoot();
+        if (health>0)
+        {
+            setPos(50+50*col,50+50*row);
+            shoot();
+        }
      }
 
 
      else if(rand()%4==2) // moving left
      {
         moveLeft(*charLocPoint,*presencePoint);
-        setPos(50+50*col,50+50*row);
-        shoot();
+        if (health>0)
+        {
+            setPos(50+50*col,50+50*row);
+            shoot();
+        }
      }
 
      else if(rand()%4==3) // moving right
      {
         moveRight(*charLocPoint,*presencePoint);
-        setPos(50+50*col,50+50*row);
-        shoot();
+        if (health>0)
+        {
+            setPos(50+50*col,50+50*row);
+            shoot();
+        }
      }
 
 
