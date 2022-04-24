@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1014</width>
+    <width>611</width>
     <height>448</height>
    </rect>
   </property>
@@ -42,14 +42,14 @@
   <widget class="QLabel" name="god">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>10</y>
+     <x>10</x>
+     <y>180</y>
      <width>201</width>
      <height>131</height>
     </rect>
    </property>
    <property name="text">
-    <string>//</string>
+    <string>// escape from hell</string>
    </property>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -58,7 +58,7 @@
      <x>430</x>
      <y>290</y>
      <width>171</width>
-     <height>71</height>
+     <height>74</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -70,14 +70,14 @@
      </widget>
     </item>
     <item>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="on">
       <property name="text">
        <string>on</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QRadioButton" name="radioButton_2">
+     <widget class="QRadioButton" name="off">
       <property name="text">
        <string>off</string>
       </property>
@@ -99,21 +99,21 @@
      <widget class="QLineEdit" name="name"/>
     </item>
     <item row="2" column="1">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="registor">
       <property name="text">
        <string>registor</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="login">
       <property name="text">
        <string>login</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="pass"/>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label_2">

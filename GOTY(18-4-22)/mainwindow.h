@@ -4,8 +4,8 @@
 #include <QTimer>
 #include<QGraphicsScene>
 #include <QMainWindow>
-#include "main_menu.h"
 #include "ui_main_menu.h"
+#include <QtMultimedia>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -18,7 +18,7 @@ public:
     MainWindow(QWidget *parent = nullptr, QGraphicsScene* scene = nullptr);
     ~MainWindow();
     void play_sound(bool music);
-    void timefunction(QMediaPlayer* music);
+    void openmenu();
     QGraphicsScene* scene;
 
 private:

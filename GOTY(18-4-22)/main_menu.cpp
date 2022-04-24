@@ -1,5 +1,6 @@
 #include "main_menu.h"
 #include "ui_main_menu.h"
+#include <QtMultimedia>
 
 
 
@@ -17,7 +18,15 @@ main_menu::~main_menu()
 
 void main_menu::on_start_clicked()
 {
-    //main.setname(ui->name->text());
+    if (ui->on->isChecked()){
+    QMediaPlaylist *background = new QMediaPlaylist();
+    background->addMedia(QUrl("qrc:/sounds/JOJO.mp3"));
+    background->setPlaybackMode(QMediaPlaylist::Loop);
+
+    QMediaPlayer *music = new QMediaPlayer();
+    music->setPlaylist(background);
+    music->play();
+}
     //main.show();
     this->close();
     //main.play_sound(music_check);
@@ -31,15 +40,3 @@ void main_menu::on_exit_clicked()//exit
 }
 
 
-void main_menu::on_music_switch_clicked()//this flips the switch on music
-{
-    if(bool music_check=false){
-        music_check=true;
-
-
-
-    }
-    else {
-        music_check=false;
-    }
-}

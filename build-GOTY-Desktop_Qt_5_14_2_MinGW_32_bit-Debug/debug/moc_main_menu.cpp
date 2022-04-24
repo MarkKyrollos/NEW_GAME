@@ -78,7 +78,6 @@ void main_menu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         switch (_id) {
         case 0: _t->on_start_clicked(); break;
         case 1: _t->on_exit_clicked(); break;
-        case 2: _t->on_music_switch_clicked(); break;
         default: ;
         }
     }

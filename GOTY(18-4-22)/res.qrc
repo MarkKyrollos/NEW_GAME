@@ -1,6 +1,4 @@
 <RCC>
-    <qresource prefix="/sounds">
-        <file>JOJO.mp3</file>
-    </qresource>
+    <qresource prefix="/sounds"/>
     <qresource prefix="/"/>
 </RCC>

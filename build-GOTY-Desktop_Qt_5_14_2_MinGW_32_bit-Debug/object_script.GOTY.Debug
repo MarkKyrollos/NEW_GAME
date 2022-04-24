@@ -9,6 +9,7 @@ debug/minor.o
 debug/player.o
 debug/projectile.o
 debug/qrc_res.o
+debug/qrc_sound.o
 debug/moc_character.o
 debug/moc_enemy.o
 debug/moc_main_menu.o
