@@ -87,6 +87,7 @@ void character::shoot() // automatic shooting
             {
                 delete charLoc->at(rowtar)[coltar][1];
             }
+            delete proj;
         }
 
 
