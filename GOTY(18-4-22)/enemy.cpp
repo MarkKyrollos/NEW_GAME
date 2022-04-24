@@ -9,7 +9,7 @@ void enemy::Detection_Shooting(player p, enemy e) //(Magd Comment: We can have t
 {
     while(abs(e.row-p.row)<=2)
     {
-        p.shoot();
+        e.shoot();
     }
 }
 

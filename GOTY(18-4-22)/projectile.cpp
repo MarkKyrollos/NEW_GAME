@@ -69,26 +69,25 @@ bool projectile::Location_Check(QVector<QVector<bool>> &presence) // got it, thi
 
 void projectile::movement() //make this a function that moves periodically and is called in the character class
 {
-    QVector<QVector<bool>>* presencePoint=presence;
     if (direction==1)
     {
         row--;
-        Location_Check(*presencePoint);
+        Location_Check(*presence);
     }
     else if (direction==2)
     {
         col++;
-        Location_Check(*presencePoint);
+        Location_Check(*presence);
     }
     else if (direction==3)
     {
         col--;
-        Location_Check(*presencePoint);
+        Location_Check(*presence);
     }
     else if (direction==4)
     {
         row++;
-        Location_Check(*presencePoint);
+        Location_Check(*presence);
 
     }
     if (Location_Check(*presence))

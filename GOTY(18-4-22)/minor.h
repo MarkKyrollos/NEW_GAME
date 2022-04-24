@@ -15,7 +15,8 @@ class minor: public enemy
 public: 
     
 minor(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene);
-
+public slots:
+    void random_movement();
 // minor enemies only inherit the Detection_Shooting function from enemy
 
 };
