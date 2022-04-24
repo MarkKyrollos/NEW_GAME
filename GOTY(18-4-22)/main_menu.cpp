@@ -20,7 +20,7 @@ void main_menu::on_start_clicked()
 {
     if (ui->on->isChecked()){
     QMediaPlaylist *background = new QMediaPlaylist();
-    background->addMedia(QUrl("qrc:/sounds/JOJO.mp3"));
+    background->addMedia(QUrl("qrc:/new/prefix1/JOJO.mp3"));
     background->setPlaybackMode(QMediaPlaylist::Loop);
 
     QMediaPlayer *music = new QMediaPlayer();
