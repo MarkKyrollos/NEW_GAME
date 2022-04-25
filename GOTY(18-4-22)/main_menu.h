@@ -17,12 +17,12 @@ public:
     explicit main_menu(QWidget *parent = nullptr);
     ~main_menu();
 
-private slots:
+public slots:
     void on_start_clicked();
 
     void on_exit_clicked();
 
-    void on_music_switch_clicked();
+    //void on_music_switch_clicked();
 
 private:
     Ui::main_menu *ui;

@@ -6,7 +6,7 @@
 #include "ui_main_menu.h"
 
 
-MainWindow::MainWindow(QWidget *parent, QGraphicsScene* scene)
+MainWindow::MainWindow(QWidget *parent, QGraphicsScene* scene,player *P1)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent, QGraphicsScene* scene)
 
 ui->graphicsView->setScene(this->scene);
 ui->graphicsView->show();
+ui->label->setText("<font color='green'>Health:"+ QString::number(P1->health)+"</font>");
 }
 //play music
 MainWindow::~MainWindow()

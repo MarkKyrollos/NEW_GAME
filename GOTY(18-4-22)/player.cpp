@@ -102,7 +102,7 @@ void player::keyPressEvent(QKeyEvent* event)
     }
     if(event->key()==Qt::Key_Space)
     {
-            shoot();
+            shoot(*charLoc);
     }
 
     setPos(50+50*col,50+50*row);

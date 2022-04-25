@@ -6,6 +6,8 @@
 #include <QMainWindow>
 #include "ui_main_menu.h"
 #include <QtMultimedia>
+#include "character.h"
+#include "player.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -15,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr, QGraphicsScene* scene = nullptr);
+    MainWindow(QWidget *parent = nullptr, QGraphicsScene* scene = nullptr,player *P1=nullptr);
     ~MainWindow();
     void play_sound(bool music);
     void openmenu();

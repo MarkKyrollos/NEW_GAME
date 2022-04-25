@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../halp/NEW_GAME-591728520f35a9cdcfc944a26dcbe03924378d8b/GOTY(18-4-22)/projectile.h"
+#include "../../GOTY(18-4-22)/projectile.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

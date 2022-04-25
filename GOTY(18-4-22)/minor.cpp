@@ -7,9 +7,7 @@ minor::minor(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int 
        minorE=minorE.scaledToHeight(50);
        setPixmap(minorE);
        setPos(50+50*col,50+50*row); // modify the 2 minor's position according to Mahmoud's map
-       QTimer* T=new QTimer(this);
-       connect(T,SIGNAL(timeout()),this,SLOT(shoot()));
-       T->start(1000);
+
 }
 void minor::random_movement()
 {
@@ -27,7 +25,7 @@ void minor::random_movement()
     { // not gonna use the our defined moveUp etc since major enemies CAN go through walls, redefined new movements
 
         face=up;
-        shoot();
+        shoot(*charLoc);
     }
 
 
@@ -47,7 +45,7 @@ void minor::random_movement()
                 presencePoint[row][col]=true;
                 face=down*/
         face=down;
-        shoot();
+        shoot(*charLoc);
     }
 
 
@@ -68,7 +66,7 @@ void minor::random_movement()
                 face=left;
                 */
         face=left;
-        shoot();
+        shoot(*charLoc);
     }
 
     else if(rand()%4==3) // moving right
@@ -88,7 +86,7 @@ void minor::random_movement()
                 face=right;
                 */
         face=right;
-        shoot();
+        shoot(*charLoc);
     }
 
 

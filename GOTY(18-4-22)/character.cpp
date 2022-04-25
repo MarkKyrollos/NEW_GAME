@@ -30,7 +30,7 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
 }
 
 
-void character::shoot() // automatic shooting
+void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automatic shooting
 {
     if (Player) //checks who is shooting
     {
@@ -82,12 +82,13 @@ void character::shoot() // automatic shooting
             }
 
         }
-        if (charLoc->at(rowtar)[coltar][1]!= nullifier) //checks if enemy is hit and deals damage
+        if (charLoc.at(rowtar)[coltar][1]!= nullifier) //checks if enemy is hit and deals damage
         {
-            charLoc->at(rowtar)[coltar][1]->health-=dmg; //deducts health
-            if(charLoc->at(rowtar)[coltar][1]->health<=0) //kills enemy;
+            charLoc.at(rowtar)[coltar][1]->health-=dmg; //deducts health
+            if(charLoc.at(rowtar)[coltar][1]->health<=0) //kills enemy;
             {
-                delete charLoc->at(rowtar)[coltar][1];
+                delete charLoc.at(rowtar)[coltar][1];
+                charLoc[rowtar][coltar][1]=nullptr;
             }
             delete proj; //deletes projectile on enemy contact
         }
@@ -145,12 +146,13 @@ void character::shoot() // automatic shooting
             }
 
         }
-        if (charLoc->at(rowtar)[coltar][0]!= nullifier)
+        if (charLoc.at(rowtar)[coltar][0]!= nullifier)
         {
-            charLoc->at(rowtar)[coltar][0]->health-=dmg;
-            if(charLoc->at(rowtar)[coltar][0]->health<=0) //kills player if health reaches 0
+            charLoc.at(rowtar)[coltar][0]->health-=dmg;
+            if(charLoc.at(rowtar)[coltar][0]->health<=0) //kills player if health reaches 0
             {
-                delete charLoc->at(rowtar)[coltar][0];
+                delete charLoc.at(rowtar)[coltar][0];
+                charLoc[rowtar][coltar][0]=nullptr;
             }
         }
     }
@@ -165,17 +167,20 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
         if (Player)
         {
             if(map->at(row-1).at(col)==-1||map->at(row-1).at(col)>=0)
-            charLoc[row][col][0] = nullifier; //makes previous location null
-            if (charLoc[row][col][1]==nullifier) //checks if enemy is in that location
             {
-                presence[row][col]=false; //removes presence if no enemy is present
+                charLoc[row][col][0] = nullifier; //makes previous location null
+                if (charLoc[row][col][1]==nullifier) //checks if enemy is in that location
+                {
+                    presence[row][col]=false; //removes presence if no enemy is present
+                }
+                row--; //changes row/column
+                charLoc[row][col][0]=this; //moves player to new location
+                if (map->at(row).at(col)==-1) //kills player if they step in lava
+                {
+                    health=0;
+                }
             }
-            row--; //changes row/column
-            charLoc[row][col][0]=this; //moves player to new location
-            if (map->at(row).at(col)==-1) //kills player if they step in lava
-            {
-                health=0;
-            }
+
         }
         else if (charLoc[row-1][col][1] == nullifier && map->at(row-1).at(col)!=1000) //enemy movement
         {
@@ -195,8 +200,25 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
     }
 
     face=up; //changes direction character is facing
-    if (health==0) //just a secondary check to kill off a character in case they survive a lethal attack
+//just a secondary check to kill off a character in case they survive a lethal attack
+    if (health<=0)
     {
+        if (Player)
+        {
+            charLoc[row][col][0]=nullptr;
+            if (charLoc[row][col][1]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
+        else
+        {
+            charLoc[row][col][1]=nullptr;
+            if (charLoc[row][col][0]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
         delete this;
     }
 }
@@ -244,8 +266,24 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
         presence[row][col]=true;
     }
     face=down;
-    if (health==0)
+    if (health<=0)
     {
+        if (Player)
+        {
+            charLoc[row][col][0]=nullptr;
+            if (charLoc[row][col][1]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
+        else
+        {
+            charLoc[row][col][1]=nullptr;
+            if (charLoc[row][col][0]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
         delete this;
     }
 }
@@ -290,6 +328,26 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
         presence[row][col]=true;
     }
     face=right;
+    if (health<=0)
+    {
+        if (Player)
+        {
+            charLoc[row][col][0]=nullptr;
+            if (charLoc[row][col][1]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
+        else
+        {
+            charLoc[row][col][1]=nullptr;
+            if (charLoc[row][col][0]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
+        delete this;
+    }
 
 }
 
@@ -333,8 +391,24 @@ void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector
         presence[row][col]=true;
     }
     face=left;
-    if (health==0)
+    if (health<=0)
     {
+        if (Player)
+        {
+            charLoc[row][col][0]=nullptr;
+            if (charLoc[row][col][1]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
+        else
+        {
+            charLoc[row][col][1]=nullptr;
+            if (charLoc[row][col][0]==nullptr)
+            {
+                presence[row][col]=false;
+            }
+        }
         delete this;
     }
 }

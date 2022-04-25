@@ -57,14 +57,14 @@ int main(int argc, char *argv[])
         player* P1; //creates a player
 
         P1=new player(100,5,true,up,1,1,"Placeholder",map, charLoc,true, presence, scene, false);
-        minor* E1=new minor(100,3,true,down,5,5,map,charLoc,false,presence,scene, false); //creates an enemy
-        minor* E2=new minor(100,3,true,down,5,8,map,charLoc,false,presence,scene, false);
-        minor* E3=new minor(100,3,true,down,17,3,map,charLoc,false,presence,scene, false);
-        minor* E4=new minor(100,3,true,down,26,1,map,charLoc,false,presence,scene, false);
-        major* E5=new major(100,2,true,down,24,3,map,charLoc,false,presence,scene, true);
-        major* E6=new major(100,2,true,down,6,17,map,charLoc,false,presence,scene, true);
-        major* E7=new major(100,2,true,down,13,20,map,charLoc,false,presence,scene, true);
-        major* E8=new major(100,2,true,down,20,8,map,charLoc,false,presence,scene, true);
+        minor* E1=new minor(100,1,true,down,5,5,map,charLoc,false,presence,scene, false); //creates an enemy
+        minor* E2=new minor(100,1,true,down,5,8,map,charLoc,false,presence,scene, false);
+        minor* E3=new minor(100,1,true,down,17,3,map,charLoc,false,presence,scene, false);
+        minor* E4=new minor(100,1,true,down,26,1,map,charLoc,false,presence,scene, false);
+        major* E5=new major(100,0.5,true,down,24,3,map,charLoc,false,presence,scene, true);
+        major* E6=new major(100,0.5,true,down,6,17,map,charLoc,false,presence,scene, true);
+        major* E7=new major(100,0.5,true,down,13,20,map,charLoc,false,presence,scene, true);
+        major* E8=new major(100,0.5,true,down,20,8,map,charLoc,false,presence,scene, true);
         //program will crash whe an enemy dies
         //start drawing on the map
         QPixmap grassImage("Netherrack.png");
@@ -134,7 +134,7 @@ int main(int argc, char *argv[])
         //view.show(); //displays the GraphicsView
 
 
-        MainWindow w(nullptr,&scene);
+        MainWindow w(nullptr,&scene,P1);
         w.show();
 
 
