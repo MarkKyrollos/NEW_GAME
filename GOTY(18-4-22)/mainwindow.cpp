@@ -30,6 +30,10 @@ void MainWindow::openmenu()
     main_menu main_menu;
     main_menu.setModal(true);
     main_menu.exec();
+    if (main_menu.exit==true){
+        this->close();
+    };
 
 }
+void MainWindow(){}
 

@@ -14,11 +14,13 @@
 #include <QEvent>
 #include <QKeyEvent>
 #include <QPainter>
+#include<QMediaPlayer>
 //
 class player: public character{
 public: 
     QString Name;
     QPixmap pac;
+    QMediaPlayer * shots_fired;
 player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, int Cold, QString NAME, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool live, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major); //constructor
     
 void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);//checks if player is in an enemy to deal damage

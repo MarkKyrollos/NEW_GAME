@@ -9,7 +9,7 @@
 #include <QApplication>
 #include <QEvent>
 #include <QKeyEvent>
-
+#include<QMediaPlayer>
 
 /**
  * player implementation
@@ -24,6 +24,7 @@ void player::In_Enemy(QVector<QVector<QVector<character*>>> &charLoc) {
     if (charLoc[row][col][1] != nullifier)
     {
         health-=10;
+
     }//
 }
 
@@ -50,6 +51,8 @@ player::player(int helth, float mvmt_spd, bool Playa, direct Facer, int Rowd, in
        pac=pac.scaledToHeight(50);
        setPixmap(pac);
        setPos(50+50*col,50+50*row);
+       shots_fired= new QMediaPlayer();
+       shots_fired->setMedia(QUrl("qrc:/new/prefix1/magnum.mp3"));
 
 }
 
@@ -102,6 +105,13 @@ void player::keyPressEvent(QKeyEvent* event)
     }
     if(event->key()==Qt::Key_Space)
     {
+        if(shots_fired->state()== QMediaPlayer::PlayingState){
+        shots_fired->setPosition(0);
+        }
+        else if(shots_fired->state()== QMediaPlayer::StoppedState){
+        shots_fired->play();
+        }
+
             shoot(*charLoc);
     }
 

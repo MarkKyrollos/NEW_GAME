@@ -64,8 +64,9 @@ void minor::random_movement()
 
                 presencePoint[row][col]=true;
                 face=left;
-                */
+
         face=left;
+        */
         shoot(*charLoc);
     }
 
@@ -84,8 +85,9 @@ void minor::random_movement()
 
                 presencePoint[row][col]=true;
                 face=right;
-                */
+
         face=right;
+        */
         shoot(*charLoc);
     }
 

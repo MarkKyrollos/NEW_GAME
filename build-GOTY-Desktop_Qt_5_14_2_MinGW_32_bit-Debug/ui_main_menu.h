@@ -29,7 +29,7 @@ public:
     QVBoxLayout *verticalLayout;
     QPushButton *start;
     QPushButton *exit;
-    QLabel *god;
+    QLabel *title;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QLabel *label;
@@ -43,6 +43,7 @@ public:
     QLineEdit *pass;
     QLabel *label_2;
     QLabel *label_3;
+    QLabel *god;
 
     void setupUi(QDialog *main_menu)
     {
@@ -65,9 +66,9 @@ public:
 
         verticalLayout->addWidget(exit);
 
-        god = new QLabel(main_menu);
-        god->setObjectName(QString::fromUtf8("god"));
-        god->setGeometry(QRect(10, 180, 201, 131));
+        title = new QLabel(main_menu);
+        title->setObjectName(QString::fromUtf8("title"));
+        title->setGeometry(QRect(10, 180, 201, 21));
         verticalLayoutWidget_2 = new QWidget(main_menu);
         verticalLayoutWidget_2->setObjectName(QString::fromUtf8("verticalLayoutWidget_2"));
         verticalLayoutWidget_2->setGeometry(QRect(430, 290, 171, 74));
@@ -125,6 +126,9 @@ public:
 
         gridLayout->addWidget(label_3, 0, 1, 1, 1);
 
+        god = new QLabel(main_menu);
+        god->setObjectName(QString::fromUtf8("god"));
+        god->setGeometry(QRect(10, 230, 241, 91));
 
         retranslateUi(main_menu);
 
@@ -136,7 +140,7 @@ public:
         main_menu->setWindowTitle(QCoreApplication::translate("main_menu", "Dialog", nullptr));
         start->setText(QCoreApplication::translate("main_menu", "start", nullptr));
         exit->setText(QCoreApplication::translate("main_menu", "exit", nullptr));
-        god->setText(QCoreApplication::translate("main_menu", "// escape from hell", nullptr));
+        title->setText(QCoreApplication::translate("main_menu", "// escape from hell", nullptr));
         label->setText(QCoreApplication::translate("main_menu", "music", nullptr));
         on->setText(QCoreApplication::translate("main_menu", "on", nullptr));
         off->setText(QCoreApplication::translate("main_menu", "off", nullptr));
@@ -144,6 +148,7 @@ public:
         login->setText(QCoreApplication::translate("main_menu", "login", nullptr));
         label_2->setText(QCoreApplication::translate("main_menu", "username", nullptr));
         label_3->setText(QCoreApplication::translate("main_menu", "password", nullptr));
+        god->setText(QCoreApplication::translate("main_menu", "enter username or password or registor", nullptr));
     } // retranslateUi
 
 };
