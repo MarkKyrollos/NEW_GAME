@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
         player* P1; //creates a player
 
         P1=new player(100,5,true,up,1,1,"Placeholder",map, charLoc,true, presence, scene, false);
-        /*minor* E1=new minor(100,1,true,down,5,5,map,charLoc,false,presence,scene, false); //creates an enemy
+        minor* E1=new minor(100,1,true,down,5,5,map,charLoc,false,presence,scene, false); //creates an enemy
         minor* E2=new minor(100,1,true,down,5,8,map,charLoc,false,presence,scene, false);
         minor* E3=new minor(100,1,true,down,17,3,map,charLoc,false,presence,scene, false);
         minor* E4=new minor(100,1,true,down,26,1,map,charLoc,false,presence,scene, false);
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
         major* E6=new major(100,0.5,true,down,6,17,map,charLoc,false,presence,scene, true);
         major* E7=new major(100,0.5,true,down,13,20,map,charLoc,false,presence,scene, true);
         major* E8=new major(100,0.5,true,down,20,8,map,charLoc,false,presence,scene, true);
-        */
+
         //program will crash whe an enemy dies
         //start drawing on the map
         QPixmap grassImage("Netherrack.png");
@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
             }
         }
         scene.addItem(P1);//adds elements to the scene
-       /* scene.addItem(E1);
+        scene.addItem(E1);
         scene.addItem(E2);
         scene.addItem(E3);
         scene.addItem(E4);
@@ -128,7 +128,7 @@ int main(int argc, char *argv[])
         scene.addItem(E6);
         scene.addItem(E7);
         scene.addItem(E8);
-        */;
+
         P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable); //makes the focus on the character
         P1->setFocus();
         P1->grabKeyboard(); //brute forces the character into accepting keyboard input
