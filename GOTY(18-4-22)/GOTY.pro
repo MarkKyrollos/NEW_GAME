@@ -10,8 +10,6 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    a_star.cpp \
-    boss.cpp \
     character.cpp \
     enemy.cpp \
     main.cpp \
@@ -23,8 +21,6 @@ SOURCES += \
     projectile.cpp
 
 HEADERS += \
-    a_star.h \
-    boss.h \
     character.h \
     enemy.h \
     main_menu.h \

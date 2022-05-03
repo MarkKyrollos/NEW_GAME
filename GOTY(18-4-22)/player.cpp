@@ -112,7 +112,7 @@ void player::keyPressEvent(QKeyEvent* event)
         shots_fired->play();
         }
 
-            shoot(*charLoc);
+            shoot(*charLoc, *presence);
     }
 
     setPos(50+50*col,50+50*row);

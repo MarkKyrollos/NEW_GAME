@@ -30,7 +30,7 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
 }
 
 
-void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automatic shooting
+void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<QVector<bool>> &presence) // automatic shooting
 {
     if (Player) //checks who is shooting
     {
@@ -47,7 +47,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=1;
             if (map->at(row-1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,*presence); //it wouldn't construct unless we did the terribleness above
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,presence); //it wouldn't construct unless we did the terribleness above
                 scene->addItem(proj);
             }
 
@@ -57,7 +57,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=2;
             if (map->at(row)[col+1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,presence);
                 scene->addItem(proj);
             }
 
@@ -67,7 +67,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=3;
             if (map->at(row)[col-1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,presence);
                 scene->addItem(proj);
             }
 
@@ -77,7 +77,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=4;
             if (map->at(row+1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,presence);
                 scene->addItem(proj);
             }
 
@@ -89,6 +89,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             {
                 delete charLoc.at(rowtar)[coltar][1];
                 charLoc[rowtar][coltar][1]=nullptr;
+                presence[rowtar][coltar]=false;
             }
             delete proj; //deletes projectile on enemy contact
         }
@@ -111,7 +112,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=1;
             if (map->at(row-1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,presence);
                 scene->addItem(proj);
             }
 
@@ -121,7 +122,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=2;
             if (map->at(row)[col+1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,presence);
                 scene->addItem(proj);
             }
 
@@ -131,7 +132,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=3;
             if (map->at(row)[col-1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,presence);
                 scene->addItem(proj);
             }
 
@@ -141,7 +142,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             direct=4;
             if (map->at(row+1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,*presence);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,presence);
                 scene->addItem(proj);
             }
 
@@ -153,6 +154,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             {
                 delete charLoc.at(rowtar)[coltar][0];
                 charLoc[rowtar][coltar][0]=nullptr;
+                presence[rowtar][coltar]=false;
             }
         }
     }

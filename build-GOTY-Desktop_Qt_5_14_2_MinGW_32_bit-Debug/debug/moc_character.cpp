@@ -38,9 +38,9 @@ QT_MOC_LITERAL(1, 10, 5), // "shoot"
 QT_MOC_LITERAL(2, 16, 0), // ""
 QT_MOC_LITERAL(3, 17, 40), // "QVector<QVector<QVector<chara..."
 QT_MOC_LITERAL(4, 58, 7), // "charLoc"
-QT_MOC_LITERAL(5, 66, 6), // "moveUp"
-QT_MOC_LITERAL(6, 73, 24), // "QVector<QVector<bool> >&"
-QT_MOC_LITERAL(7, 98, 8), // "presence"
+QT_MOC_LITERAL(5, 66, 24), // "QVector<QVector<bool> >&"
+QT_MOC_LITERAL(6, 91, 8), // "presence"
+QT_MOC_LITERAL(7, 100, 6), // "moveUp"
 QT_MOC_LITERAL(8, 107, 8), // "moveDown"
 QT_MOC_LITERAL(9, 116, 9), // "moveRight"
 QT_MOC_LITERAL(10, 126, 8) // "moveLeft"
@@ -48,8 +48,9 @@ QT_MOC_LITERAL(10, 126, 8) // "moveLeft"
     },
     "character\0shoot\0\0"
     "QVector<QVector<QVector<character*> > >&\0"
-    "charLoc\0moveUp\0QVector<QVector<bool> >&\0"
-    "presence\0moveDown\0moveRight\0moveLeft"
+    "charLoc\0QVector<QVector<bool> >&\0"
+    "presence\0moveUp\0moveDown\0moveRight\0"
+    "moveLeft"
 };
 #undef QT_MOC_LITERAL
 
@@ -67,18 +68,18 @@ static const uint qt_meta_data_character[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x0a /* Public */,
-       5,    2,   42,    2, 0x0a /* Public */,
-       8,    2,   47,    2, 0x0a /* Public */,
-       9,    2,   52,    2, 0x0a /* Public */,
-      10,    2,   57,    2, 0x0a /* Public */,
+       1,    2,   39,    2, 0x0a /* Public */,
+       7,    2,   44,    2, 0x0a /* Public */,
+       8,    2,   49,    2, 0x0a /* Public */,
+       9,    2,   54,    2, 0x0a /* Public */,
+      10,    2,   59,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, 0x80000000 | 3,    4,
-    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 6,    4,    7,
-    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 6,    4,    7,
-    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 6,    4,    7,
-    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 6,    4,    7,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,    4,    6,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,    4,    6,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,    4,    6,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,    4,    6,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 5,    4,    6,
 
        0        // eod
 };
@@ -89,7 +90,7 @@ void character::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         auto *_t = static_cast<character *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->shoot((*reinterpret_cast< QVector<QVector<QVector<character*> > >(*)>(_a[1]))); break;
+        case 0: _t->shoot((*reinterpret_cast< QVector<QVector<QVector<character*> > >(*)>(_a[1])),(*reinterpret_cast< QVector<QVector<bool> >(*)>(_a[2]))); break;
         case 1: _t->moveUp((*reinterpret_cast< QVector<QVector<QVector<character*> > >(*)>(_a[1])),(*reinterpret_cast< QVector<QVector<bool> >(*)>(_a[2]))); break;
         case 2: _t->moveDown((*reinterpret_cast< QVector<QVector<QVector<character*> > >(*)>(_a[1])),(*reinterpret_cast< QVector<QVector<bool> >(*)>(_a[2]))); break;
         case 3: _t->moveRight((*reinterpret_cast< QVector<QVector<QVector<character*> > >(*)>(_a[1])),(*reinterpret_cast< QVector<QVector<bool> >(*)>(_a[2]))); break;

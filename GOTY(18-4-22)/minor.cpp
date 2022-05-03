@@ -25,7 +25,7 @@ void minor::random_movement()
     { // not gonna use the our defined moveUp etc since major enemies CAN go through walls, redefined new movements
 
         face=up;
-        shoot(*charLoc);
+        shoot(*charLoc, *presence);
     }
 
 
@@ -45,7 +45,7 @@ void minor::random_movement()
                 presencePoint[row][col]=true;
                 face=down*/
         face=down;
-        shoot(*charLoc);
+        shoot(*charLoc, *presence);
     }
 
 
@@ -67,7 +67,7 @@ void minor::random_movement()
 
         face=left;
         */
-        shoot(*charLoc);
+        shoot(*charLoc, *presence);
     }
 
     else if(rand()%4==3) // moving right
@@ -88,7 +88,7 @@ void minor::random_movement()
 
         face=right;
         */
-        shoot(*charLoc);
+        shoot(*charLoc, *presence);
     }
 
 

@@ -40,7 +40,7 @@ void enemy::random_movement()
         if (health>0)
         {
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {
@@ -56,7 +56,7 @@ void enemy::random_movement()
         if (health>0)
         {
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {
@@ -71,7 +71,7 @@ void enemy::random_movement()
         if (health>0)
         {
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {
@@ -85,7 +85,7 @@ void enemy::random_movement()
         if (health>0)
         {
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {

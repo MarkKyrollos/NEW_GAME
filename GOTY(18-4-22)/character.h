@@ -40,7 +40,7 @@ public:
     character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major); //constructor
 public slots:
 
-    void shoot(); // creates a projectile to shoot
+    void shoot(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence); // creates a projectile to shoot
     void moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence); //makes the character move up
     void moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence);//down
     void moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence);//right
