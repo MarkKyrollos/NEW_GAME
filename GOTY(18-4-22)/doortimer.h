@@ -4,14 +4,20 @@
 #include <QObject>
 #include <QTimer>
 #include "enemy.h"
-class DoorTimer: public QObject
+#include<QGraphicsPixmapItem>
+#include<QGraphicsView>
+
+class DoorTimer: public QObject,  public QGraphicsPixmapItem
 {
+
 public:
-    DoorTimer(QVector<QVector<int>>& map,QGraphicsScene& scene);
+    DoorTimer(QVector<QVector<int>>& map,QGraphicsScene& scene, QGraphicsView& v);
     QVector<QVector<int>>* map;
     QGraphicsScene* scene;
-public slots:
-void Open_door(QVector<QVector<int>>& map);
+    QGraphicsView * v;
+
+//public slots:
+void Open_door(QVector<QVector<int>>& map, QGraphicsPixmapItem boardItems[30][30]);
 };
 
 #endif // DOORTIMER_H
