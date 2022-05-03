@@ -1,4 +1,5 @@
 debug/character.o
+debug/doortimer.o
 debug/enemy.o
 debug/main.o
 debug/main_menu.o

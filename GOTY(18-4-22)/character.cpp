@@ -12,6 +12,8 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     Player=Playa;
     this->map =&map;
     this->charLoc= &charLoc;
+    this->charLoc->detach();
+    this->map->detach();
     //places location in charLoc depending on whether or not its a player
     if (Player)
     {

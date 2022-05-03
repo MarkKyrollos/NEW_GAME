@@ -17,6 +17,13 @@ int enemy::killCount=0;
 enemy::~enemy()
 {
     incrementKillCount();
+
+  /*  if(map[7][3]==-2)
+    {
+        map[7][3]=1000; // opening the entrance door for room 1
+    }*/
+    DoorCheck(*map);
+
 }
 
 
@@ -95,6 +102,42 @@ void enemy::random_movement()
 
 }
 
+void enemy::DoorCheck(QVector<QVector<int>>& map)
+{
+
+
+    if(enemy::killCount==2)
+    {
+        if(map[3][6]==-2)
+        {
+            map[3][6]=1000; // opening the exit door for room 1
+
+            // TODO: check the locations of each door again thoroughly from Board.txt
+            map[9][24]=1000; // opening the entrance door for room 2
+        }
+    }
+
+       else if(enemy::killCount==4)
+        {
+            if(map[9][14]==-2)
+            {
+                map[9][14]=1000;
+
+
+
+                map[26][9]=1000;
+            }
+        }
+            else if (enemy::killCount==8)
+            {
+                if(map[14][5]==-2)
+                {
+                    map[14][5]=1000;
+                }
+            }
+
+
+}
 
 enemy::enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major, bool enem):character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene, major)
 {

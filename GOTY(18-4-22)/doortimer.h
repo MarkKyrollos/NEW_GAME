@@ -11,12 +11,11 @@ class DoorTimer: public QObject,  public QGraphicsPixmapItem
 {
 
 public:
-    DoorTimer(QVector<QVector<int>>& map,QGraphicsScene& scene, QGraphicsView& v);
+    DoorTimer(QVector<QVector<int>>& map,QGraphicsScene& scene);
     QVector<QVector<int>>* map;
     QGraphicsScene* scene;
-    QGraphicsView * v;
 
-//public slots:
+public slots:
 void Open_door(QVector<QVector<int>>& map, QGraphicsPixmapItem boardItems[30][30]);
 };
 

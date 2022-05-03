@@ -1,13 +1,12 @@
 #include "doortimer.h"
 #include <QTimer>
 
-DoorTimer::DoorTimer(QVector<QVector<int>>& map,QGraphicsScene& scene, QGraphicsView& v)
+DoorTimer::DoorTimer(QVector<QVector<int>>& map,QGraphicsScene& scene)
 {
     // create a timer
 
     this->map=&map;
     this->scene=&scene;
-    this->v=&v;
     QTimer* T=new QTimer(this);
     connect(T,SIGNAL(timeout()),this,SLOT(Open_Door(map)));
     T->start(1000);
@@ -26,7 +25,7 @@ void DoorTimer::Open_door(QVector<QVector<int>>& map, QGraphicsPixmapItem boardI
         map[7][3]=1000; // opening the entrance door for room 1
     }*/
 
-    if(enemy::killCount==2)
+    if(enemy::killCount==0)
     {
         if(map[3][6]==-2)
         {
@@ -43,7 +42,7 @@ void DoorTimer::Open_door(QVector<QVector<int>>& map, QGraphicsPixmapItem boardI
         }
     }
 
-       else if(enemy::killCount==4)
+       else if(enemy::killCount==0)
         {
             if(map[9][14]==-2)
             {
@@ -60,7 +59,7 @@ void DoorTimer::Open_door(QVector<QVector<int>>& map, QGraphicsPixmapItem boardI
                 scene->addItem(&boardItems[26][9]);
             }
         }
-            else if (enemy::killCount==8)
+            else if (enemy::killCount==0)
             {
                 if(map[14][5]==-2)
                 {
@@ -71,6 +70,4 @@ void DoorTimer::Open_door(QVector<QVector<int>>& map, QGraphicsPixmapItem boardI
                 }
             }
 
-    v->setScene(scene);
-    v->show();
 }

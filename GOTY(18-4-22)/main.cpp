@@ -128,7 +128,7 @@ int main(int argc, char *argv[])
         scene.addItem(E6);
         scene.addItem(E7);
         scene.addItem(E8);
-
+        //DoorTimer dor(map, scene);
         P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable); //makes the focus on the character
         P1->setFocus();
         P1->grabKeyboard(); //brute forces the character into accepting keyboard input
