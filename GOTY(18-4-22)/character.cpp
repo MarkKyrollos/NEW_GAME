@@ -1,9 +1,10 @@
-#include "character.h"
+﻿#include "character.h"
+
+
 character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major)
 {
     //assigning data to attributes
     health=helth;
-    /*name=NAME;*/
     movement_speed=mvmt_spd;
     is_alive=alive;
     face=Facer;
@@ -16,25 +17,23 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     if (Player)
     {
         charLoc[row][col][0]=this;
-
     }
     else
     {
         charLoc[row][col][1]=this;
     }
     this->presence=&presence;
-    this->scene=&scene;
     presence[row][col]=true;
+    this->scene=&scene;
     this->major=major;
-
 }
 
 
-void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automatic shooting
+void character::shoot() // automatic shooting
 {
     if (Player) //checks who is shooting
     {
-        character* nullifier = NULL; //You'll see this a lot because NULL on its own is read as type int
+        //character* nullifier = NULL; //You'll see this a lot because NULL on its own is read as type int
         projectile* proj; //projectile pointer
         int dmg=25; //damage
         float proj_speed=0.25; //projectile speed
@@ -50,8 +49,8 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
                 proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,*presence); //it wouldn't construct unless we did the terribleness above
                 scene->addItem(proj);
             }
-
         }
+
         else if (face==right) //shoot right
         {
             direct=2;
@@ -60,8 +59,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
                 proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,*presence);
                 scene->addItem(proj);
             }
-
-        }//
+        }
         else if (face==left) //shoot left
         {
             direct=3;
@@ -82,21 +80,20 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             }
 
         }
-        if (charLoc.at(rowtar)[coltar][1]!= nullifier) //checks if enemy is hit and deals damage
+
+        if (charLoc->at(rowtar)[coltar][1] != nullptr) //checks if enemy is hit and deals damage
         {
-            charLoc.at(rowtar)[coltar][1]->health-=dmg; //deducts health
-            if(charLoc.at(rowtar)[coltar][1]->health<=0) //kills enemy;
+            charLoc->at(rowtar)[coltar][1]->health-=dmg; //deducts health
+            if(charLoc->at(rowtar)[coltar][1]->health<=0) //kills enemy;
             {
-                delete charLoc.at(rowtar)[coltar][1];
-                charLoc[rowtar][coltar][1]=nullptr;
+                delete charLoc->at(rowtar)[coltar][1];
             }
             delete proj; //deletes projectile on enemy contact
         }
 
 
-
     }
-    else
+    else  // enemy is the shooter
     {
         character* nullifier = NULL;
         projectile* proj;
@@ -114,7 +111,6 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
                 proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,*presence);
                 scene->addItem(proj);
             }
-
         }
         else if (face==right)
         {
@@ -126,6 +122,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             }
 
         }
+
         else if (face==left)
         {
             direct=3;
@@ -146,17 +143,19 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc) // automat
             }
 
         }
-        if (charLoc.at(rowtar)[coltar][0]!= nullifier)
+
+        if (charLoc->at(rowtar)[coltar][0]!= nullifier)
         {
-            charLoc.at(rowtar)[coltar][0]->health-=dmg;
-            if(charLoc.at(rowtar)[coltar][0]->health<=0) //kills player if health reaches 0
+            charLoc->at(rowtar)[coltar][0]->health-=dmg;
+            if(charLoc->at(rowtar)[coltar][0]->health<=0) //kills player if health reaches 0
             {
-                delete charLoc.at(rowtar)[coltar][0];
-                charLoc[rowtar][coltar][0]=nullptr;
+                delete charLoc->at(rowtar)[coltar][0];
             }
         }
     }
 }
+
+
 
 void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) //move up
 {
@@ -166,25 +165,32 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
     {
         if (Player)
         {
-            if(map->at(row-1).at(col)==-1||map->at(row-1).at(col)>=0)
+            if(map->at(row-1).at(col)==-1 || map->at(row-1).at(col)>=0)
             {
-                charLoc[row][col][0] = nullifier; //makes previous location null
-                if (charLoc[row][col][1]==nullifier) //checks if enemy is in that location
-                {
-                    presence[row][col]=false; //removes presence if no enemy is present
-                }
-                row--; //changes row/column
-                charLoc[row][col][0]=this; //moves player to new location
-                if (map->at(row).at(col)==-1) //kills player if they step in lava
-                {
-                    health=0;
-                }
+            charLoc[row][col][0] = nullifier; //makes previous location null
+            if (charLoc[row][col][1]==nullifier) //checks if enemy is in that location
+            {
+                presence[row][col]=false; //removes presence if no enemy is present
+            }
+            row--; //changes row/column
+
+            charLoc[row][col][0]=this; //moves player to new location
+            presence[row][col]=true;
             }
 
+            if (map->at(row).at(col)==-1) //kills player if they step in lava
+            {
+                health=0;
+                presence[row][col]=false;
+                charLoc[row][col][0]=nullptr;
+
+            }
         }
-        else if (charLoc[row-1][col][1] == nullifier && map->at(row-1).at(col)!=1000) //enemy movement
+
+        // enemy movement
+        else if (charLoc[row-1][col][1] == nullptr) //&& map->at(row-1).at(col)!=1000)
         {
-            if ((map->at(row-1).at(col)==-3 && major) || map->at(row-1).at(col)>=0)
+            if ((map->at(row-1).at(col)==-3 && major) || map->at(row-1).at(col)>=0) // moving a major or minor enemy, majors go through -3 walls and everything else
             {
                 charLoc[row][col][1] = nullifier;
                 if (charLoc[row][col][0]==nullifier)
@@ -193,32 +199,14 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
                 }
                 row--;
                 charLoc[row][col][1]=this;
+             presence[row][col]=true;
             }
-
         }
-        presence[row][col]=true;
     }
 
     face=up; //changes direction character is facing
-//just a secondary check to kill off a character in case they survive a lethal attack
-    if (health<=0)
+    if (health==0) //just a secondary check to kill off a character in case they survive a lethal attack
     {
-        if (Player)
-        {
-            charLoc[row][col][0]=nullptr;
-            if (charLoc[row][col][1]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
-        else
-        {
-            charLoc[row][col][1]=nullptr;
-            if (charLoc[row][col][0]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
         delete this;
     }
 }
@@ -242,14 +230,17 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
                 }
                 row++; //changes row/column
                 charLoc[row][col][0]=this; //moves player to new location
+                presence[row][col]=true;
                 if (map->at(row).at(col)==-1) //kills player if they step in lava
                 {
-                    health=0;
+                health=0;
+                presence[row][col]=false;
+                charLoc[row][col][0]= nullptr;
                 }
             }
-
         }
-        else if (charLoc[row+1][col][1] == nullifier && map->at(row+1).at(col)!=1000) //enemy movement
+
+        else if (charLoc[row+1][col][1]==nullptr)// == nullifier && map->at(row+1).at(col)!=1000) //enemy movement
         {
             if ((map->at(row+1).at(col)==-3 && major) || map->at(row+1).at(col)>=0)
             {
@@ -260,30 +251,15 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
                 }
                 row++;
                 charLoc[row][col][1]=this;
+                presence[row][col]=true;
             }
-
         }
-        presence[row][col]=true;
     }
+
+
     face=down;
-    if (health<=0)
+    if (health==0)
     {
-        if (Player)
-        {
-            charLoc[row][col][0]=nullptr;
-            if (charLoc[row][col][1]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
-        else
-        {
-            charLoc[row][col][1]=nullptr;
-            if (charLoc[row][col][0]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
         delete this;
     }
 }
@@ -295,7 +271,7 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
     {
         if (Player)
         {
-            if(map->at(row).at(col+1)==-1||map->at(row).at(col+1)>=0)
+            if(map->at(row).at(col+1)==-1 || map->at(row).at(col+1)>=0)
             {
                 charLoc[row][col][0] = nullifier; //makes previous location null
                 if (charLoc[row][col][1]==nullifier) //checks if enemy is in that location
@@ -304,14 +280,17 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
                 }
                 col++; //changes row/column
                 charLoc[row][col][0]=this; //moves player to new location
+                presence[row][col]=true;
                 if (map->at(row).at(col)==-1) //kills player if they step in lava
                 {
                     health=0;
+                    presence[row][col]=false;
+                    charLoc[row][col][0]=nullptr;
                 }
             }
-
         }
-        else if (charLoc[row][col+1][1] == nullifier && map->at(row).at(col+1)!=1000) //enemy movement
+
+        else if (charLoc[row][col+1][1] == nullptr) //&& map->at(row).at(col+1)!=1000) //enemy movement
         {
             if ((map->at(row).at(col+1)==-3 && major) || map->at(row).at(col+1)>=0)
             {
@@ -322,33 +301,18 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
                 }
                 col++;
                 charLoc[row][col][1]=this;
+                presence[row][col]=true;
             }
-
         }
-        presence[row][col]=true;
     }
+
+
     face=right;
-    if (health<=0)
+
+    if (health==0)
     {
-        if (Player)
-        {
-            charLoc[row][col][0]=nullptr;
-            if (charLoc[row][col][1]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
-        else
-        {
-            charLoc[row][col][1]=nullptr;
-            if (charLoc[row][col][0]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
         delete this;
     }
-
 }
 
 void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector<QVector<bool>> &presence) // move left
@@ -361,20 +325,27 @@ void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector
             if(map->at(row).at(col-1)==-1||map->at(row).at(col-1)>=0)
             {
                 charLoc[row][col][0] = nullifier; //makes previous location null
+
                 if (charLoc[row][col][1]==nullifier) //checks if enemy is in that location
                 {
                     presence[row][col]=false; //removes presence if no enemy is present
                 }
-                col--; //changes row/column
+
+                col--;
                 charLoc[row][col][0]=this; //moves player to new location
+                presence[row][col]=true;
+
                 if (map->at(row).at(col)==-1) //kills player if they step in lava
                 {
                     health=0;
+                    presence[row][col]=false;
+                    charLoc[row][col][0]=nullptr;
                 }
             }
 
         }
-        else if (charLoc[row][col-1][1] == nullifier && map->at(row).at(col-1)!=1000) //enemy movement
+
+        else if (charLoc[row][col-1][1] == nullptr)// && map->at(row).at(col-1)!=1000) //enemy movement
         {
             if ((map->at(row).at(col-1)==-3 && major) || map->at(row).at(col-1)>=0)
             {
@@ -385,46 +356,15 @@ void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector
                 }
                 col--;
                 charLoc[row][col][1]=this;
+                presence[row][col]=true;
             }
-
         }
-        presence[row][col]=true;
     }
+
+
     face=left;
-    if (health<=0)
+    if (health==0)
     {
-        if (Player)
-        {
-            charLoc[row][col][0]=nullptr;
-            if (charLoc[row][col][1]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
-        else
-        {
-            charLoc[row][col][1]=nullptr;
-            if (charLoc[row][col][0]==nullptr)
-            {
-                presence[row][col]=false;
-            }
-        }
         delete this;
     }
 }
-
-
-
-//*** I will do another public slots in derived classes for up down left right buttons, which will relocate the player using its array and pixmap
-//void character::keyPressEvent(QKeyEvent* event)  // if character manually shoots
-//{
-    //if(event->key()==Qt::Key_Space)
-    //{
-        /*projectile proj(25, 50, 0.1, 0.5, 1, face);
-        while(!proj.Location_Check(map, charLoc)) // projectile keeps moving until it reaches the location of a character/wall
-        {
-            proj.movement(); //needs to be done with QTimer
-        }
-        */
-    //}
-//}
