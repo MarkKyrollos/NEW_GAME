@@ -4,20 +4,25 @@
 #include <QMediaPlaylist>
 #include "main_menu.h"
 #include "ui_main_menu.h"
+#include <QTimer>
 
 
 MainWindow::MainWindow(QWidget *parent, QGraphicsScene* scene,player *P1)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    PlayerPoint=P1;
+    QTimer* T=new QTimer(this);
+    connect(T,SIGNAL(timeout()),this,SLOT(update_health()));
     this->scene=scene;
     ui->setupUi(this);
     //to play music on a loop
     openmenu();
 
 ui->graphicsView->setScene(this->scene);
+T->start(150);
 ui->graphicsView->show();
-ui->label->setText("<font color='green'>Health:"+ QString::number(P1->health)+"</font>");
+
 }
 //play music
 MainWindow::~MainWindow()
@@ -35,5 +40,11 @@ void MainWindow::openmenu()
     };
 
 }
+
+void MainWindow::update_health()
+{
+    ui->label->setText("<font color='green'>Health:"+ QString::number(PlayerPoint->health)+"</font>");
+}
+
 void MainWindow(){}
 

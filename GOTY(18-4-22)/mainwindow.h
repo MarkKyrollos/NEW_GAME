@@ -22,6 +22,10 @@ public:
     void play_sound(bool music);
     void openmenu();
     QGraphicsScene* scene;
+    player* PlayerPoint;
+
+public slots:
+    void update_health();
 
 private:
     Ui::MainWindow *ui;

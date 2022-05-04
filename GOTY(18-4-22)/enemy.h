@@ -21,7 +21,7 @@ enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, Q
 
 ~enemy();
 
-void DoorCheck(QVector<QVector<int>>& map)
+void DoorCheck(QVector<QVector<int>>& map);
 
 
 //void Detection_Shooting(player p);

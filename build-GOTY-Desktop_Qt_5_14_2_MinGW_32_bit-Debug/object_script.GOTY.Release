@@ -1,5 +1,4 @@
 release/character.o
-release/doortimer.o
 release/enemy.o
 release/main.o
 release/main_menu.o
