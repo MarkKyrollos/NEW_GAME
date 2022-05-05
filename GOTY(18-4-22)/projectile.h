@@ -5,12 +5,13 @@
 
 #ifndef _PROJECTILE_H
 #define _PROJECTILE_H
-#include "character.h"
 #include<QObject>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <QApplication>
+#include <QTimer>
 //
+class character;
 class projectile: public QObject, public QGraphicsPixmapItem {
     Q_OBJECT
 public:
@@ -21,11 +22,14 @@ public:
     int direction; //this is a variable of type enum I'm thinking of making, hmu if you want an explanation
     QVector<QVector<int>>* map;
     QVector<QVector<bool>>* presence;
+    QVector<QVector<QVector<character*>>>* charLoc;
     QTimer T; //timer for projectile movement
 
-projectile(float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence); //constructor also row and column are passed by reference because we need a way to know where the character that got hit is
+projectile(float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence, QGraphicsScene &scene, QVector<QVector<QVector<character*>>> &charLoc); //constructor also row and column are passed by reference because we need a way to know where the character that got hit is
 
-bool Location_Check(QVector<QVector<bool>> &presence); //checks if it hit a wall or character
+void setCharLoc(QVector<QVector<QVector<character*>>> &charLoc);
+
+bool Location_Check(QVector<QVector<bool>> &presence, QVector<QVector<QVector<character*>>> &charLoc); //checks if it hit a wall or character
 
 /**
  * @param &character target

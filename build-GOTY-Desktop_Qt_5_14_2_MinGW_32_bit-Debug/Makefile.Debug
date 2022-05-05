@@ -287,7 +287,6 @@ debug/moc_character.cpp: ../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
 		../GOTY(18-4-22)/projectile.h \
-		../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		debug/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
@@ -1499,7 +1498,6 @@ debug/moc_mainwindow.cpp: ../GOTY(18-4-22)/mainwindow.h \
 	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_projectile.cpp: ../GOTY(18-4-22)/projectile.h \
-		../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QObject \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qobject.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qobjectdefs.h \
@@ -1553,80 +1551,70 @@ debug/moc_projectile.cpp: ../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsPixmapItem \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qset.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsize.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcolor.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgb.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qline.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtransform.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcolor.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgb.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qimage.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qhash.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtransform.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcursor.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfont.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcursor.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qkeysequence.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qevent.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qvariant.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmap.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdebug.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qlocale.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qset.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qurl.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qfile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
-		../GOTY(18-4-22)/projectile.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
 		debug/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
 	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\projectile.h -o debug\moc_projectile.cpp
@@ -3999,7 +3987,6 @@ debug/player.o: ../GOTY(18-4-22)/player.cpp ../GOTY(18-4-22)/player.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\player.o ..\GOTY(18-4-22)\player.cpp
 
 debug/projectile.o: ../GOTY(18-4-22)/projectile.cpp ../GOTY(18-4-22)/projectile.h \
-		../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QObject \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qobject.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qobjectdefs.h \
@@ -4053,79 +4040,80 @@ debug/projectile.o: ../GOTY(18-4-22)/projectile.cpp ../GOTY(18-4-22)/projectile.
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsPixmapItem \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qset.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmargins.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsize.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcolor.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgb.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qline.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtransform.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcolor.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgb.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qimage.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qhash.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtransform.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcursor.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qbrush.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfont.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qcursor.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qkeysequence.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qevent.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qvariant.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qmap.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qdebug.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qlocale.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qset.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qurl.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qfile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/QPixmap
+		../GOTY(18-4-22)/character.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\projectile.o ..\GOTY(18-4-22)\projectile.cpp
 
 debug/qrc_res.o: debug/qrc_res.cpp 

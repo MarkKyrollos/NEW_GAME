@@ -36,9 +36,9 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
 {
     if (Player) //checks who is shooting
     {
-        character* nullifier = NULL; //You'll see this a lot because NULL on its own is read as type int
+        //character* nullifier = NULL; //You'll see this a lot because NULL on its own is read as type int
         projectile* proj; //projectile pointer
-        int dmg=25; //damage
+        //int dmg=25; //damage
         float proj_speed=0.25; //projectile speed
         int shooter=1; //determines if shooter is player or enemy, 1 is player, 2 is enemy
         int direct=4; //determines direction, 1 is up, 2 is right, 3 is left, 4 is down
@@ -49,8 +49,9 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=1;
             if (map->at(row-1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,presence); //it wouldn't construct unless we did the terribleness above
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }
@@ -59,8 +60,9 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=2;
             if (map->at(row)[col+1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,presence);
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }//
@@ -69,8 +71,9 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=3;
             if (map->at(row)[col-1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,presence);
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }
@@ -79,11 +82,13 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=4;
             if (map->at(row+1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,presence);
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }
+        /*
         if (charLoc.at(rowtar)[coltar][1]!= nullifier) //checks if enemy is hit and deals damage
         {
             charLoc.at(rowtar)[coltar][1]->health-=dmg; //deducts health
@@ -95,15 +100,16 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             }
             delete proj; //deletes projectile on enemy contact
         }
+        */
 
 
 
     }
     else
     {
-        character* nullifier = NULL;
+        //character* nullifier = NULL;
         projectile* proj;
-        int dmg=10; //less damage than player
+        //int dmg=10; //less damage than player
         float proj_speed=0.5;
         int shooter=2;
         int direct=4;
@@ -114,8 +120,9 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=1;
             if (map->at(row-1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,presence);
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,--rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }
@@ -124,8 +131,9 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=2;
             if (map->at(row)[col+1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,presence);
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,++coltar,rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }
@@ -134,8 +142,9 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=3;
             if (map->at(row)[col-1]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,presence);
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,--coltar,rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }
@@ -144,11 +153,13 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
             direct=4;
             if (map->at(row+1)[col]>=0)
             {
-                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,presence);
-                scene->addItem(proj);
+                proj=new projectile(proj_speed,shooter,direct,*map,coltar,++rowtar,presence, *scene, charLoc); //it wouldn't construct unless we did the terribleness above
+                //proj->setCharLoc(charLoc);
+                //scene->addItem(proj);
             }
 
         }
+        /*
         if (charLoc.at(rowtar)[coltar][0]!= nullifier)
         {
             charLoc.at(rowtar)[coltar][0]->health-=dmg;
@@ -159,6 +170,7 @@ void character::shoot(QVector<QVector<QVector<character*>>> &charLoc , QVector<Q
                 presence[rowtar][coltar]=false;
             }
         }
+        */
     }
 }
 
