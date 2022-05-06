@@ -69,7 +69,7 @@ if(killCount==2)
             scene->addItem(&boardItems[26][9]);*/
         }
     }
-        else if (killCount>=8)
+        else if (killCount==8)
         {
             if(MAP[14][5]== -2)
             {
@@ -98,7 +98,7 @@ void enemy::random_movement()
         {
             moveUp(*charLocPoint,*presencePoint);
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {
@@ -113,7 +113,7 @@ void enemy::random_movement()
         {
             moveDown(*charLocPoint,*presencePoint);
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {
@@ -129,7 +129,7 @@ void enemy::random_movement()
         {
             moveLeft(*charLocPoint,*presencePoint);
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {
@@ -144,7 +144,7 @@ void enemy::random_movement()
         {
             moveRight(*charLocPoint,*presencePoint);
             setPos(50+50*col,50+50*row);
-            shoot();
+            shoot(*charLoc, *presence);
         }
         else if(health<=0)
         {
