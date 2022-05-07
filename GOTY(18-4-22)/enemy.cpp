@@ -2,7 +2,6 @@
 #include "character.h"
 #include "player.h"
 
-
 /*
 void enemy::Detection_Shooting(player p)
 {
@@ -18,6 +17,11 @@ int enemy::killCount=0;
 enemy::~enemy()
 {
     incrementKillCount();
+
+    if(killCount==8)
+    {
+        DoorTime(*MAP);
+    }
 }
 
 
