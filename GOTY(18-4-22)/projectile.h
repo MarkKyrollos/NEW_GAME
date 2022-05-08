@@ -10,6 +10,7 @@
 #include <QPixmap>
 #include <QApplication>
 #include <QTimer>
+#include <QGraphicsScene>
 //
 class character;
 class projectile: public QObject, public QGraphicsPixmapItem {
@@ -23,6 +24,7 @@ public:
     QVector<QVector<int>>* map;
     QVector<QVector<bool>>* presence;
     QVector<QVector<QVector<character*>>>* charLoc;
+    QGraphicsScene* scene;
     QTimer T; //timer for projectile movement
 
 projectile(float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence, QGraphicsScene &scene, QVector<QVector<QVector<character*>>> &charLoc); //constructor also row and column are passed by reference because we need a way to know where the character that got hit is

@@ -6,7 +6,6 @@
 #include <QApplication>
 #include <QGraphicsScene>
 
-
 projectile::projectile(float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence, QGraphicsScene &scene, QVector<QVector<QVector<character*>>> &charLoc)
 {
     //assigns the data
@@ -18,7 +17,7 @@ projectile::projectile(float proj_speed, int Shooter, int direction, QVector<QVe
     this->col=col;
     this->row=row;
     this->charLoc= &charLoc;
-    this->scene = &scene;
+    this->scene=&scene;
 
     //sets projectile image
     QPixmap g("projectile.png");
@@ -27,10 +26,10 @@ projectile::projectile(float proj_speed, int Shooter, int direction, QVector<QVe
        setPixmap(g);
        setPos(50+50*col,50+50*row);
 
-  /*  if(!Location_Check(presence , charLoc))  // prevents a shot from visually passing through an enemy
+    if(!Location_Check(presence , charLoc))  // prevents a shot from visually passing through an enemy
     {
     scene.addItem(this);
-    }*/
+    }
 
     QTimer* T=new QTimer(this);
     connect(T,SIGNAL(timeout()),this,SLOT(movement()));//timer makes projectile move
@@ -99,11 +98,7 @@ bool projectile::Location_Check(QVector<QVector<bool>> &presence, QVector<QVecto
 
 void projectile::movement() //make this a function that moves periodically and is called in the character class
 {
-    if(!Location_Check(*presence , *charLoc))
-    {
-    scene->addItem(this);
-    }
-
+    Location_Check(*presence, *charLoc);
 
     if (direction==1)
     {

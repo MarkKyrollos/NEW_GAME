@@ -1615,6 +1615,9 @@ debug/moc_projectile.cpp: ../GOTY(18-4-22)/projectile.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		debug/moc_predefs.h \
 		C:/Qt/5.14.2/mingw73_32/bin/moc.exe
 	C:\Qt\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include "C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/build-GOTY-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++ -I"C:/Users/focka/OneDrive/Documents/AUC Files/CS2/Code/Project2electricboogaloo/NEW_GAME/GOTY(18-4-22)" -IC:/Qt/5.14.2/mingw73_32/include -IC:/Qt/5.14.2/mingw73_32/include/QtMultimedia -IC:/Qt/5.14.2/mingw73_32/include/QtWidgets -IC:/Qt/5.14.2/mingw73_32/include/QtGui -IC:/Qt/5.14.2/mingw73_32/include/QtANGLE -IC:/Qt/5.14.2/mingw73_32/include/QtNetwork -IC:/Qt/5.14.2/mingw73_32/include/QtCore -I. -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\GOTY(18-4-22)\projectile.h -o debug\moc_projectile.cpp
@@ -4104,14 +4107,14 @@ debug/projectile.o: ../GOTY(18-4-22)/projectile.cpp ../GOTY(18-4-22)/projectile.
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QTimer \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/qbasictimer.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		../GOTY(18-4-22)/character.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.14.2/mingw73_32/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.14.2/mingw73_32/include/QtGui/qpen.h \
 		C:/Qt/5.14.2/mingw73_32/include/QtCore/QEvent \
 		C:/Qt/5.14.2/mingw73_32/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\projectile.o ..\GOTY(18-4-22)\projectile.cpp
