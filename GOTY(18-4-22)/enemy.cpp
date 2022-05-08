@@ -92,7 +92,7 @@ void enemy::random_movement()
     QVector<QVector<QVector<character*>>>* charLocPoint=charLoc;
     QVector<QVector<bool>>* presencePoint=presence;
 
-    srand(time(NULL));
+
 
     // generating random numbers from 0-3, 0 1 2 3 correspond to up down left right respectively
     if(rand()%4==0) // moving UPWARDS
@@ -160,9 +160,9 @@ void enemy::random_movement()
 }
 
 
-enemy::enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major, bool enem) : character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene, major)
+enemy::enemy(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major) : character(helth, mvmt_spd,alive, Facer, Rowd, Cold, map, charLoc, Playa, presence, scene, major)
 {
-    is_enemy=enem;
+    //is_enemy=enem;
     MAP=&map;
     QTimer* T=new QTimer(this);
     connect(T,SIGNAL(timeout()),this,SLOT(random_movement()));

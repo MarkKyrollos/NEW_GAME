@@ -14,6 +14,7 @@
 #include "enemy.h"
 #include "major.h"
 #include "minor.h"
+#include "boss.h"
 #include <QVector>
 #include "doortimer.h"
 
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
     QVector<QVector<int>> map(30); //map vector
     srand(time(NULL));
         //QGraphicsView view; //trying to port this from the lab led to the main menu breaking beyond repair, we were unaware this was a widget
-        QBrush Brush(Qt::black); //brush for background (if you see the background for whatever reason)
+        //QBrush Brush(Qt::black); //brush for background (if you see the background for whatever reason)
         QGraphicsScene scene; //the scene where everything is displayed
         //view.setFixedSize(1500,1000); //changes size of window
         //view.setWindowTitle("Maze Game"); //renames the window
@@ -65,7 +66,7 @@ int main(int argc, char *argv[])
         major* E6=new major(100,0.5,true,down,6,17,map,charLoc,false,presence,scene, true);
         major* E7=new major(100,0.5,true,down,13,20,map,charLoc,false,presence,scene, true);
         major* E8=new major(100,0.5,true,down,20,8,map,charLoc,false,presence,scene, true);
-
+        boss* finalBoss= new boss(100,0.5,true, down,25,3,map,charLoc,false,presence, scene, true, P1);
         //program will crash whe an enemy dies
         //start drawing on the map
         QPixmap grassImage("Netherrack.png");
@@ -128,6 +129,7 @@ int main(int argc, char *argv[])
         scene.addItem(E6);
         scene.addItem(E7);
         scene.addItem(E8);
+        scene.addItem(finalBoss);
         //DoorTimer dor(map, scene);
         P1->setFlag(QGraphicsPixmapItem::ItemIsFocusable); //makes the focus on the character
         P1->setFocus();

@@ -27,7 +27,7 @@ character::character(int helth, float mvmt_spd, bool alive, direct Facer, int Ro
     this->presence=&presence;
     this->scene=&scene;
     presence[row][col]=true;
-    this->major=major;
+    this->maj=major;
 
 }
 
@@ -200,7 +200,7 @@ void character::moveUp(QVector<QVector<QVector<character*>>> &charLoc, QVector<Q
         }
         else if (charLoc[row-1][col][1] == nullifier && map->at(row-1).at(col)!=1000) //enemy movement
         {
-            if ((map->at(row-1).at(col)==-3 && major) || map->at(row-1).at(col)>=0)
+            if ((map->at(row-1).at(col)==-3 && maj) || map->at(row-1).at(col)>=0)
             {
                 charLoc[row][col][1] = nullifier;
                 if (charLoc[row][col][0]==nullifier)
@@ -267,7 +267,7 @@ void character::moveDown(QVector<QVector<QVector<character*>>> &charLoc, QVector
         }
         else if (charLoc[row+1][col][1] == nullifier && map->at(row+1).at(col)!=1000) //enemy movement
         {
-            if ((map->at(row+1).at(col)==-3 && major) || map->at(row+1).at(col)>=0)
+            if ((map->at(row+1).at(col)==-3 && maj) || map->at(row+1).at(col)>=0)
             {
                 charLoc[row][col][1] = nullifier;
                 if (charLoc[row][col][0]==nullifier)
@@ -329,7 +329,7 @@ void character::moveRight(QVector<QVector<QVector<character*>>> &charLoc, QVecto
         }
         else if (charLoc[row][col+1][1] == nullifier && map->at(row).at(col+1)!=1000) //enemy movement
         {
-            if ((map->at(row).at(col+1)==-3 && major) || map->at(row).at(col+1)>=0)
+            if ((map->at(row).at(col+1)==-3 && maj) || map->at(row).at(col+1)>=0)
             {
                 charLoc[row][col][1] = nullifier;
                 if (charLoc[row][col][0]==nullifier)
@@ -392,7 +392,7 @@ void character::moveLeft(QVector<QVector<QVector<character*>>> &charLoc, QVector
         }
         else if (charLoc[row][col-1][1] == nullifier && map->at(row).at(col-1)!=1000) //enemy movement
         {
-            if ((map->at(row).at(col-1)==-3 && major) || map->at(row).at(col-1)>=0)
+            if ((map->at(row).at(col-1)==-3 && maj) || map->at(row).at(col-1)>=0)
             {
                 charLoc[row][col][1] = nullifier;
                 if (charLoc[row][col][0]==nullifier)

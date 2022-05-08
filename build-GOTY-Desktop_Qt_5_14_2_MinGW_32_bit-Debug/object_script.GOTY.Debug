@@ -1,3 +1,4 @@
+debug/boss.o
 debug/character.o
 debug/enemy.o
 debug/main.o

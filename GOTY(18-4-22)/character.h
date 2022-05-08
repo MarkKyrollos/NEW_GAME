@@ -31,7 +31,7 @@ public:
     //a boolean to determine if the character is a player
     bool Player;
     QGraphicsScene* scene; //ports the scene to make the character move in it freely
-    bool major;
+    bool maj;
     // create an integer 2d array that will store the map text file (which would be converted to int in main) according to different maps in different rooms
     // then later on in derived classes we will decide the starting position of enemy/player using setPixMap using this
     // also make sure tha tthe constructors of derived classes would take an integer 2D array in its parameter (in an initializer list fashion?)

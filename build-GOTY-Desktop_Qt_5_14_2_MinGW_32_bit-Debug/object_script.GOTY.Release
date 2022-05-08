@@ -1,3 +1,4 @@
+release/boss.o
 release/character.o
 release/enemy.o
 release/main.o
