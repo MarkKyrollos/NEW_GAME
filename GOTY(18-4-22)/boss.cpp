@@ -18,7 +18,7 @@ boss::boss(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Co
        setPixmap(boss);
        setPos(50+50*col,50+50*row);
        QTimer* T=new QTimer(this);
-       connect(T,SIGNAL(timeout()),this,SLOT(spawnEnemies(charLoc)));
+       connect(T,SIGNAL(timeout()),this,SLOT(spawnEnemiesShell()));
        T->start(5000);
 }
 
@@ -27,6 +27,11 @@ boss::~boss()
     //QMediaPlayer* victory_screen=new QMediaPlayer();
     //victory_screen->setMedia(QUrl("qrc:/new/prefix1/magnum.mp3"));
     //Mahmoud, hlp pls, I don't know how to deal with multimedia, the file is called VictoryScreen.mp4
+}
+
+void boss::spawnEnemiesShell()
+{
+    spawnEnemies(*charLoc);
 }
 
 void boss::spawnEnemies(QVector<QVector<QVector<character*>>> &charLoc)
@@ -39,10 +44,12 @@ void boss::spawnEnemies(QVector<QVector<QVector<character*>>> &charLoc)
             if (rand()%2==0) //spawn minor enemy
             {
                 minor* Enenmi=new minor(100,1,true,down,row-1,col,*map,charLoc,false,*presence,*scene, false);
+                scene->addItem(Enenmi);
             }
             else //spawn major enemy
             {
                 major* Enenmi=new major(100,1,true,down,row-1,col,*map,charLoc,false,*presence,*scene, false);
+                scene->addItem(Enenmi);
             }
         }
 

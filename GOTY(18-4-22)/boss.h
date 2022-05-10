@@ -5,7 +5,6 @@
 
 #ifndef _BOSS_H
 #define _BOSS_H
-
 #include "enemy.h"
 #include "player.h"
 #include "minor.h"
@@ -612,13 +611,16 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 }
 */
 class boss: public enemy {
+    Q_OBJECT
 public:
     boss(int helth, float mvmt_spd, bool alive, direct Facer, int Rowd, int Cold, QVector<QVector<int>> &map, QVector<QVector<QVector<character*>>> &charLoc, bool Playa, QVector<QVector<bool>> &presence, QGraphicsScene &scene, bool major,player* P1);
     ~boss();
     player* P1;
+    void spawnEnemies(QVector<QVector<QVector<character*>>> &charLoc);
     //insert movement function here
 public slots:
-    void spawnEnemies(QVector<QVector<QVector<character*>>> &charLoc);
+    void spawnEnemiesShell();
+
 };
 
 #endif //_BOSS_H

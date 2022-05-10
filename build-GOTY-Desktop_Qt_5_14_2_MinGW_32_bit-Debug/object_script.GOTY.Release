@@ -10,6 +10,7 @@ release/player.o
 release/projectile.o
 release/qrc_res.o
 release/qrc_sound.o
+release/moc_boss.o
 release/moc_character.o
 release/moc_enemy.o
 release/moc_main_menu.o

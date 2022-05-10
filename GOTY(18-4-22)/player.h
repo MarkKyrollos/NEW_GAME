@@ -27,7 +27,8 @@ void In_Enemy(QVector<QVector<QVector<character*>>> &charLoc);//checks if player
 
 ~player();
 
-    
+
+
 public slots:
     void keyPressEvent(QKeyEvent* event); //handles key presses
 /**
