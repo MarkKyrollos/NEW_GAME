@@ -6,6 +6,7 @@
 #include "mainwindow.h"
 #include <QtMultimedia>
 #include <QVector>
+#include "game.h"
 namespace Ui {
 class main_menu;
 }
