@@ -22,6 +22,7 @@ void main_menu::on_start_clicked()
        QMediaPlayer * startup=new QMediaPlayer();
        startup->setMedia(QUrl("qrc:/new/prefix1/RELOAD.mp3"));
        startup->play();
+
     if (ui->on->isChecked()){
 
     QMediaPlaylist *background = new QMediaPlaylist();
@@ -31,12 +32,15 @@ void main_menu::on_start_clicked()
     QMediaPlayer *music = new QMediaPlayer();
     music->setPlaylist(background);
     music->play();
-    game Games;
-}
+
+        }
     //main.show();
     this->close();
     //main.play_sound(music_check);
-}else{
+    //game Games;
+    }
+
+else{
        ui->god->setText("invaild must enter a vaild username and password or sign up");
    }
 }

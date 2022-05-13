@@ -2,7 +2,7 @@
 
 game::game()
 {
-    //MainWindow w;
+    //MainWindow* w;
     //w.show();
 
     //creating the view obj
