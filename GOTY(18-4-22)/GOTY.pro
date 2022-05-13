@@ -13,6 +13,7 @@ SOURCES += \
     boss.cpp \
     character.cpp \
     enemy.cpp \
+    game.cpp \
     main.cpp \
     main_menu.cpp \
     mainwindow.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     boss.h \
     character.h \
     enemy.h \
+    game.h \
     main_menu.h \
     mainwindow.h \
     major.h \
