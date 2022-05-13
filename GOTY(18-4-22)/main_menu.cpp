@@ -31,6 +31,7 @@ void main_menu::on_start_clicked()
     QMediaPlayer *music = new QMediaPlayer();
     music->setPlaylist(background);
     music->play();
+    game Games;
 }
     //main.show();
     this->close();
