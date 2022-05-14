@@ -5,7 +5,7 @@
 #include <QGraphicsPixmapItem>
 #include <QApplication>
 #include <QGraphicsScene>
-
+#include"coin.h"
 
 projectile::projectile(float proj_speed, int Shooter, int direction, QVector<QVector<int>> &map, int& col, int& row, QVector<QVector<bool>> &presence, QGraphicsScene &scene, QVector<QVector<QVector<character*>>> &charLoc)
 {
@@ -27,7 +27,7 @@ projectile::projectile(float proj_speed, int Shooter, int direction, QVector<QVe
        setPixmap(g);
        setPos(50+50*col,50+50*row);
 
-  /*  if(!Location_Check(presence , charLoc))  // prevents a shot from visually passing through an enemy
+  /*  if(!Location_Check(presence , charLoc))
     {
     scene.addItem(this);
     }*/
@@ -42,32 +42,43 @@ void projectile::setCharLoc(QVector<QVector<QVector<character*>>> &charLoc)
     this->charLoc=&charLoc;
 }
 
-bool projectile::Location_Check(QVector<QVector<bool>> &presence, QVector<QVector<QVector<character*>>> &charLoc)
+
+bool projectile::Location_Check(QVector<QVector<bool>> &presence, QVector<QVector<QVector<character*>>> &charLoc , QVector<QVector<int>> &map)
 {
-    if (Shooter == 1)
+    if (Shooter == 1) //player is shooting
             {
 
-                if (presence[row][col])
+                if (presence[row][col] && map[row][col]!=-3)
                 {
 
                     if (charLoc[row][col][1]!=nullptr)
                     {
                         charLoc[row][col][1]->health -=25;
-                        if(charLoc.at(row)[col][1]->health<=0) //kills player if health reaches 0
+                        if(charLoc.at(row)[col][1]->health<=0) //kills enemy if health reaches 0
                         {
                             delete charLoc.at(row)[col][1];
                             charLoc[row][col][1]=nullptr;
                             presence[row][col]=false;
+
+
+
+                            //character *obj= new character(100, 1.0,true,up,row,col, map,charLoc,true,presence, *scene,false);// had to create a character object in order to store the coin position as charLoc[][][2]
+                            //obj->coinSetter(row,col);
+                            // ^^old version
+
+
+                            //charLoc[row][col][0]->coinSetter(row,col); // old method that crashes the program, the logic is right tho
+                            coin* c= new coin(row,col,*scene); // calling the coin constructor to place a coin at the same position an enemy dies at
+                            c->addCoin();
                         }
                     }
 
                     return true;
                 }
-
             }
 
 
-            if (Shooter == 2)
+            if (Shooter == 2) // enemy is shooting
             {
                 if (presence[row][col])
                 {
@@ -88,7 +99,7 @@ bool projectile::Location_Check(QVector<QVector<bool>> &presence, QVector<QVecto
             }
 
 
-            if (map->at(row).at(col) < 0 && map->at(row).at(col) != -1) // if projectile hits a wall
+            if (map[row][col] < 0) // && map->at(row).at(col) != -1) // if projectile hits a wall
             {
                 return true;
             }
@@ -97,9 +108,9 @@ bool projectile::Location_Check(QVector<QVector<bool>> &presence, QVector<QVecto
 }
 
 
-void projectile::movement() //make this a function that moves periodically and is called in the character class
+void projectile::movement() //make this a function that moves periodically and is called by the QTimer
 {
-    if(!Location_Check(*presence , *charLoc))
+    if(!Location_Check(*presence , *charLoc,*map)) // prevents a shot from visually passing through an enemy
     {
     scene->addItem(this);
     }
@@ -107,7 +118,7 @@ void projectile::movement() //make this a function that moves periodically and i
 
     if (direction==1)
     {
-        if(Location_Check(*presence ,*charLoc))
+        if(Location_Check(*presence ,*charLoc,*map))
         {
             delete this;
         }
@@ -121,7 +132,7 @@ void projectile::movement() //make this a function that moves periodically and i
 
     else if (direction==2)
     {
-        if(Location_Check(*presence ,*charLoc))
+        if(Location_Check(*presence ,*charLoc,*map))
         {
             delete this;
         }
@@ -134,7 +145,7 @@ void projectile::movement() //make this a function that moves periodically and i
 
     else if (direction==3)
     {
-        if(Location_Check(*presence ,*charLoc))
+        if(Location_Check(*presence ,*charLoc,*map))
         {
             delete this;
         }
@@ -147,7 +158,7 @@ void projectile::movement() //make this a function that moves periodically and i
 
     else if (direction==4)
     {
-        if(Location_Check(*presence ,*charLoc))
+        if(Location_Check(*presence ,*charLoc,*map))
         {
             delete this;
         }
