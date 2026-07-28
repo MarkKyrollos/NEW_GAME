@@ -5,7 +5,7 @@ A 2D top-down dungeon crawler built in **C++** with the **Qt** framework (Qt Wid
 
 ## 🎥 Gameplay
 
-▶️ [Watch Gameplay Video](assets/gameplay.mp4)
+▶️ [Watch Gameplay Video](assets/Maze Game.mp4)
 
 
 ## 📖 About
