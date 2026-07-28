@@ -3,6 +3,13 @@
 
 A 2D top-down dungeon crawler built in **C++** with the **Qt** framework (Qt Widgets, Qt Graphics View, and Qt Multimedia). You explore a tile-based maze, fight off waves of enemies, dodge hazards, and take down a final boss.
 
+🎥 Gameplay Video
+<!-- Add your gameplay video here. You can either upload a video file and link it, or embed a YouTube video. -->
+
+<video src="Maze Game.mp4" controls width="800"></video>
+
+<!-- If you're uploading directly to GitHub: 1. Open an Issue or a Pull Request on this repo 2. Drag and drop your video file into the text box 3. GitHub will generate a URL like https://github.com/user-attachments/assets/... 4. Copy that URL into the space below, then delete this comment block <video src="PASTE_GITHUB_GENERATED_URL_HERE" controls width="600"></video> -->
+
 ## 📖 About
 
 This project was built as a course/team project using the Qt framework and the Qt Graphics View system for rendering. The game features:
