@@ -4,9 +4,7 @@ A 2D top-down dungeon crawler built in **C++** with the **Qt** framework (Qt Wid
 
 ## 🎥 Gameplay Video
 
-<!-- Add your gameplay video here. You can either upload a video file and link it, or embed a YouTube video. -->
 
-[![Watch the gameplay video](file:///C:/Users/DELL/Downloads/Screenshot%202026-07-28%20131033.jpg)](file:///D:/dump/other%20dump/discord/Maze%20Game%202022-04-29%2001-04-49.mp4)
 
 <!--
 If you're uploading directly to GitHub:
@@ -111,4 +109,4 @@ A few suggestions if you plan to keep developing this project:
 
 ## 👥 Authors
 
-Built by Mark Kyrollos and collaborators as a Qt/C++ game project.
+Built by Mark Kyrollos, MagdElDin Mohammed, and Mahmoud Aly
