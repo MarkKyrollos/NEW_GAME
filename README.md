@@ -3,6 +3,11 @@
 
 A 2D top-down dungeon crawler built in **C++** with the **Qt** framework (Qt Widgets, Qt Graphics View, and Qt Multimedia). You explore a tile-based maze, fight off waves of enemies, dodge hazards, and take down a final boss.
 
+
+
+## 🎥 Gameplay
+
+▶️ [Watch Gameplay Video](assets/gameplay.mp4)
 🎥 Gameplay Video
 <!-- Add your gameplay video here. You can either upload a video file and link it, or embed a YouTube video. -->
 
