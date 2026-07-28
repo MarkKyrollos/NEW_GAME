@@ -6,7 +6,7 @@ A 2D top-down dungeon crawler built in **C++** with the **Qt** framework (Qt Wid
 
 <!-- Add your gameplay video here. You can either upload a video file and link it, or embed a YouTube video. -->
 
-[![Watch the gameplay video](PASTE_THUMBNAIL_IMAGE_URL_HERE)](PASTE_VIDEO_URL_HERE)
+[![Watch the gameplay video](file:///C:/Users/DELL/Downloads/Screenshot%202026-07-28%20131033.jpg)](file:///D:/dump/other%20dump/discord/Maze%20Game%202022-04-29%2001-04-49.mp4)
 
 <!--
 If you're uploading directly to GitHub:
